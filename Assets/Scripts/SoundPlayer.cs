@@ -3,6 +3,8 @@ using UnityEngine;
 public class SoundPlayer : MonoBehaviour
 {
     private AudioSource player;
+    [SerializeField] private float somVolume = 0.5f;
+    [SerializeField] private float musicaVolume = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,11 +28,13 @@ public class SoundPlayer : MonoBehaviour
         if (clip != null && player != null && player.isPlaying && player.clip.name != clip.name)
         {
             player.clip = clip;
+            player.volume = musicaVolume;
             player.Play();
         }
         else if(clip != null && player != null && !player.isPlaying)
         {
             player.clip = clip;
+            player.volume = musicaVolume;
             player.Play();
         }
     }
@@ -39,7 +43,32 @@ public class SoundPlayer : MonoBehaviour
     {
         if (clip != null && player != null)
         {
+            player.volume = somVolume;
             player.PlayOneShot(clip);
         }
+    }
+
+    public void SetSomVolume(float volume)
+    {
+        somVolume = volume;
+    }
+
+    public void SetMusicaVolume(float volume)
+    {
+        musicaVolume = volume;
+        if (player.isPlaying)
+        {
+            player.volume = musicaVolume;
+        }
+    }
+
+    public float GetSomVolume()
+    {
+        return somVolume;
+    }
+
+    public float GetMusicaVolume()
+    {
+        return musicaVolume;
     }
 }

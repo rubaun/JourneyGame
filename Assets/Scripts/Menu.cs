@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private static float tempo = 0.5f;
     [SerializeField] private AudioClip somBackgroundMenu;
     [SerializeField] private AudioClip somBotao;
+    [SerializeField] private GameObject painelConfiguracao;
+    private bool paused = false;
     private SoundPlayer player;
     private WaitForSeconds tempoDeEspera = new WaitForSeconds(tempo);
 
@@ -14,6 +16,11 @@ public class Menu : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Audio Source").GetComponent<SoundPlayer>();
+        painelConfiguracao = GameObject.Find("PainelConfiguracao");
+        if (painelConfiguracao != null)
+        {
+            painelConfiguracao.SetActive(false);
+        }
     }
 
     private void OnLevelWasLoaded(int level)
@@ -81,6 +88,33 @@ public class Menu : MonoBehaviour
         }
         yield return tempoDeEspera;
         SceneManager.LoadScene(nomeCena);
+    }
+
+    public void PauseGame()
+    {
+        if(paused)
+        {
+            Time.timeScale = 1f;
+            paused = false;
+            if (painelConfiguracao != null)
+            {
+                painelConfiguracao.SetActive(false);
+            }
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            paused = true;
+            if (painelConfiguracao != null)
+            {
+                painelConfiguracao.SetActive(true);
+            }
+        }
+    }
+
+    public void SairJogo()
+    {
+        Application.Quit();
     }
 
 }
