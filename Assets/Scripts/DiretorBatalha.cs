@@ -136,6 +136,7 @@ public class DiretorBatalha : MonoBehaviour
         GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomVitoria();
+        SceneManager.LoadScene("Vitoria");
         yield return new WaitForSeconds(1.0f);
         textoTextoVitoria.SetActive(true);
     }
@@ -145,6 +146,7 @@ public class DiretorBatalha : MonoBehaviour
         GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomMorte();
+        SceneManager.LoadScene("Derrota");
         textoTextoDerrota.SetActive(true);
     }
 
