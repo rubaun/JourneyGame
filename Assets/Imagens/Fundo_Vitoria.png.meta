@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fundo_Vitoria_0: 7228852226713186247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

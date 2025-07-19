@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c265119cb86334f93d75d3d85a28c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somVolume: 0.5
+  somVolume: 0.3
   musicaVolume: 0.5
 --- !u!1 &1058040836
 GameObject:
