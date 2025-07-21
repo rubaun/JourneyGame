@@ -7,72 +7,26 @@ public class Menu : MonoBehaviour
     [SerializeField] private static float tempo = 0.5f;
     [SerializeField] private AudioClip somBackgroundMenu;
     [SerializeField] private AudioClip somBotao;
-    [SerializeField] private GameObject painelConfiguracao;
+    private GameObject painelConfiguracao;
     private bool paused = false;
-    private SoundPlayer player;
+    private SoundPlayer soundPlayer;
     private WaitForSeconds tempoDeEspera = new WaitForSeconds(tempo);
 
 
     void Start()
     {
-        player = GameObject.Find("Audio Source").GetComponent<SoundPlayer>();
+        soundPlayer = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
         painelConfiguracao = GameObject.Find("PainelConfiguracao");
+
         if (painelConfiguracao != null)
         {
             painelConfiguracao.SetActive(false);
         }
-    }
 
-    private void OnLevelWasLoaded(int level)
-    {
-        if (SceneManager.GetActiveScene().name == "MenuPrincipal" && SceneManager.GetActiveScene().buildIndex == level)
+        if (somBackgroundMenu != null && soundPlayer != null)
         {
-            if (somBackgroundMenu != null && player != null)
-            {
-                player.PlaySoundBackground(somBackgroundMenu);
-            }
+            soundPlayer.PlaySoundBackground(somBackgroundMenu);
         }
-        else if (SceneManager.GetActiveScene().name == "EscolhaFloresta" && SceneManager.GetActiveScene().buildIndex == level)
-        {
-            if (somBackgroundMenu != null && player != null)
-            {
-                player.PlaySoundBackground(somBackgroundMenu);
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "FlorestaEsquerdaBatalha" && SceneManager.GetActiveScene().buildIndex == level)
-        {
-            if (somBackgroundMenu != null && player != null)
-            {
-                player.PlaySoundBackground(somBackgroundMenu);
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "FlorestaDireitaBatalha" && SceneManager.GetActiveScene().buildIndex == level)
-        {
-            if (somBackgroundMenu != null && player != null)
-            {
-                player.PlaySoundBackground(somBackgroundMenu);
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "FlorestaDireitaPortal" && SceneManager.GetActiveScene().buildIndex == level)
-        {
-            if (somBackgroundMenu != null && player != null)
-            {
-                player.PlaySoundBackground(somBackgroundMenu);
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "FlorestaSaidaEsquerda" && SceneManager.GetActiveScene().buildIndex == level)
-        {
-            if (somBackgroundMenu != null && player != null)
-            {
-                player.PlaySoundBackground(somBackgroundMenu);
-            }
-        }
-        
-    }
-
-    private void Update()
-    {
-        OnLevelWasLoaded(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void CarregarCenaJogo(string nomeCena)
@@ -82,9 +36,9 @@ public class Menu : MonoBehaviour
 
     IEnumerator CarregarCena(string nomeCena)
     {
-        if (player != null)
+        if (soundPlayer != null)
         {
-            player.PlaySound(somBotao);
+            soundPlayer.PlaySound(somBotao);
         }
         yield return tempoDeEspera;
         SceneManager.LoadScene(nomeCena);

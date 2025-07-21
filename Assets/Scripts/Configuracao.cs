@@ -13,16 +13,16 @@ public class Configuracao : MonoBehaviour
     {
         somSlider = GameObject.Find("SomVolume").GetComponent<Slider>();
         musicaSlider = GameObject.Find("MusicaVolume").GetComponent<Slider>();
-        soundPlayer = GameObject.Find("Audio Source").GetComponent<SoundPlayer>();
+        soundPlayer = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
         caixaMensagem = GameObject.Find("InformativoAtiva").GetComponent<Toggle>();
         caixaMensagemObj = GameObject.Find("FundoInformativo");
-        
-        if (caixaMensagemObj != null)
-        {
-            caixaMensagemObj.SetActive(caixaMensagem.isOn);
-        }
 
-        caixaMensagem.onValueChanged.AddListener(delegate { CaixaMensagem(); });
+        caixaMensagemObj.SetActive(caixaMensagem.isOn);
+
+        if (caixaMensagem != null)
+        {
+            caixaMensagem.onValueChanged.AddListener(delegate { AlternarCaixaMensagem(); });
+        }
 
         if (somSlider != null)
         {
@@ -36,19 +36,18 @@ public class Configuracao : MonoBehaviour
             musicaSlider.value = soundPlayer.GetMusicaVolume();
         }
     }
-    
-    private void CaixaMensagem()
+
+    public void SalvarConfig()
     {
-        if (caixaMensagem != null)
+        soundPlayer.SaveVolumes();
+    }
+
+    // Método para alternar a visibilidade da caixa de mensagem
+    public void AlternarCaixaMensagem()
+    {
+        if (caixaMensagemObj != null)
         {
-            if(caixaMensagem.isOn)
-            {
-                caixaMensagem.gameObject.SetActive(true);
-            }
-            else
-            {
-                caixaMensagem.gameObject.SetActive(false);
-            }
+            caixaMensagemObj.SetActive(caixaMensagem.isOn);
         }
     }
 }

@@ -14,8 +14,8 @@ public class DiretorBatalha : MonoBehaviour
     [SerializeField] TextMeshProUGUI nomeInimigo;
     [SerializeField] TextMeshProUGUI informativo;
     [SerializeField] TextMeshProUGUI indicadorEspecial;
-    [SerializeField] GameObject textoTextoVitoria;
-    [SerializeField] GameObject textoTextoDerrota;
+    //[SerializeField] GameObject textoTextoVitoria;
+    //[SerializeField] GameObject textoTextoDerrota;
     [SerializeField] Button botaoEspecial;
     [SerializeField] Button botaoAtaque;
     string turno = "Player";
@@ -133,25 +133,30 @@ public class DiretorBatalha : MonoBehaviour
 
     IEnumerator TelaVitoria()
     {
-        GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
+        //StopSound();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomVitoria();
         SceneManager.LoadScene("Vitoria");
-        yield return new WaitForSeconds(1.0f);
-        textoTextoVitoria.SetActive(true);
+        //yield return new WaitForSeconds(1.0f);
+        //textoTextoVitoria.SetActive(true);
     }
 
     IEnumerator TelaMorte()
     {
-        GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
+        //StopSound();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomMorte();
         SceneManager.LoadScene("Derrota");
-        textoTextoDerrota.SetActive(true);
+        //textoTextoDerrota.SetActive(true);
     }
 
     public void ReiniciarJogo()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    //private void StopSound()
+    //{
+    //    GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>().Stop();
+    //}
 }

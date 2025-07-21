@@ -1,65 +1,82 @@
+using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
-    private AudioSource player;
     [SerializeField] private float somVolume = 0.5f;
     [SerializeField] private float musicaVolume = 0.5f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private static SoundPlayer Instance;
+    private AudioSource bgMusic;
+    private AudioSource soundFX;
+
+    void Awake()
     {
-        player = GetComponent<AudioSource>();
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        //Find other AudioSources in the scene and destroy them
-        GameObject[] audioSources = GameObject.FindGameObjectsWithTag("Audio");
-        foreach (GameObject audioSource in audioSources)
+        //Verifica se tem PlayerPrefs salvos
+        if (PlayerPrefs.HasKey("SomVolume"))
         {
-            if (audioSource == this.gameObject && audioSources.Length > 1)
-            {
-                Destroy(this.gameObject);
-            }
+            somVolume = PlayerPrefs.GetFloat("SomVolume");
         }
+        else
+        {
+            SaveVolumes();
+        }
+
+        if (PlayerPrefs.HasKey("MusicaVolume"))
+        {
+            musicaVolume = PlayerPrefs.GetFloat("MusicaVolume");
+        }
+        else
+        {
+            SaveVolumes();
+        }
+
+
+
+        bgMusic = GameObject.Find("BgMusic").GetComponent<AudioSource>();
+        soundFX = GameObject.Find("SoundFX").GetComponent<AudioSource>();
+        
+        DontDestroyOnLoad(gameObject);
+
+        SetVolumes();
     }
 
     public void PlaySoundBackground(AudioClip clip)
     {
-        if (clip != null && player != null && player.isPlaying && player.clip.name != clip.name)
+        if(clip.name != bgMusic.clip.name)
         {
-            player.clip = clip;
-            player.volume = musicaVolume;
-            player.Play();
-        }
-        else if(clip != null && player != null && !player.isPlaying)
-        {
-            player.clip = clip;
-            player.volume = musicaVolume;
-            player.Play();
+            SetVolumes();
+            bgMusic.clip = clip;
+            bgMusic.Play();
         }
     }
 
     public void PlaySound(AudioClip clip)
     {
-        if (clip != null && player != null)
-        {
-            player.volume = somVolume;
-            player.PlayOneShot(clip);
-        }
+        SetVolumes();
+        soundFX.PlayOneShot(clip);
     }
 
     public void SetSomVolume(float volume)
     {
         somVolume = volume;
+        soundFX.volume = volume;
     }
 
     public void SetMusicaVolume(float volume)
     {
         musicaVolume = volume;
-        if (player.isPlaying)
-        {
-            player.volume = musicaVolume;
-        }
+        bgMusic.volume = volume;
     }
 
     public float GetSomVolume()
@@ -70,5 +87,18 @@ public class SoundPlayer : MonoBehaviour
     public float GetMusicaVolume()
     {
         return musicaVolume;
+    }
+
+    private void SetVolumes()
+    {
+        bgMusic.volume = musicaVolume;
+        soundFX.volume = somVolume;
+    }
+
+    public void SaveVolumes()
+    {
+        PlayerPrefs.SetFloat("SomVolume", somVolume);
+        PlayerPrefs.SetFloat("MusicaVolume", musicaVolume);
+        PlayerPrefs.Save();
     }
 }

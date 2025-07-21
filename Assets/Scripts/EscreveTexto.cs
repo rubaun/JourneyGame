@@ -16,7 +16,7 @@ public class EscreveTexto : MonoBehaviour
 
     void Start()
     {
-        tocadorSom = GameObject.Find("Audio Source").GetComponent<SoundPlayer>(); // Obtém o componente AudioSource
+        tocadorSom = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>(); // Obtém o componente AudioSource
         texto.text = ""; // Limpa o texto atual
         if(som != null)
         {
