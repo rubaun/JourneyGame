@@ -11,12 +11,18 @@ public class Menu : MonoBehaviour
     private bool paused = false;
     private SoundPlayer soundPlayer;
     private WaitForSeconds tempoDeEspera = new WaitForSeconds(tempo);
+    private PlayerPrefsGame playerPrefsGame;
 
+    private void Awake()
+    {
+        playerPrefsGame = GameObject.Find("PlayerPrefsGame").GetComponent<PlayerPrefsGame>();
+    }
 
     void Start()
     {
         soundPlayer = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
         painelConfiguracao = GameObject.Find("PainelConfiguracao");
+
 
         if (painelConfiguracao != null)
         {
@@ -64,6 +70,11 @@ public class Menu : MonoBehaviour
                 painelConfiguracao.SetActive(true);
             }
         }
+    }
+
+    public void JogarNovamente()
+    {
+        StartCoroutine(CarregarCena(playerPrefsGame.GetCenaAnterior()));
     }
 
     public void SairJogo()
