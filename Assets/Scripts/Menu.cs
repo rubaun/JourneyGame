@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Menu : MonoBehaviour
     private SoundPlayer soundPlayer;
     private WaitForSeconds tempoDeEspera = new WaitForSeconds(tempo);
     private PlayerPrefsGame playerPrefsGame;
+    private string nomeCenaProxima;
 
     private void Awake()
     {
@@ -33,6 +35,12 @@ public class Menu : MonoBehaviour
         {
             soundPlayer.PlaySoundBackground(somBackgroundMenu);
         }
+
+        if(SceneManager.GetActiveScene().name == "Vitoria")
+        {
+            nomeCenaProxima = PlayerPrefs.GetString("NomeCenaProxima");
+            GameObject.Find("BotaoMudarFase").GetComponent<Button>().onClick.AddListener(() => CarregarCenaJogo(nomeCenaProxima));
+        }   
     }
 
     public void CarregarCenaJogo(string nomeCena)

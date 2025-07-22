@@ -1512,6 +1512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nomeCena: 
+  nivelAtual: 0
+  nomeCenaAnterior: 
+  nivelAnterior: 0
+  cenaBatalha: 0
 --- !u!4 &1581010674
 Transform:
   m_ObjectHideFlags: 0
@@ -1722,7 +1727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Oduvaldo
+  m_text: 'Sylvaran
 
     O Druida'
   m_isRightToLeft: 0

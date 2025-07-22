@@ -20,12 +20,10 @@ public class DiretorBatalha : MonoBehaviour
     [SerializeField] Button botaoAtaque;
     string turno = "Player";
     bool verificadorDeTurno = true;
-    PlayerPrefsGame playerPrefsGame;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerPrefsGame = GameObject.Find("PlayerPrefsGame").GetComponent<PlayerPrefsGame>();
         vidaPlayer.text = player.GetVida().ToString();
         vidaInimigo.text = inimigo.GetVida().ToString();
         nomePlayer.text = player.GetNomePersonagem();
@@ -147,7 +145,6 @@ public class DiretorBatalha : MonoBehaviour
     IEnumerator TelaMorte()
     {
         //StopSound();
-        playerPrefsGame.SetCenaAnterior();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomMorte();
         SceneManager.LoadScene("Derrota");

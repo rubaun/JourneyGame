@@ -730,7 +730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Descri\xE7\xE3o da Conquista"
+  m_text: "Descri\xE7\xE3o da Conquista\n(Em breve)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.85
+  m_fontSize: 27
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -975,6 +975,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nomeCena: 
+  nivelAtual: 0
+  nomeCenaAnterior: 
+  nivelAnterior: 0
+  cenaBatalha: 0
+  nomeCenaProxima: 
 --- !u!4 &1153594245
 Transform:
   m_ObjectHideFlags: 0
@@ -1218,19 +1224,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1643429140}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1742194371}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: CarregarCenaJogo
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: EscolhaFloresta
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1643429140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,7 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somBackgroundMenu: {fileID: 0}
+  somBackgroundMenu: {fileID: 8300000, guid: 43d92932b9f2cf4438eb0f31852db824, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
 --- !u!4 &1742194372
 Transform:

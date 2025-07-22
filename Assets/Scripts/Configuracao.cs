@@ -14,16 +14,7 @@ public class Configuracao : MonoBehaviour
         somSlider = GameObject.Find("SomVolume").GetComponent<Slider>();
         musicaSlider = GameObject.Find("MusicaVolume").GetComponent<Slider>();
         soundPlayer = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
-        caixaMensagem = GameObject.Find("InformativoAtiva").GetComponent<Toggle>();
-        caixaMensagemObj = GameObject.Find("FundoInformativo");
-
-        caixaMensagemObj.SetActive(caixaMensagem.isOn);
-
-        if (caixaMensagem != null)
-        {
-            caixaMensagem.onValueChanged.AddListener(delegate { AlternarCaixaMensagem(); });
-        }
-
+       
         if (somSlider != null)
         {
             somSlider.onValueChanged.AddListener(soundPlayer.SetSomVolume);
@@ -34,6 +25,16 @@ public class Configuracao : MonoBehaviour
         {
             musicaSlider.onValueChanged.AddListener(soundPlayer.SetMusicaVolume);
             musicaSlider.value = soundPlayer.GetMusicaVolume();
+        }
+
+        caixaMensagem = GameObject.Find("InformativoAtiva").GetComponent<Toggle>();
+        caixaMensagemObj = GameObject.Find("FundoInformativo");
+
+        caixaMensagemObj.SetActive(caixaMensagem.isOn);
+
+        if (caixaMensagem != null)
+        {
+            caixaMensagem.onValueChanged.AddListener(delegate { AlternarCaixaMensagem(); });
         }
     }
 

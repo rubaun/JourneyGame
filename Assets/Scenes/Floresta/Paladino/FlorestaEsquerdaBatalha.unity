@@ -1980,6 +1980,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nomeCena: 
+  nivelAtual: 0
+  nomeCenaAnterior: 
+  nivelAnterior: 0
+  cenaBatalha: 1
+  nomeCenaProxima: FlorestaSaidaEsquerda
 --- !u!4 &879057257
 Transform:
   m_ObjectHideFlags: 0
@@ -4829,6 +4835,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1461136012}
+    - target: {fileID: 9213843013140468647, guid: 603621576c4ccb343adc6812a0557c1c, type: 3}
+      propertyPath: somVitoria
+      value: 
+      objectReference: {fileID: 8300000, guid: ab49b9ee56cb5ef4fb71ca43b7a51a8a, type: 3}
     - target: {fileID: 9213843013140468647, guid: 603621576c4ccb343adc6812a0557c1c, type: 3}
       propertyPath: somEspecialPronto
       value: 

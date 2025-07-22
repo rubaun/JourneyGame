@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip somVitoria;
     [SerializeField] private AudioClip somMorte;
     [SerializeField] private AudioClip somEspecialPronto;
-    [SerializeField] private Camera camera;
+    [SerializeField] private GameObject cameraC;
 
     private Animator anim;
     private SpriteRenderer spriteRenderer;
@@ -34,6 +34,12 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
+
+        //Procura a camera
+        if (cameraC == null)
+        {
+            cameraC = GameObject.FindGameObjectWithTag("MainCamera");
+        }
 
         if (!falasPersonagem && !ehHeroi)
         {
@@ -301,6 +307,6 @@ public class Player : MonoBehaviour
     private void CameraTreme(float magnitude)
     {
         audioSource.PlaySound(somVitoria);
-        camera.GetComponent<CameraShake>().ShakeCamera(0.5f, magnitude);
+        cameraC.GetComponent<CameraShake>().ShakeCamera(0.5f, magnitude);
     }
 }

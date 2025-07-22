@@ -3,10 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerPrefsGame : MonoBehaviour
 {
-    private string nomeCena;
-    private int nivelAtual;
-    private string nomeCenaAnterior;
-    private int nivelAnterior;
+    [Header("Informações da Cena Atual")]
+    [SerializeField] private string nomeCena;
+    [SerializeField] private int nivelAtual;
+    [SerializeField] private string nomeCenaAnterior;
+    [SerializeField] private int nivelAnterior;
+    [SerializeField] private bool cenaBatalha;
+    [Header("Informações da Proxima Cena")]
+    [SerializeField] private string nomeCenaProxima;
+
+
+
 
     void Start()
     {
@@ -14,16 +21,19 @@ public class PlayerPrefsGame : MonoBehaviour
         PlayerPrefs.SetString("NomeCena", nomeCena);
         nivelAtual = SceneManager.GetActiveScene().buildIndex;
         PlayerPrefs.SetInt("NivelAtual", nivelAtual);
+        PlayerPrefs.SetString("NomeCenaProxima", nomeCenaProxima);
         PlayerPrefs.Save();
-    }
 
-    public void SetCenaAnterior()
-    {   
-        if (PlayerPrefs.HasKey("NomeCenaAnterior"))
+        if (cenaBatalha)
         {
             PlayerPrefs.SetString("NomeCenaAnterior", nomeCena);
             PlayerPrefs.SetInt("NivelAnterior", nivelAtual);
             PlayerPrefs.Save();
+        }
+        else 
+        {
+           nomeCenaAnterior = PlayerPrefs.GetString("NomeCenaAnterior");
+           nivelAnterior = PlayerPrefs.GetInt("NivelAnterior");
         }
     }
 
@@ -46,5 +56,7 @@ public class PlayerPrefsGame : MonoBehaviour
         }
         return 0;
     }
+
+    
 
 }
