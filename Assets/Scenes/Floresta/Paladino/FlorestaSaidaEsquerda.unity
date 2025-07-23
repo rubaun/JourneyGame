@@ -409,7 +409,6 @@ GameObject:
   - component: {fileID: 325857262}
   - component: {fileID: 325857261}
   - component: {fileID: 325857260}
-  - component: {fileID: 325857263}
   m_Layer: 5
   m_Name: BotaoMudarFase
   m_TagString: Untagged
@@ -432,10 +431,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500.06, y: -246}
-  m_SizeDelta: {x: 219.5099, y: 83.8422}
+  m_AnchorMin: {x: 0.7066042, y: 0.13144444}
+  m_AnchorMax: {x: 0.82029164, y: 0.21074073}
+  m_AnchoredPosition: {x: -1.1000061, y: 1}
+  m_SizeDelta: {x: 1.5098877, y: -2.1578064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -490,7 +489,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: DesfiladeiroEsquerdaBatalha
+          m_StringArgument: DesfiladeiroBatalha
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &325857261
@@ -513,7 +512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9215191660496094313, guid: dd3818e3cfac0544e8d24ecf4a59d6f3, type: 3}
+  m_Sprite: {fileID: -8695538805958314294, guid: 530acc54d7c287a4a87aceaaf0c7e40a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -531,28 +530,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325857256}
   m_CullTransparentMesh: 1
---- !u!95 &325857263
-Animator:
-  serializedVersion: 7
+--- !u!1 &519042326
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325857256}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519042327}
+  - component: {fileID: 519042329}
+  - component: {fileID: 519042328}
+  m_Layer: 5
+  m_Name: FundoTexto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &519042327
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519042326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 693381498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5696874, y: 0.05459259}
+  m_AnchorMax: {x: 0.95500004, y: 0.9434445}
+  m_AnchoredPosition: {x: 1.019989, y: 1.0000305}
+  m_SizeDelta: {x: 3.6400146, y: 1.2102051}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &519042328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519042326}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9040f27cdad3a2449a11893fff6e618a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8695019518180747640, guid: 3333e86aeb0583241af23fe9bf37ec43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &519042329
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519042326}
+  m_CullTransparentMesh: 1
 --- !u!1 &693381494
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +699,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 519042327}
   - {fileID: 1295041823}
   - {fileID: 1214815202}
   - {fileID: 325857257}
@@ -773,7 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somBackgroundMenu: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
+  somBackgroundMenu: {fileID: 8300000, guid: 78035701e337b2e4ca7dcb063c949cea, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
 --- !u!4 &1179866710
 Transform:
@@ -802,7 +855,7 @@ GameObject:
   - component: {fileID: 1214815204}
   - component: {fileID: 1214815203}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Titulo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -822,10 +875,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500.06006, y: 355}
-  m_SizeDelta: {x: 686.4458, y: 239.0548}
+  m_AnchorMin: {x: 0.59879166, y: 0.781}
+  m_AnchorMax: {x: 0.92727095, y: 0.8685556}
+  m_AnchoredPosition: {x: 0.70114136, y: 0.40533447}
+  m_SizeDelta: {x: -1.4023, y: -1.720398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214815203
 MonoBehaviour:
@@ -849,15 +902,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Seguindo ao Desfiladeiro das Almas
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1fea70f1b2bc8b64180e4cf6b4b726aa, type: 2}
-  m_sharedMaterial: {fileID: 7876251607848186625, guid: 1fea70f1b2bc8b64180e4cf6b4b726aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bb78ce5b137c2f44494cf4486f1839a7, type: 2}
+  m_sharedMaterial: {fileID: -6287048353374691813, guid: bb78ce5b137c2f44494cf4486f1839a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278244909
-  m_fontColor: {r: 0.17696397, g: 0.8396226, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -874,7 +927,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.45
+  m_fontSize: 64.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -958,10 +1011,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500.06494, y: -55.326324}
-  m_SizeDelta: {x: 733.7278, y: 512.7324}
+  m_AnchorMin: {x: 0.62, y: 0.24174073}
+  m_AnchorMax: {x: 0.9062293, y: 0.7665555}
+  m_AnchoredPosition: {x: -0.10369873, y: 0.20629883}
+  m_SizeDelta: {x: 0.20739996, y: 0.47450256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295041824
 MonoBehaviour:
@@ -983,9 +1036,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ap\xF3s derrotar o Orc, voc\xEA encontra uma passagem secreta que leva
-    a um desfiladeiro.\n\nL\xE1, voc\xEA encontra esp\xEDritos de Guerreiros mortos-vivos
-    que vagam, presos em uma maldi\xE7\xE3o."
+  m_text: "O corpo ainda pulsa com a adrenalina do combate contra Vorazin. A luz
+    que penetra timidamente pelas copas retorcidas da Floresta das Sombras parece
+    mais viva agora \u2014 como se at\xE9 a natureza temesse o orc tombado.\nAo abrir
+    caminho por entre ra\xEDzes e n\xE9voa, seus olhos finalmente alcan\xE7am o Desfiladeiro
+    das Almas. Rochas imensas se erguem como sentinelas antigas, e l\xE1 embaixo,
+    entre as fendas e a poeira, silhuetas se movem.\nVoc\xEA respira fundo. O descanso
+    ainda n\xE3o veio. A pr\xF3xima batalha j\xE1 come\xE7ou no olhar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1012,21 +1069,21 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 32
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 28
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 28
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0
@@ -1074,7 +1131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1300629035}
   - component: {fileID: 1300629034}
-  - component: {fileID: 1300629033}
   m_Layer: 0
   m_Name: EscreveTexto
   m_TagString: Untagged
@@ -1082,103 +1138,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1300629033
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300629032}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1300629034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,11 +1151,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Ap\xF3s derrotar o Orc, voc\xEA encontra uma passagem secreta
-    que leva a um desfiladeiro.\n\nL\xE1, voc\xEA encontra esp\xEDritos de Guerreiros
-    mortos-vivos que vagam, presos em uma maldi\xE7\xE3o."
+  mensagemCompleta: "O corpo ainda pulsa com a adrenalina do combate contra Vorazin.
+    A luz que penetra timidamente pelas copas retorcidas da Floresta das Sombras
+    parece mais viva agora \u2014 como se at\xE9 a natureza temesse o orc tombado.\nAo
+    abrir caminho por entre ra\xEDzes e n\xE9voa, seus olhos finalmente alcan\xE7am
+    o Desfiladeiro das Almas. Rochas imensas se erguem como sentinelas antigas, e
+    l\xE1 embaixo, entre as fendas e a poeira, silhuetas se movem.\nVoc\xEA respira
+    fundo. O descanso ainda n\xE3o veio. A pr\xF3xima batalha j\xE1 come\xE7ou no
+    olhar."
   velocidadeDigitacao: 0.05
-  som: {fileID: 8300000, guid: 201471410c7edc446a5f66b83ad572ba, type: 3}
+  som: {fileID: 0}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

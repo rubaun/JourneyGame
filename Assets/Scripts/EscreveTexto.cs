@@ -16,10 +16,7 @@ public class EscreveTexto : MonoBehaviour
     {
         tocadorSom = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>(); // Obtém o componente AudioSource
         texto.text = ""; // Limpa o texto atual
-        if(som != null)
-        {
-            StartCoroutine(DigitarTexto());
-        }        
+        StartCoroutine(DigitarTexto());     
     }
 
     private IEnumerator DigitarTexto() // Coroutina para digitar o texto
@@ -27,7 +24,10 @@ public class EscreveTexto : MonoBehaviour
         foreach (char letra in mensagemCompleta) // Itera sobre cada letra da mensagem
         {
             texto.text += letra;
-            tocadorSom.PlaySound(som); // Toca o som de digitação
+            if (som != null)
+            {
+                tocadorSom.PlaySound(som);
+            }
             yield return new WaitForSeconds(velocidadeDigitacao); // Espera antes de escrever a próxima letra
         }
     }

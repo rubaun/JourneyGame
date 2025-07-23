@@ -18,6 +18,12 @@ public class Menu : MonoBehaviour
     private void Awake()
     {
         playerPrefsGame = GameObject.Find("PlayerPrefsGame").GetComponent<PlayerPrefsGame>();
+        
+        if (SceneManager.GetActiveScene().name == "Vitoria")
+        {
+            nomeCenaProxima = PlayerPrefs.GetString("NomeCenaProxima");
+            Debug.Log("Próxima Cena: " + nomeCenaProxima);
+        }
     }
 
     void Start()
@@ -38,7 +44,6 @@ public class Menu : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name == "Vitoria")
         {
-            nomeCenaProxima = PlayerPrefs.GetString("NomeCenaProxima");
             GameObject.Find("BotaoMudarFase").GetComponent<Button>().onClick.AddListener(() => CarregarCenaJogo(nomeCenaProxima));
         }   
     }

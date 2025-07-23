@@ -394,6 +394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nomeCena: 
+  nivelAtual: 0
+  nomeCenaAnterior: 
+  nivelAnterior: 0
+  cenaBatalha: 0
+  nomeCenaProxima: 
 --- !u!4 &257144325
 Transform:
   m_ObjectHideFlags: 0
@@ -828,7 +834,7 @@ MonoBehaviour:
     quanto proteger. Ele guarda este trecho da floresta como um c\xE3o raivoso guarda
     sua \xFAltima refei\xE7\xE3o."
   velocidadeDigitacao: 0.05
-  som: {fileID: 8300000, guid: 201471410c7edc446a5f66b83ad572ba, type: 3}
+  som: {fileID: 0}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0
