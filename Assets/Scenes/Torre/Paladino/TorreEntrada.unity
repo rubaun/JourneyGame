@@ -267,8 +267,6 @@ GameObject:
   - component: {fileID: 325857262}
   - component: {fileID: 325857261}
   - component: {fileID: 325857260}
-  - component: {fileID: 325857259}
-  - component: {fileID: 325857258}
   m_Layer: 5
   m_Name: BotaoLutar
   m_TagString: Untagged
@@ -291,121 +289,11 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 732, y: -433}
-  m_SizeDelta: {x: 219.5099, y: 83.8422}
+  m_AnchorMin: {x: 0.8116252, y: 0.087000005}
+  m_AnchorMax: {x: 0.9281251, y: 0.16700001}
+  m_AnchoredPosition: {x: -1.75, y: 0.7999878}
+  m_SizeDelta: {x: -2.4901123, y: -2.1578064}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!82 &325857258
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325857256}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &325857259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325857256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  som: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
 --- !u!114 &325857260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,9 +338,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 325857259}
+      - m_Target: {fileID: 1617250886}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: CarregarCena
+        m_MethodName: CarregarCenaJogo
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -482,7 +370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9215191660496094313, guid: dd3818e3cfac0544e8d24ecf4a59d6f3, type: 3}
+  m_Sprite: {fileID: -8695538805958314294, guid: 530acc54d7c287a4a87aceaaf0c7e40a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -648,8 +536,6 @@ GameObject:
   - component: {fileID: 661983200}
   - component: {fileID: 661983199}
   - component: {fileID: 661983198}
-  - component: {fileID: 661983197}
-  - component: {fileID: 661983196}
   m_Layer: 5
   m_Name: BotaoFugir
   m_TagString: Untagged
@@ -672,121 +558,11 @@ RectTransform:
   - {fileID: 412331642}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: -433}
-  m_SizeDelta: {x: 219.5099, y: 83.8422}
+  m_AnchorMin: {x: 0.59220827, y: 0.087000005}
+  m_AnchorMax: {x: 0.7074792, y: 0.16700001}
+  m_AnchoredPosition: {x: -0.070007324, y: -0.2000122}
+  m_SizeDelta: {x: -2.490097, y: -2.1578064}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!82 &661983196
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661983193}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &661983197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661983193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  som: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
 --- !u!114 &661983198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,10 +607,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 661983197}
+      - m_Target: {fileID: 1617250886}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: CarregarCena
-        m_Mode: 5
+        m_MethodName: CarregarCenaSorte
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -863,7 +639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9215191660496094313, guid: dd3818e3cfac0544e8d24ecf4a59d6f3, type: 3}
+  m_Sprite: {fileID: -8695538805958314294, guid: 530acc54d7c287a4a87aceaaf0c7e40a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -975,6 +751,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1144417727}
   - {fileID: 1295041823}
   - {fileID: 1214815202}
   - {fileID: 325857257}
@@ -986,7 +763,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &764790781
+--- !u!1 &1144417726
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -994,127 +771,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 764790783}
-  - component: {fileID: 764790782}
-  m_Layer: 0
-  m_Name: Audio Source
+  - component: {fileID: 1144417727}
+  - component: {fileID: 1144417729}
+  - component: {fileID: 1144417728}
+  m_Layer: 5
+  m_Name: FundoTexto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &764790782
-AudioSource:
+--- !u!224 &1144417727
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764790781}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
-  m_Resource: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &764790783
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764790781}
-  serializedVersion: 2
+  m_GameObject: {fileID: 1144417726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1211.7528, y: 452.8727, z: 4.562768}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5416874, y: 0.01914815}
+  m_AnchorMax: {x: 0.9781253, y: 0.97911114}
+  m_AnchoredPosition: {x: 1.0599976, y: 0.99993896}
+  m_SizeDelta: {x: 3.960022, y: -1.2989502}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1144417728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144417726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8695019518180747640, guid: 3333e86aeb0583241af23fe9bf37ec43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1144417729
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144417726}
+  m_CullTransparentMesh: 1
 --- !u!1 &1214815201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,10 +870,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500.06006, y: 355}
-  m_SizeDelta: {x: 841.9624, y: 293.2134}
+  m_AnchorMin: {x: 0.5845209, y: 0.7961482}
+  m_AnchorMax: {x: 0.9364792, y: 0.9157778}
+  m_AnchoredPosition: {x: 0.5799866, y: 0.5}
+  m_SizeDelta: {x: -0.6694946, y: -0.8825073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214815203
 MonoBehaviour:
@@ -1174,15 +897,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: A Entrada da Torre
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1fea70f1b2bc8b64180e4cf6b4b726aa, type: 2}
-  m_sharedMaterial: {fileID: 7876251607848186625, guid: 1fea70f1b2bc8b64180e4cf6b4b726aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bb78ce5b137c2f44494cf4486f1839a7, type: 2}
+  m_sharedMaterial: {fileID: -6287048353374691813, guid: bb78ce5b137c2f44494cf4486f1839a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294901918
-  m_fontColor: {r: 0.62068987, g: 0, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1251,6 +974,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214815201}
   m_CullTransparentMesh: 1
+--- !u!1 &1224319725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224319727}
+  - component: {fileID: 1224319726}
+  m_Layer: 0
+  m_Name: PlayerPrefsGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1224319726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224319725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeCena: 
+  nivelAtual: 0
+  nomeCenaAnterior: 
+  nivelAnterior: 0
+  cenaBatalha: 0
+  nomeCenaProxima: 
+--- !u!4 &1224319727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224319725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1299.4524, y: 552.9584, z: 5.1524506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295041822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,10 +1056,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500.06494, y: -55.326324}
-  m_SizeDelta: {x: 733.7278, y: 512.7324}
+  m_AnchorMin: {x: 0.59220827, y: 0.17922223}
+  m_AnchorMax: {x: 0.9255209, y: 0.80655557}
+  m_AnchoredPosition: {x: 0.566803, y: 0.48031616}
+  m_SizeDelta: {x: -1.1335, y: -1.6353989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295041824
 MonoBehaviour:
@@ -1308,12 +1081,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ao se aproximar da torre \xE9 poss\xEDvel ver a presen\xE7a inebriante
-    de uma magia espectral. Cada passo mais pr\xF3ximo voc\xEA sente a press\xE3o
-    e o arrepio tenebroso ne uma presen\xE7a terr\xEDvel.\n\nNesse momento voc\xEA
-    pode decidir se segue em frente ao perigo, ou se tenta procurar uma forma de
-    entrar na masmorra. Lembre-se que h\xE1 uma chance do mago terr\xEDvel sentir
-    a sua presen\xE7a."
+  m_text: "Diante da entrada, envolto por correntes de energia arcana corro\xEDda,
+    est\xE1 o Guardi\xE3o da Sombra \u2014 um mago morto-vivo, de olhos ocos que
+    brilham em tons viol\xE1ceos. Sua t\xFAnica em farrapos parece flutuar sem vento,
+    e sua presen\xE7a distorce o ch\xE3o ao redor. H\xE1 s\xE9culos, ele foi selado
+    ali para impedir que qualquer alma profanasse os port\xF5es da torre.\nEste \xE9
+    o momento da escolha:\nVoc\xEA enfrentar\xE1 o mago terr\xEDvel em combate direto,
+    desafiando seu dom\xEDnio necrom\xE2ntico?\nOu tentar\xE1 evitar o confronto,
+    sondando os arredores em busca de uma entrada alternativa pela masmorra subterr\xE2nea,
+    torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?\nLembre-se: sua
+    classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o o desfecho."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1340,21 +1117,21 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 28
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 28
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0
@@ -1402,7 +1179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1300629035}
   - component: {fileID: 1300629034}
-  - component: {fileID: 1300629033}
   m_Layer: 0
   m_Name: EscreveTexto
   m_TagString: Untagged
@@ -1410,103 +1186,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1300629033
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300629032}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1300629034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,14 +1199,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Ao se aproximar da torre \xE9 poss\xEDvel ver a presen\xE7a
-    inebriante de uma magia espectral. Cada passo mais pr\xF3ximo voc\xEA sente a
-    press\xE3o e o arrepio tenebroso ne uma presen\xE7a terr\xEDvel.\n\nNesse momento
-    voc\xEA pode decidir se segue em frente ao perigo, ou se tenta procurar uma forma
-    de entrar na masmorra. Lembre-se que h\xE1 uma chance do mago terr\xEDvel sentir
-    a sua presen\xE7a."
+  mensagemCompleta: "Diante da entrada, envolto por correntes de energia arcana corro\xEDda,
+    est\xE1 o Guardi\xE3o da Sombra \u2014 um mago morto-vivo, de olhos ocos que
+    brilham em tons viol\xE1ceos. Sua t\xFAnica em farrapos parece flutuar sem vento,
+    e sua presen\xE7a distorce o ch\xE3o ao redor. H\xE1 s\xE9culos, ele foi selado
+    ali para impedir que qualquer alma profanasse os port\xF5es da torre.\nEste \xE9
+    o momento da escolha:\nVoc\xEA enfrentar\xE1 o mago terr\xEDvel em combate direto,
+    desafiando seu dom\xEDnio necrom\xE2ntico?\nOu tentar\xE1 evitar o confronto,
+    sondando os arredores em busca de uma entrada alternativa pela masmorra subterr\xE2nea,
+    torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?\nLembre-se: sua
+    classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o o desfecho."
   velocidadeDigitacao: 0.05
-  som: {fileID: 8300000, guid: 201471410c7edc446a5f66b83ad572ba, type: 3}
+  som: {fileID: 0}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0
@@ -1607,7 +1290,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 8229714163926742126, guid: 2445822d52e13bd4f8d583f9a181c0a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 16, y: 9.21}
@@ -1790,6 +1473,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1617250885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617250887}
+  - component: {fileID: 1617250886}
+  m_Layer: 0
+  m_Name: Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1617250886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617250885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  somBackgroundMenu: {fileID: 8300000, guid: 5d407d7474aaa814bb4a895d68c0e946, type: 3}
+  somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  nomeCenaSorte: TorreSorte
+  nomeCenaAzar: TorreLuta
+--- !u!4 &1617250887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617250885}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1299.4524, y: 552.9584, z: 5.1524506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718367359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,13 +1600,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1822344347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822344349}
+  - component: {fileID: 1822344348}
+  m_Layer: 0
+  m_Name: Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1822344348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822344347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02366b79ab7abf2448f1b0bbb24ea901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1822344349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822344347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1299.4524, y: 552.9584, z: 5.1524506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1461136013}
-  - {fileID: 764790783}
   - {fileID: 693381498}
   - {fileID: 1718367362}
   - {fileID: 1300629035}
   - {fileID: 1356804899}
+  - {fileID: 1617250887}
+  - {fileID: 1224319727}
+  - {fileID: 1822344349}

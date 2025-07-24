@@ -1,4 +1,5 @@
 using System.Collections;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +9,9 @@ public class Menu : MonoBehaviour
     [SerializeField] private static float tempo = 0.5f;
     [SerializeField] private AudioClip somBackgroundMenu;
     [SerializeField] private AudioClip somBotao;
+    [Header("Cenas de Sorte e Azar")]
+    [SerializeField] private string nomeCenaSorte = "CenaSorte";
+    [SerializeField] private string nomeCenaAzar = "CenaAzar";
     private GameObject painelConfiguracao;
     private bool paused = false;
     private SoundPlayer soundPlayer;
@@ -53,6 +57,11 @@ public class Menu : MonoBehaviour
         StartCoroutine(CarregarCena(nomeCena));
     }
 
+    public void CarregarCenaSorte()
+    {
+        StartCoroutine(CarregarCenaComSorte(nomeCenaSorte, nomeCenaAzar));
+    }
+
     IEnumerator CarregarCena(string nomeCena)
     {
         if (soundPlayer != null)
@@ -61,6 +70,27 @@ public class Menu : MonoBehaviour
         }
         yield return tempoDeEspera;
         SceneManager.LoadScene(nomeCena);
+    }
+
+    IEnumerator CarregarCenaComSorte(string nomeCenaSorte, string nomeCenaAzar)
+    {
+        int sorte = Random.Range(1, 2);
+
+        if (soundPlayer != null)
+        {
+            soundPlayer.PlaySound(somBotao);
+        }
+
+        yield return tempoDeEspera;
+
+        if (sorte == 1)
+        {
+            SceneManager.LoadScene(nomeCenaSorte);
+        }
+        else
+        {
+            SceneManager.LoadScene(nomeCenaAzar);
+        }    
     }
 
     public void PauseGame()

@@ -72,13 +72,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Desfiladeiro/Paladino/DesfiladeiroBatalha.unity
     guid: f5a59a338617eb444b9dd248b88e1035
   - enabled: 1
-    path: Assets/Scenes/Torre/Torre.unity
+    path: Assets/Scenes/Torre/Paladino/Torre.unity
     guid: 8a31306c949b40a468df803de1ac1c0b
   - enabled: 1
-    path: Assets/Scenes/Torre/TorreEntrada.unity
+    path: Assets/Scenes/Torre/Paladino/TorreEntrada.unity
     guid: a2ed787142cfdf841ba0204372e6b460
   - enabled: 1
-    path: Assets/Scenes/Torre/TorreLuta.unity
+    path: Assets/Scenes/Torre/Paladino/TorreLuta.unity
     guid: 6b66fc8cd1929204ba7bbccd2bf24c91
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
