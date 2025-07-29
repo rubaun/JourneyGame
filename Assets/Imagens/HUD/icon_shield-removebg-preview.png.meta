@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_shield-removebg-preview_0: -511213831139532322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

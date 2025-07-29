@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Paladino-walk_0: -5726611396155108706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
