@@ -63,6 +63,7 @@ public class DiretorBatalha : MonoBehaviour
         }
         else if (turno == "Inimigo" && verificadorDeTurno && inimigo.VerificaVida())
         {
+            StopCoroutine(ContadorRoundPlayer());
             StartCoroutine(AtaqueInimigo());
         }
 
@@ -85,12 +86,14 @@ public class DiretorBatalha : MonoBehaviour
     }
     public void AtaquePlayer()
     {
+        StopContador();
         inimigo.LevarDano(player.Ataque());
         StartCoroutine(AtaqueP());
     }
 
     public void AtaqueEspecial()
     {
+        StopContador();
         inimigo.LevarDano(player.Especial());
         StartCoroutine(AtaqueP());
     }
@@ -117,10 +120,15 @@ public class DiretorBatalha : MonoBehaviour
                 contador--;
                 indicadorTempo.text = contador.ToString();
             }
-        
             informativo.text = "Tempo esgotado!";
             StartCoroutine(AtaqueP());
         }
+    }
+
+    private void StopContador()
+    {
+        StopCoroutine(ContadorRoundPlayer());
+        indicadorTempo.text = "20";
     }
 
     private IEnumerator ExibeTexto(string texto)
@@ -132,6 +140,7 @@ public class DiretorBatalha : MonoBehaviour
 
     private IEnumerator AtaqueInimigo()
     {
+        StopCoroutine(ContadorRoundPlayer());
         verificadorDeTurno = false;
 
         if (turno == "Inimigo")
