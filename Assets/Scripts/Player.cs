@@ -186,7 +186,6 @@ public class Player : MonoBehaviour
 
         if (estahVivo)
         {
-            Debug.Log("");
             Debug.Log($"{nomePersonagem}, vida: {vida}");
         }
         else
@@ -296,12 +295,6 @@ public class Player : MonoBehaviour
         ParticulaSangrar();
         vida -= danoFinal;
         DefineVida();
-    }
-
-    IEnumerator timerSomVitoria()
-    {
-        yield return new WaitForSeconds(1.5f);
-        audioSource.PlaySound(somVitoria);
     }
 
     private void CameraTreme(float magnitude)

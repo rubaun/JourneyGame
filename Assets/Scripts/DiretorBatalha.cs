@@ -20,6 +20,8 @@ public class DiretorBatalha : MonoBehaviour
     [SerializeField] Button botaoAtaque;
     string turno = "Player";
     bool verificadorDeTurno = true;
+    bool verificadorDoContador = true;
+    Coroutine contadorCoroutine;
     int contador;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -39,16 +41,16 @@ public class DiretorBatalha : MonoBehaviour
         indicadorTempo.text = tempoRoundPlayer.ToString();
         botaoEspecial.interactable = false;
         DefinirCorBotaoDesabilitado();
+        contadorCoroutine = StartCoroutine(ContadorRoundPlayer());
     }
 
     void Update()
     {
         AtualizaDadosTela();
 
-        if (turno == "Player" && verificadorDeTurno && player.VerificaVida())
+        if(turno == "Player" && verificadorDeTurno && player.VerificaVida())
         {
             botaoAtaque.interactable = true;
-            StartCoroutine(ContadorRoundPlayer());
 
             if (player.VerificaEspecial())
             {
@@ -63,7 +65,6 @@ public class DiretorBatalha : MonoBehaviour
         }
         else if (turno == "Inimigo" && verificadorDeTurno && inimigo.VerificaVida())
         {
-            StopCoroutine(ContadorRoundPlayer());
             StartCoroutine(AtaqueInimigo());
         }
 
@@ -86,14 +87,12 @@ public class DiretorBatalha : MonoBehaviour
     }
     public void AtaquePlayer()
     {
-        StopContador();
         inimigo.LevarDano(player.Ataque());
         StartCoroutine(AtaqueP());
     }
 
     public void AtaqueEspecial()
     {
-        StopContador();
         inimigo.LevarDano(player.Especial());
         StartCoroutine(AtaqueP());
     }
@@ -111,36 +110,49 @@ public class DiretorBatalha : MonoBehaviour
 
     private IEnumerator ContadorRoundPlayer()
     {
+        Debug.Log("Contador Iniciado");
+
         contador = tempoRoundPlayer;
-        if (turno == "Player")
+
+        if (turno == "Player" && verificadorDeTurno)
         {
-            while (contador > 0)
+            while (verificadorDoContador && contador > 0)
             {
                 yield return new WaitForSeconds(1f);
                 contador--;
                 indicadorTempo.text = contador.ToString();
+                Debug.Log($"Contador: {contador}");
             }
-            informativo.text = "Tempo esgotado!";
-            StartCoroutine(AtaqueP());
+
+            if (contador <= 0)
+            {
+                informativo.text = "Tempo esgotado!";
+                StartCoroutine(AtaqueP());
+            }
         }
     }
 
     private void StopContador()
     {
-        StopCoroutine(ContadorRoundPlayer());
+        if (contadorCoroutine != null)
+        {
+            StopCoroutine(contadorCoroutine);
+            contadorCoroutine = null;
+        }
+        verificadorDoContador = false;
         indicadorTempo.text = "20";
     }
 
     private IEnumerator ExibeTexto(string texto)
     {
         informativo.text += texto + "\n";
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         informativo.text = "";
     }
 
     private IEnumerator AtaqueInimigo()
     {
-        StopCoroutine(ContadorRoundPlayer());
+        StopContador();
         verificadorDeTurno = false;
 
         if (turno == "Inimigo")
@@ -148,14 +160,17 @@ public class DiretorBatalha : MonoBehaviour
             botaoAtaque.interactable = false;
             botaoEspecial.interactable = false;
             player.LevarDano(inimigo.Ataque());
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
+            verificadorDoContador = true;
             verificadorDeTurno = true;
             turno = "Player";
+            contadorCoroutine = StartCoroutine(ContadorRoundPlayer());
         }
     }
 
     private IEnumerator AtaqueP()
     {
+        StopContador();
         verificadorDeTurno = false;
         botaoAtaque.interactable = false;
         botaoEspecial.interactable = false;
@@ -163,9 +178,8 @@ public class DiretorBatalha : MonoBehaviour
 
         if (turno == "Player")
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             verificadorDeTurno = true;
-            indicadorTempo.text = "20";
             turno = "Inimigo";
         }
     }
@@ -185,21 +199,16 @@ public class DiretorBatalha : MonoBehaviour
 
     IEnumerator TelaVitoria()
     {
-        //StopSound();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomVitoria();
         SceneManager.LoadScene("Vitoria");
-        //yield return new WaitForSeconds(1.0f);
-        //textoTextoVitoria.SetActive(true);
     }
 
     IEnumerator TelaMorte()
     {
-        //StopSound();
         yield return new WaitForSeconds(1.0f);
         player.PlaySomMorte();
         SceneManager.LoadScene("Derrota");
-        //textoTextoDerrota.SetActive(true);
     }
 
     
