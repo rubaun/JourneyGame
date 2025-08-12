@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0be39e6322ca6914798fbfbf0034a09f
+guid: d6a4cfad5515c104a82b16969c9dfa84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -176401947592947516
-    second: floresta_0
+      213: 7675427434219014071
+    second: HallDeEntradaTorre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floresta_0
+      name: HallDeEntradaTorre_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1600
-        height: 921
+        width: 1536
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c809000d5b4d8df0800000000000000
-      internalID: -176401947592947516
+      spriteID: 7b789e3d598948a60800000000000000
+      internalID: 7675427434219014071
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      floresta_0: -176401947592947516
+      HallDeEntradaTorre_0: 7675427434219014071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

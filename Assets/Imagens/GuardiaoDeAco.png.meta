@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 0be39e6322ca6914798fbfbf0034a09f
+guid: cd83fda092a3f794aa7112aa6c5abe95
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -176401947592947516
-    second: floresta_0
+      213: -1024492167235068446
+    second: GuardiaoDeAco_0
+  - first:
+      213: -8495721433410067909
+    second: GuardiaoDeAco_1
+  - first:
+      213: 7561847783631127352
+    second: GuardiaoDeAco_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floresta_0
+      name: GuardiaoDeAco_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1600
-        height: 921
+        y: 91
+        width: 1024
+        height: 1445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +160,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c809000d5b4d8df0800000000000000
-      internalID: -176401947592947516
+      spriteID: 2ed98c84dc548c1f0800000000000000
+      internalID: -1024492167235068446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuardiaoDeAco_1
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32abea5e52291a80800000000000000
+      internalID: -8495721433410067909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GuardiaoDeAco_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83388ecae7411f860800000000000000
+      internalID: 7561847783631127352
       vertices: []
       indices: 
       edges: []
@@ -174,7 +224,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      floresta_0: -176401947592947516
+      GuardiaoDeAco_0: -1024492167235068446
+      GuardiaoDeAco_1: -8495721433410067909
+      GuardiaoDeAco_2: 7561847783631127352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

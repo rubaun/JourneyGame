@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 5d407d7474aaa814bb4a895d68c0e946, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
-  nomeCenaSorte: TorreSorte
+  nomeCenaSorte: TorreEntradaSecreta
   nomeCenaAzar: TorreLuta
 --- !u!4 &1617250887
 Transform:

@@ -75,11 +75,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Torre/Paladino/Torre.unity
     guid: 8a31306c949b40a468df803de1ac1c0b
   - enabled: 1
-    path: Assets/Scenes/Torre/Paladino/TorreEntrada.unity
+    path: Assets/Scenes/Torre/Paladino/TorreCorredorLuta.unity
+    guid: 8b2428528e253284393b42773390298f
+  - enabled: 1
+    path: Assets/Scenes/Torre/Paladino/TorreCorredorPrisao.unity
+    guid: f98dc8af445cb4a4181fbf1c5e9ae6f2
+  - enabled: 1
+    path: Assets/Scenes/Torre/Paladino/TorreEntradaPrincipal.unity
+    guid: 0c3c9ba12d121a64e9175dc8c481cc43
+  - enabled: 1
+    path: Assets/Scenes/Torre/Paladino/TorreEntradaSecreta.unity
     guid: a2ed787142cfdf841ba0204372e6b460
   - enabled: 1
     path: Assets/Scenes/Torre/Paladino/TorreLuta.unity
     guid: 6b66fc8cd1929204ba7bbccd2bf24c91
+  - enabled: 1
+    path: Assets/Scenes/Torre/Paladino/TorreTestarSorte.unity
+    guid: fbade8d15d2770f43b664f4f7d0bbedd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

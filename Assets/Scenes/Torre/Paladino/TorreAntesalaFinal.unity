@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entrar
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -255,6 +255,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50716755}
   m_CullTransparentMesh: 1
+--- !u!1 &80741050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80741052}
+  - component: {fileID: 80741051}
+  m_Layer: 0
+  m_Name: Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &80741051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80741050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  somBackgroundMenu: {fileID: 8300000, guid: 78035701e337b2e4ca7dcb063c949cea, type: 3}
+  somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  nomeCenaSorte: CenaSorte
+  nomeCenaAzar: CenaAzar
+--- !u!4 &80741052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80741050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 883.46246, y: 358.70065, z: 3.0601318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &91797637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91797639}
+  - component: {fileID: 91797638}
+  m_Layer: 0
+  m_Name: Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &91797638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91797637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02366b79ab7abf2448f1b0bbb24ea901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &91797639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91797637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 883.46246, y: 358.70065, z: 3.0601318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325857256
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +360,7 @@ GameObject:
   - component: {fileID: 325857261}
   - component: {fileID: 325857260}
   m_Layer: 5
-  m_Name: BotaoLutar
+  m_Name: BotaoMudarFase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,10 +381,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.702, y: 0.12955557}
-  m_AnchorMax: {x: 0.8166878, y: 0.20774072}
-  m_AnchoredPosition: {x: 0.9299927, y: 0}
-  m_SizeDelta: {x: -1.4901123, y: -0.1578064}
+  m_AnchorMin: {x: 0.69100004, y: 0.0805926}
+  m_AnchorMax: {x: 0.804, y: 0.16114815}
+  m_AnchoredPosition: {x: 0.7609863, y: -0.5}
+  m_SizeDelta: {x: 2.5098877, y: -3.1578064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -338,7 +430,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617250886}
+      - m_Target: {fileID: 80741051}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: CarregarCenaJogo
         m_Mode: 5
@@ -347,7 +439,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: TorreCorredorEntradaSecreta
+          m_StringArgument: TorreEntrada
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &325857261
@@ -482,7 +574,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1144417727}
+  - {fileID: 1097347658}
   - {fileID: 1295041823}
   - {fileID: 1214815202}
   - {fileID: 325857257}
@@ -493,7 +585,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1144417726
+--- !u!1 &1097347657
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,23 +593,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1144417727}
-  - component: {fileID: 1144417729}
-  - component: {fileID: 1144417728}
+  - component: {fileID: 1097347658}
+  - component: {fileID: 1097347660}
+  - component: {fileID: 1097347659}
   m_Layer: 5
-  m_Name: FundoTexto
+  m_Name: TextoFundo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1144417727
+--- !u!224 &1097347658
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144417726}
+  m_GameObject: {fileID: 1097347657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -525,18 +617,18 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5416874, y: 0.01914815}
-  m_AnchorMax: {x: 0.9781253, y: 0.97911114}
-  m_AnchoredPosition: {x: 1.0599976, y: 0.99993896}
-  m_SizeDelta: {x: 3.960022, y: -1.2989502}
+  m_AnchorMin: {x: 0.54452085, y: 0}
+  m_AnchorMax: {x: 0.95220834, y: 1}
+  m_AnchoredPosition: {x: -1.3988953, y: 0.099975586}
+  m_SizeDelta: {x: -1.3480988, y: -0.43999863}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1144417728
+--- !u!114 &1097347659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144417726}
+  m_GameObject: {fileID: 1097347657}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -560,13 +652,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1144417729
+--- !u!222 &1097347660
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144417726}
+  m_GameObject: {fileID: 1097347657}
   m_CullTransparentMesh: 1
 --- !u!1 &1214815201
 GameObject:
@@ -600,10 +692,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5834792, y: 0.76929635}
-  m_AnchorMax: {x: 0.9364792, y: 0.88900006}
-  m_AnchoredPosition: {x: 1.3346252, y: 1}
-  m_SizeDelta: {x: -2.6694946, y: -0.8825073}
+  m_AnchorMin: {x: 0.573, y: 0.8224074}
+  m_AnchorMax: {x: 0.9234792, y: 0.9252593}
+  m_AnchoredPosition: {x: -0.598999, y: -1}
+  m_SizeDelta: {x: -1.6478996, y: -0.97859955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214815203
 MonoBehaviour:
@@ -625,7 +717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A Entrada Secreta
+  m_text: A Luta Final
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb78ce5b137c2f44494cf4486f1839a7, type: 2}
   m_sharedMaterial: {fileID: -6287048353374691813, guid: bb78ce5b137c2f44494cf4486f1839a7, type: 2}
@@ -652,7 +744,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 98.29
+  m_fontSize: 88.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -704,56 +796,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214815201}
   m_CullTransparentMesh: 1
---- !u!1 &1224319725
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1224319727}
-  - component: {fileID: 1224319726}
-  m_Layer: 0
-  m_Name: PlayerPrefsGame
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1224319726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224319725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nomeCena: 
-  nivelAtual: 0
-  nomeCenaAnterior: 
-  nivelAnterior: 0
-  cenaBatalha: 0
-  nomeCenaProxima: 
---- !u!4 &1224319727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224319725}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1299.4524, y: 552.9584, z: 5.1524506}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295041822
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,10 +828,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.59220827, y: 0.25518522}
-  m_AnchorMax: {x: 0.9255209, y: 0.7442963}
-  m_AnchoredPosition: {x: 0.566803, y: 0.23999023}
-  m_SizeDelta: {x: -1.1336, y: -3.7050018}
+  m_AnchorMin: {x: 0.5914376, y: 0.21300001}
+  m_AnchorMax: {x: 0.9054376, y: 0.8224074}
+  m_AnchoredPosition: {x: -0.7390137, y: -0.80300903}
+  m_SizeDelta: {x: -1.3530006, y: 0.58399963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295041824
 MonoBehaviour:
@@ -811,13 +853,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A sorte est\xE1 do seu lado. \nVoc\xEA consegue passar furtivamente pelo
-    Guardi\xE3o, sem que ele perceba sua presen\xE7a.\nAo rodear a torre \xE9 poss\xEDvel
-    encontrar uma passagem em meio \xE0 densa vegeta\xE7\xE3o que a esconde.\nCom
-    muito cuidado voc\xEA passa sem fazer algum som que possa atrair o Guardi\xE3o
-    ou qualquer outra criatura pr\xF3xima.\nSua preocupa\xE7\xE3o n\xE3o est\xE1
-    mais no que pode estar fora. Agora, o mais preocupante \xE9 o que pode estar
-    dentro."
+  m_text: "O ar est\xE1 pesado, como se o mundo inteiro prendesse a respira\xE7\xE3o.\nNo
+    centro do sal\xE3o, uma \xFAltima reuni\xE3o \u2014 os tr\xEAs her\xF3is, vindos
+    de caminhos diferentes, finalmente lado a lado. Paladino, Mago e Ladr\xE3o se
+    encaram, sabendo que n\xE3o h\xE1 mais volta.\nO Paladino ajusta a armadura,
+    o olhar firme, mas com um leve tremor de incerteza.\nO Mago observa as runas
+    que brilham na porta, murmurando palavras de poder, como se buscando for\xE7as
+    ocultas.\nO Ladr\xE3o afia as l\xE2minas, sorriso c\xEDnico, mas os olhos revelam
+    respeito pelo que est\xE1 por vir."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -926,16 +969,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Diante da entrada, envolto por correntes de energia arcana corro\xEDda,
-    est\xE1 o Guardi\xE3o da Sombra \u2014 um mago morto-vivo, de olhos ocos que
-    brilham em tons viol\xE1ceos. Sua t\xFAnica em farrapos parece flutuar sem vento,
-    e sua presen\xE7a distorce o ch\xE3o ao redor. H\xE1 s\xE9culos, ele foi selado
-    ali para impedir que qualquer alma profanasse os port\xF5es da torre.\nEste \xE9
-    o momento da escolha:\nVoc\xEA enfrentar\xE1 o mago terr\xEDvel em combate direto,
-    desafiando seu dom\xEDnio necrom\xE2ntico?\nOu tentar\xE1 evitar o confronto,
-    sondando os arredores em busca de uma entrada alternativa pela masmorra subterr\xE2nea,
-    torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?\nLembre-se: sua
-    classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o o desfecho."
+  mensagemCompleta: "Ao derrubar Dremilin, o mago morto-vivo, um sil\xEAncio pesado
+    toma conta do ambiente. Voc\xEA respira fundo e empurra a pesada porta que leva
+    ao cora\xE7\xE3o da Torre do Eclipse.\nO Hall de Entrada se revela \xE0 sua frente.
+    Espalhados ao longo do sal\xE3o, montes de tesouros esquecidos brilham com um
+    brilho opaco: armas antigas, armaduras forjadas com maestria, artefatos reluzentes
+    e po\xE7\xF5es que emanam um leve calor.\nAqui, no limiar da batalha final, voc\xEA
+    sente que este \xE9 o momento de fortalecer-se, de preparar sua mente e seu corpo
+    para o que est\xE1 por vir. Cada espada, cada elmo, cada frasco pode ser a diferen\xE7a
+    entre a vit\xF3ria e o esquecimento.\n\xC0 sua frente, o caminho para o Crep\xFAsculo
+    Perdido aguarda."
   velocidadeDigitacao: 0.05
   som: {fileID: 0}
 --- !u!4 &1300629035
@@ -963,7 +1006,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1356804899}
   - component: {fileID: 1356804898}
-  - component: {fileID: 1356804900}
   m_Layer: 0
   m_Name: floresta
   m_TagString: Untagged
@@ -1015,9 +1057,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7189099787804884657, guid: 55a277da1b40b9242bc637873bf8b408, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6a4cfad5515c104a82b16969c9dfa84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 16, y: 9.21}
@@ -1035,34 +1077,12 @@ Transform:
   m_GameObject: {fileID: 1356804897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0.69, z: 0}
-  m_LocalScale: {x: 1.197486, y: 1.2171078, z: 1.032009}
+  m_LocalPosition: {x: -1.15, y: 0.45, z: 0}
+  m_LocalScale: {x: 1.3465918, y: 1.368657, z: 1.16051}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1356804900
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356804897}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1733a863534e1f94ca1ecda0bc42a6a8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1461136009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1220,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1617250885
+--- !u!1 &1476455362
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1208,41 +1228,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1617250887}
-  - component: {fileID: 1617250886}
+  - component: {fileID: 1476455364}
+  - component: {fileID: 1476455363}
   m_Layer: 0
-  m_Name: Menu
+  m_Name: PlayerPrefsGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1617250886
+--- !u!114 &1476455363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617250885}
+  m_GameObject: {fileID: 1476455362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
+  m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somBackgroundMenu: {fileID: 8300000, guid: 5d407d7474aaa814bb4a895d68c0e946, type: 3}
-  somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
-  nomeCenaSorte: TorreSorte
-  nomeCenaAzar: TorreLuta
---- !u!4 &1617250887
+  nomeCena: 
+  nivelAtual: 0
+  nomeCenaAnterior: 
+  nivelAnterior: 0
+  cenaBatalha: 0
+  nomeCenaProxima: 
+--- !u!4 &1476455364
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617250885}
+  m_GameObject: {fileID: 1476455362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1299.4524, y: 552.9584, z: 5.1524506}
+  m_LocalPosition: {x: 883.46246, y: 358.70065, z: 3.0601318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1327,50 +1349,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1822344347
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1822344349}
-  - component: {fileID: 1822344348}
-  m_Layer: 0
-  m_Name: Config
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1822344348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822344347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02366b79ab7abf2448f1b0bbb24ea901, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1822344349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822344347}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1299.4524, y: 552.9584, z: 5.1524506}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1380,6 +1358,6 @@ SceneRoots:
   - {fileID: 1718367362}
   - {fileID: 1300629035}
   - {fileID: 1356804899}
-  - {fileID: 1617250887}
-  - {fileID: 1224319727}
-  - {fileID: 1822344349}
+  - {fileID: 80741052}
+  - {fileID: 91797639}
+  - {fileID: 1476455364}

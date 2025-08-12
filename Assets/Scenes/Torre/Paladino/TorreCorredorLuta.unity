@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: ataque
-      value: 60
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: camera
@@ -358,14 +358,14 @@ PrefabInstance:
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: somVitoria
       value: 
-      objectReference: {fileID: 8300000, guid: 8cee49cbb98ec2f4ba4916874f0a5965, type: 3}
+      objectReference: {fileID: 8300000, guid: c7e42f4875225984198c59db2c213fbc, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: spriteDerrota
       value: 
       objectReference: {fileID: 1793645207022803005, guid: be4efb376d4951447a2e9d44fd38adda, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: nomePersonagem
-      value: Dremilin, o mago
+      value: "Guardi\xE3o de A\xE7o"
       objectReference: {fileID: 0}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: somEspecialPronto
@@ -390,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somDano.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: abc9ee436aa07d74db023c9f25591840, type: 3}
+      objectReference: {fileID: 8300000, guid: 62d63010a90924c47b8894af54def982, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: somEspecial.Array.size
       value: 2
@@ -398,19 +398,19 @@ PrefabInstance:
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somAtaque.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: cbe52c462df30da489251ebbbd14aa59, type: 3}
+      objectReference: {fileID: 8300000, guid: f3ab728ec0a33a947ad70a00856e4aab, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somAtaque.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 58cdf6606fc984048b57ee52c1d931e2, type: 3}
+      objectReference: {fileID: 8300000, guid: afde72cece2a7314f90227892d899295, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somAtaque.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: abc9ee436aa07d74db023c9f25591840, type: 3}
+      objectReference: {fileID: 8300000, guid: c7e42f4875225984198c59db2c213fbc, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somDefesa.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: ebcde56109a8bc14e9a8dcb95df1766b, type: 3}
+      objectReference: {fileID: 8300000, guid: 1b0773ee6d32e914b961c5bf701fe267, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somDefesa.Array.data[1]'
       value: 
@@ -422,15 +422,15 @@ PrefabInstance:
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somEspecial.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8cee49cbb98ec2f4ba4916874f0a5965, type: 3}
+      objectReference: {fileID: 8300000, guid: c23e745923f76d4468741179e1d5ea3f, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somEspecial.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: ebcde56109a8bc14e9a8dcb95df1766b, type: 3}
+      objectReference: {fileID: 8300000, guid: a0acaa2e48f5b2944bd8a28e47dc809d, type: 3}
     - target: {fileID: 1808504878522799691, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'somErroAtaque.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 58cdf6606fc984048b57ee52c1d931e2, type: 3}
+      objectReference: {fileID: 8300000, guid: c7e42f4875225984198c59db2c213fbc, type: 3}
     - target: {fileID: 2211656499070822285, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -480,17 +480,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6495895572211040506, guid: 631fc42460058a846a134765df22ee7b, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495895572211040506, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: m_Size.x
-      value: 9.9
+      value: 10.24
       objectReference: {fileID: 0}
     - target: {fileID: 6495895572211040506, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: m_Size.y
-      value: 14.47
+      value: 14.42
       objectReference: {fileID: 0}
     - target: {fileID: 6495895572211040506, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5545073421772263561, guid: 8d10561b2cd0bfb4ab26c61c253f1b8f, type: 3}
+      objectReference: {fileID: 21300000, guid: cd83fda092a3f794aa7112aa6c5abe95, type: 3}
     - target: {fileID: 6495895572211040506, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -513,31 +517,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[0]'
-      value: "N\xE3o devia ter vindo!"
+      value: "Mostre-me se \xE9 digno da luz que resta."
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[1]'
-      value: "Ir\xE1 se arrepender."
+      value: "A muralha n\xE3o cede."
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[2]'
-      value: Vai morrer devagar.
+      value: "Sua l\xE2mina n\xE3o encontra brecha."
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[3]'
-      value: Como ousa!
+      value: A luz me fortalece.
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[4]'
-      value: Poder Ilimitado!
+      value: Prove-se, ou caia!
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[5]'
-      value: "Ser\xE1 meu escravo."
+      value: Que a luz te consuma!
       objectReference: {fileID: 0}
     - target: {fileID: 8770529553925282458, guid: 631fc42460058a846a134765df22ee7b, type: 3}
       propertyPath: 'falas.Array.data[6]'
-      value: "S\xF3 estou come\xE7ando."
+      value: "Golpe do Crep\xFAsculo!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -944,9 +948,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8060669440038517719, guid: 39a8f46045248fe4dbeb1d5e0514d78c, type: 3}
+  m_Sprite: {fileID: -5981042041998733020, guid: b74d63470fb73a34da1d677968478734, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 16, y: 9.21}
@@ -964,8 +968,8 @@ Transform:
   m_GameObject: {fileID: 534978506}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.1, z: 0}
-  m_LocalScale: {x: 1.2393863, y: 1.2596952, z: 1.068119}
+  m_LocalPosition: {x: -1.07, y: 3.68, z: 0}
+  m_LocalScale: {x: 1.7912302, y: 1.8205818, z: 1.5437052}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1739,7 +1743,7 @@ MonoBehaviour:
   nomeCenaAnterior: 
   nivelAnterior: 0
   cenaBatalha: 1
-  nomeCenaProxima: MenuPrincipal
+  nomeCenaProxima: TorreCorredorPrisao
 --- !u!4 &729963416
 Transform:
   m_ObjectHideFlags: 0
@@ -2282,10 +2286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somBackgroundMenu: {fileID: 8300000, guid: b2d81386dcd26d44ca727bc1da332059, type: 3}
+  somBackgroundMenu: {fileID: 8300000, guid: b3973d691c88f31418b2d701a0e5f4ad, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
-  nomeCenaSorte: CenaSorte
-  nomeCenaAzar: CenaAzar
+  nomeCenaSorte: 
+  nomeCenaAzar: 
 --- !u!4 &819107586
 Transform:
   m_ObjectHideFlags: 0
@@ -2504,11 +2508,11 @@ PrefabInstance:
       objectReference: {fileID: 136823929}
     - target: {fileID: 9213843013140468647, guid: 603621576c4ccb343adc6812a0557c1c, type: 3}
       propertyPath: vida
-      value: 140
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 9213843013140468647, guid: 603621576c4ccb343adc6812a0557c1c, type: 3}
       propertyPath: ataque
-      value: 65
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 9213843013140468647, guid: 603621576c4ccb343adc6812a0557c1c, type: 3}
       propertyPath: camera
