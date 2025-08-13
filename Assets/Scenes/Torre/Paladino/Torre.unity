@@ -439,7 +439,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: TorreEntrada
+          m_StringArgument: TorreTestarSorte
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &325857261
@@ -977,8 +977,8 @@ MonoBehaviour:
     vida. O sil\xEAncio pesa. Cada passo o leva para mais perto de um confronto inevit\xE1vel.
     \nVoc\xEA j\xE1 chegou longe demais para recuar. O eclipse est\xE1 pr\xF3ximo.
     E com ele, a verdade que esteve oculta por eras."
-  velocidadeDigitacao: 0.05
-  som: {fileID: 0}
+  velocidadeDigitacao: 0.08
+  narrativa: {fileID: 8300000, guid: 0830f0f3a507259448934e667fe193e0, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

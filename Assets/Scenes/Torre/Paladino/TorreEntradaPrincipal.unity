@@ -982,7 +982,7 @@ MonoBehaviour:
     entre a vit\xF3ria e o esquecimento.\n\xC0 sua frente, o caminho para o Crep\xFAsculo
     Perdido aguarda."
   velocidadeDigitacao: 0.05
-  som: {fileID: 0}
+  narrativa: {fileID: 8300000, guid: e9d2688115098ab4da5ff2be6553d92a, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

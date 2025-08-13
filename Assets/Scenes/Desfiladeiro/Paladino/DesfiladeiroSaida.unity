@@ -255,6 +255,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50716755}
   m_CullTransparentMesh: 1
+--- !u!1001 &234042937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2098910416869480149, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682579488511408064, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: somVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682579488511408064, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: musicaVolume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 890.9655
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 555.0498
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.4145322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
 --- !u!1 &325857256
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +332,6 @@ GameObject:
   - component: {fileID: 325857262}
   - component: {fileID: 325857261}
   - component: {fileID: 325857260}
-  - component: {fileID: 325857263}
   m_Layer: 5
   m_Name: BotaoMudarFase
   m_TagString: Untagged
@@ -389,28 +453,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325857256}
   m_CullTransparentMesh: 1
---- !u!95 &325857263
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325857256}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9040f27cdad3a2449a11893fff6e618a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519042326
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 78035701e337b2e4ca7dcb063c949cea, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  nomeCenaSorte: CenaSorte
+  nomeCenaAzar: CenaAzar
 --- !u!4 &1179866710
 Transform:
   m_ObjectHideFlags: 0
@@ -956,7 +1000,7 @@ MonoBehaviour:
     alterar o equil\xEDbrio entre luz e trevas. Seu destino agora est\xE1 selado.
     A torre o aguarda."
   velocidadeDigitacao: 0.05
-  som: {fileID: 0}
+  narrativa: {fileID: 8300000, guid: 51e849a18a1186a4a8f3704f13ada711, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0
@@ -1373,3 +1417,4 @@ SceneRoots:
   - {fileID: 2001938429}
   - {fileID: 1356804899}
   - {fileID: 1179866710}
+  - {fileID: 234042937}

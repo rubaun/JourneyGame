@@ -605,6 +605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  nomeCenaSorte: CenaSorte
+  nomeCenaAzar: CenaAzar
 --- !u!4 &898761886
 Transform:
   m_ObjectHideFlags: 0
@@ -1824,7 +1826,7 @@ MonoBehaviour:
     misteriosa feita de ra\xEDzes e n\xE9voa, se aproxima e exige que voc\xEA resolva
     um enigma.\n\n\"O que nasce da terra, mas n\xE3o a toca, e canta mesmo sem voz?\""
   velocidadeDigitacao: 0.05
-  som: {fileID: 0}
+  narrativa: {fileID: 8300000, guid: c4f9d7ce0acfeb94ab54cac3e8539638, type: 3}
 --- !u!4 &2079247950
 Transform:
   m_ObjectHideFlags: 0

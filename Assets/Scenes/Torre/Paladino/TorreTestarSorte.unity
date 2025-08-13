@@ -1209,8 +1209,8 @@ MonoBehaviour:
     sondando os arredores em busca de uma entrada alternativa pela masmorra subterr\xE2nea,
     torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?\nLembre-se: sua
     classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o o desfecho."
-  velocidadeDigitacao: 0.05
-  som: {fileID: 0}
+  velocidadeDigitacao: 0.08
+  narrativa: {fileID: 8300000, guid: 3d999a6607a60b94885f22be6434e9a4, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

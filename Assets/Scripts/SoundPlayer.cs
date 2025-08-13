@@ -5,11 +5,13 @@ using UnityEngine;
 public class SoundPlayer : MonoBehaviour
 {
     [SerializeField] private float somVolume = 0.5f;
-    [SerializeField] private float musicaVolume = 0.5f;
+    [SerializeField] private float narrativaVolume = 1.0f;
+    [SerializeField] private float musicaVolume = 0.3f;
 
     private static SoundPlayer Instance;
     private AudioSource bgMusic;
     private AudioSource soundFX;
+    private AudioSource voice;
 
     void Awake()
     {
@@ -41,11 +43,21 @@ public class SoundPlayer : MonoBehaviour
             SaveVolumes();
         }
 
+        if (PlayerPrefs.HasKey("NarrativaVolume"))
+        {
+            narrativaVolume = PlayerPrefs.GetFloat("NarrativaVolume");
+        }
+        else
+        {
+            SaveVolumes();
+        }
+
 
 
         bgMusic = GameObject.Find("BgMusic").GetComponent<AudioSource>();
         soundFX = GameObject.Find("SoundFX").GetComponent<AudioSource>();
-        
+        voice = GameObject.Find("Voice").GetComponent<AudioSource>();
+
         DontDestroyOnLoad(gameObject);
 
         SetVolumes();
@@ -67,6 +79,13 @@ public class SoundPlayer : MonoBehaviour
         soundFX.PlayOneShot(clip);
     }
 
+    public void PlayNarrativa(AudioClip clip)
+    {
+        SetVolumes();
+        voice.clip = clip;
+        voice.Play();
+    }
+
     public void SetSomVolume(float volume)
     {
         somVolume = volume;
@@ -79,6 +98,12 @@ public class SoundPlayer : MonoBehaviour
         bgMusic.volume = volume;
     }
 
+    public void SetNarrativaVolume(float volume)
+    {
+        narrativaVolume = volume;
+        voice.volume = volume;
+    }
+
     public float GetSomVolume()
     {
         return somVolume;
@@ -89,16 +114,28 @@ public class SoundPlayer : MonoBehaviour
         return musicaVolume;
     }
 
+    public float GetNarrativaVolume()
+    {
+        return narrativaVolume;
+    }
+
     private void SetVolumes()
     {
         bgMusic.volume = musicaVolume;
         soundFX.volume = somVolume;
+        voice.volume = narrativaVolume;
     }
 
     public void SaveVolumes()
     {
         PlayerPrefs.SetFloat("SomVolume", somVolume);
         PlayerPrefs.SetFloat("MusicaVolume", musicaVolume);
+        PlayerPrefs.SetFloat("NarrativaVolume", narrativaVolume);
         PlayerPrefs.Save();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        voice.Stop();
     }
 }

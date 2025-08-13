@@ -880,7 +880,7 @@ MonoBehaviour:
     ao seu destino. \nAt\xE9 agora tudo parece estar correndo bem. O que pode acontecer
     de errado?"
   velocidadeDigitacao: 0.05
-  som: {fileID: 8300000, guid: 201471410c7edc446a5f66b83ad572ba, type: 3}
+  narrativa: {fileID: 8300000, guid: 8cb1b7400a63ee049a2037d533cbb8f7, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

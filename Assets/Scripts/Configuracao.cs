@@ -5,6 +5,7 @@ public class Configuracao : MonoBehaviour
 {
     private Slider somSlider;
     private Slider musicaSlider;
+    private Slider narrativaSlider;
     private Toggle caixaMensagem;
     private GameObject caixaMensagemObj;
     private SoundPlayer soundPlayer;
@@ -13,6 +14,7 @@ public class Configuracao : MonoBehaviour
     {
         somSlider = GameObject.Find("SomVolume").GetComponent<Slider>();
         musicaSlider = GameObject.Find("MusicaVolume").GetComponent<Slider>();
+        narrativaSlider = GameObject.Find("NarrativaVolume").GetComponent<Slider>();
         soundPlayer = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
        
         if (somSlider != null)
@@ -25,6 +27,12 @@ public class Configuracao : MonoBehaviour
         {
             musicaSlider.onValueChanged.AddListener(soundPlayer.SetMusicaVolume);
             musicaSlider.value = soundPlayer.GetMusicaVolume();
+        }
+
+        if (narrativaSlider != null)
+        {
+            narrativaSlider.onValueChanged.AddListener(soundPlayer.SetNarrativaVolume);
+            narrativaSlider.value = soundPlayer.GetNarrativaVolume();
         }
 
         caixaMensagem = GameObject.Find("InformativoAtiva").GetComponent<Toggle>();

@@ -74,7 +74,7 @@ public class Menu : MonoBehaviour
 
     IEnumerator CarregarCenaComSorte(string nomeCenaSorte, string nomeCenaAzar)
     {
-        int sorte = Random.Range(1, 2);
+        int sorte = Random.Range(1, 5);
 
         if (soundPlayer != null)
         {

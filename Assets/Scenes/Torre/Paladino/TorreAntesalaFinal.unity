@@ -969,18 +969,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Ao derrubar Dremilin, o mago morto-vivo, um sil\xEAncio pesado
-    toma conta do ambiente. Voc\xEA respira fundo e empurra a pesada porta que leva
-    ao cora\xE7\xE3o da Torre do Eclipse.\nO Hall de Entrada se revela \xE0 sua frente.
-    Espalhados ao longo do sal\xE3o, montes de tesouros esquecidos brilham com um
-    brilho opaco: armas antigas, armaduras forjadas com maestria, artefatos reluzentes
-    e po\xE7\xF5es que emanam um leve calor.\nAqui, no limiar da batalha final, voc\xEA
-    sente que este \xE9 o momento de fortalecer-se, de preparar sua mente e seu corpo
-    para o que est\xE1 por vir. Cada espada, cada elmo, cada frasco pode ser a diferen\xE7a
-    entre a vit\xF3ria e o esquecimento.\n\xC0 sua frente, o caminho para o Crep\xFAsculo
-    Perdido aguarda."
+  mensagemCompleta: "O ar est\xE1 pesado, como se o mundo inteiro prendesse a respira\xE7\xE3o.\nNo
+    centro do sal\xE3o, uma \xFAltima reuni\xE3o \u2014 os tr\xEAs her\xF3is, vindos
+    de caminhos diferentes, finalmente lado a lado. Paladino, Mago e Ladr\xE3o se
+    encaram, sabendo que n\xE3o h\xE1 mais volta.\nO Paladino ajusta a armadura,
+    o olhar firme, mas com um leve tremor de incerteza.\nO Mago observa as runas
+    que brilham na porta, murmurando palavras de poder, como se buscando for\xE7as
+    ocultas.\nO Ladr\xE3o afia as l\xE2minas, sorriso c\xEDnico, mas os olhos revelam
+    respeito pelo que est\xE1 por vir."
   velocidadeDigitacao: 0.05
-  som: {fileID: 0}
+  narrativa: {fileID: 8300000, guid: 53c5186a074daa140a47a1713cc4dfb0, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0
