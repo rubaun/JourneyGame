@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TorrePrisao_0: 3933332672396884693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

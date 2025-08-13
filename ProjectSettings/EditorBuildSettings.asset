@@ -72,6 +72,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Desfiladeiro/Paladino/DesfiladeiroBatalha.unity
     guid: f5a59a338617eb444b9dd248b88e1035
   - enabled: 1
+    path: Assets/Scenes/Desfiladeiro/Paladino/DesfiladeiroSaida.unity
+    guid: 963f7c9fb48b3714fada4cc28432bded
+  - enabled: 1
     path: Assets/Scenes/Torre/Paladino/Torre.unity
     guid: 8a31306c949b40a468df803de1ac1c0b
   - enabled: 1
