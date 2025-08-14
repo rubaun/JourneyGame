@@ -1273,7 +1273,7 @@ MonoBehaviour:
     em ra\xEDzes e n\xE9voa permite que passe.\n\nAtrav\xE9s do portal voc\xEA pode
     ver um belo vale que te levar\xE1 por um caminho mais seguro e direto para a
     Torre do Eclipse."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 1390d93c61e8d7f479131f09ecfa3a02, type: 3}
 --- !u!4 &2079247950
 Transform:

@@ -981,7 +981,7 @@ MonoBehaviour:
     para o que est\xE1 por vir. Cada espada, cada elmo, cada frasco pode ser a diferen\xE7a
     entre a vit\xF3ria e o esquecimento.\n\xC0 sua frente, o caminho para o Crep\xFAsculo
     Perdido aguarda."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: e9d2688115098ab4da5ff2be6553d92a, type: 3}
 --- !u!4 &1300629035
 Transform:

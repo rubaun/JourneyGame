@@ -831,7 +831,7 @@ MonoBehaviour:
     \nVorazin veste uma armadura pesada, marcada por rachaduras e espinhos, forjada
     para ferir tanto quanto proteger. Ele guarda este trecho da floresta como um
     c\xE3o raivoso guarda sua \xFAltima refei\xE7\xE3o."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 49e652b5ae18d8b4d9d374d5cc4caed0, type: 3}
 --- !u!4 &1300629035
 Transform:

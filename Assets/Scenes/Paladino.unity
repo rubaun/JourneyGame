@@ -647,7 +647,7 @@ MonoBehaviour:
     nas ru\xEDnas de um reino esquecido, seu poder \xE9 cobi\xE7ado pela vil Ordem
     das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nErgue tua l\xE2mina,
     fortalece teu esp\xEDrito, pois sobre teus ombros recai o destino da luz."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 2d63531d07c2da640b4d304c2276c81f, type: 3}
 --- !u!1 &466993676
 GameObject:

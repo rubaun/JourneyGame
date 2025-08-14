@@ -384,7 +384,7 @@ MonoBehaviour:
     parecem sussurrar segredos antigos. Voc\xEA segue um caminho bifurcado:\n\n\xC0
     esquerda, uma trilha estreita coberta por cogumelos brilhantes.\n\n\xC0 direita,
     uma clareira iluminada por uma est\xE1tua de pedra com olhos de \xE2mbar."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 91235b45f6024fa4a9f7e192fd220939, type: 3}
 --- !u!1 &330038195
 GameObject:

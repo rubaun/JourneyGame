@@ -1825,7 +1825,7 @@ MonoBehaviour:
   mensagemCompleta: "Ao investigar a Est\xE1tua com olhos de \xE2mbar, uma figura
     misteriosa feita de ra\xEDzes e n\xE9voa, se aproxima e exige que voc\xEA resolva
     um enigma.\n\n\"O que nasce da terra, mas n\xE3o a toca, e canta mesmo sem voz?\""
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: c4f9d7ce0acfeb94ab54cac3e8539638, type: 3}
 --- !u!4 &2079247950
 Transform:

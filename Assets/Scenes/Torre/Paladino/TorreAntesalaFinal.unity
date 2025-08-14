@@ -977,7 +977,7 @@ MonoBehaviour:
     que brilham na porta, murmurando palavras de poder, como se buscando for\xE7as
     ocultas.\nO Ladr\xE3o afia as l\xE2minas, sorriso c\xEDnico, mas os olhos revelam
     respeito pelo que est\xE1 por vir."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 53c5186a074daa140a47a1713cc4dfb0, type: 3}
 --- !u!4 &1300629035
 Transform:
@@ -1218,56 +1218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1476455362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1476455364}
-  - component: {fileID: 1476455363}
-  m_Layer: 0
-  m_Name: PlayerPrefsGame
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1476455363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476455362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1c39fcf181b26418b612e1ab837dcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nomeCena: 
-  nivelAtual: 0
-  nomeCenaAnterior: 
-  nivelAnterior: 0
-  cenaBatalha: 0
-  nomeCenaProxima: 
---- !u!4 &1476455364
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476455362}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 883.46246, y: 358.70065, z: 3.0601318}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718367359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,4 +1308,3 @@ SceneRoots:
   - {fileID: 1356804899}
   - {fileID: 80741052}
   - {fileID: 91797639}
-  - {fileID: 1476455364}

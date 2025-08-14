@@ -1161,7 +1161,7 @@ MonoBehaviour:
     l\xE1 embaixo, entre as fendas e a poeira, silhuetas se movem.\nVoc\xEA respira
     fundo. O descanso ainda n\xE3o veio. A pr\xF3xima batalha j\xE1 come\xE7ou no
     olhar."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 1a5de94fcf097534191be699964cd9d3, type: 3}
 --- !u!4 &1300629035
 Transform:

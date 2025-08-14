@@ -979,7 +979,7 @@ MonoBehaviour:
     antigas.\nEsses restos, embora desgastados, podem conter a \xFAltima esperan\xE7a
     de sobreviv\xEAncia.\nVoc\xEA sente o peso do tempo e da morte ao seu redor.
     O destino do Crep\xFAsculo Perdido est\xE1 mais pr\xF3ximo do que nunca."
-  velocidadeDigitacao: 0.05
+  velocidadeDigitacao: 0.08
   narrativa: {fileID: 8300000, guid: 70fe5c937720d2544b03caab6ad8a70a, type: 3}
 --- !u!4 &1300629035
 Transform:
