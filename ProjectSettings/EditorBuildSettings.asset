@@ -78,6 +78,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Torre/Paladino/Torre.unity
     guid: 8a31306c949b40a468df803de1ac1c0b
   - enabled: 1
+    path: Assets/Scenes/Torre/Paladino/TorreAntesalaFinal.unity
+    guid: 8611762ff9f88184296698004743ead8
+  - enabled: 1
     path: Assets/Scenes/Torre/Paladino/TorreCorredorLuta.unity
     guid: 8b2428528e253284393b42773390298f
   - enabled: 1
@@ -92,6 +95,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Torre/Paladino/TorreLuta.unity
     guid: 6b66fc8cd1929204ba7bbccd2bf24c91
+  - enabled: 1
+    path: Assets/Scenes/Torre/Paladino/TorreLutaFinal.unity
+    guid: 06d60aa9205c30d408e1f5db326cd747
   - enabled: 1
     path: Assets/Scenes/Torre/Paladino/TorreTestarSorte.unity
     guid: fbade8d15d2770f43b664f4f7d0bbedd
