@@ -8,10 +8,14 @@ public class FalasPersonagem : MonoBehaviour
 {
     [SerializeField] private GameObject falaTexto;
     [SerializeField] private GameObject balaoFala;
+    [SerializeField] private float tempoFalaInicial = 5.0f;
+    [SerializeField] private float tempoFalaAtaque = 3.5f;
+    [SerializeField] private float tempoFalaDefesa = 3.5f;
     [Header("Falas do Personagem")]
     [Header("0 - Fala inicial | 1-3 - Defesa | 4-6 - Ataque")]
     [SerializeField] private List<string> falas = new List<string>();
     private Player personagem;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,11 +27,11 @@ public class FalasPersonagem : MonoBehaviour
 
     private IEnumerator FalaInicial()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(tempoFalaInicial);
         falaTexto.GetComponent<TextMeshProUGUI>().text = falas[0];
         balaoFala.GetComponent<Animator>().SetTrigger("FalaAgora");
         falaTexto.GetComponent<Animator>().SetTrigger("FalaAgora");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(tempoFalaInicial);
         balaoFala.GetComponent<Animator>().SetTrigger("CalaBoca");
         falaTexto.GetComponent<Animator>().SetTrigger("CalaBoca");
         falaTexto.GetComponent<TextMeshProUGUI>().text = "";
@@ -39,10 +43,12 @@ public class FalasPersonagem : MonoBehaviour
     }
     private IEnumerator FalaAtaque()
     {
+        yield return new WaitForSeconds(tempoFalaAtaque);
+        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
         falaTexto.GetComponent<TextMeshProUGUI>().text = falas[Random.Range(4,6)];
         balaoFala.GetComponent<Animator>().SetTrigger("FalaAgora");
         falaTexto.GetComponent<Animator>().SetTrigger("FalaAgora");
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(tempoFalaAtaque);
         balaoFala.GetComponent<Animator>().SetTrigger("CalaBoca");
         falaTexto.GetComponent<Animator>().SetTrigger("CalaBoca");
         falaTexto.GetComponent<TextMeshProUGUI>().text = "";
@@ -55,10 +61,12 @@ public class FalasPersonagem : MonoBehaviour
 
     private IEnumerator FalaDefesa()
     {
+        
+        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
         falaTexto.GetComponent<TextMeshProUGUI>().text = falas[Random.Range(1, 3)];
         balaoFala.GetComponent<Animator>().SetTrigger("FalaAgora");
         falaTexto.GetComponent<Animator>().SetTrigger("FalaAgora");
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(tempoFalaDefesa);
         balaoFala.GetComponent<Animator>().SetTrigger("CalaBoca");
         falaTexto.GetComponent<Animator>().SetTrigger("CalaBoca");
         falaTexto.GetComponent<TextMeshProUGUI>().text = "";
