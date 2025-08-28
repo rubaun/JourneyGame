@@ -9,8 +9,8 @@ public class FalasPersonagem : MonoBehaviour
     [SerializeField] private GameObject falaTexto;
     [SerializeField] private GameObject balaoFala;
     [SerializeField] private float tempoFalaInicial = 5.0f;
-    [SerializeField] private float tempoFalaAtaque = 3.5f;
-    [SerializeField] private float tempoFalaDefesa = 3.5f;
+    [SerializeField] private float tempoFalaAtaque = 3f;
+    [SerializeField] private float tempoFalaDefesa = 2f;
     [Header("Falas do Personagem")]
     [Header("0 - Fala inicial | 1-3 - Defesa | 4-6 - Ataque")]
     [SerializeField] private List<string> falas = new List<string>();

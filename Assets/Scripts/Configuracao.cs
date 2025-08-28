@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Configuracao : MonoBehaviour
@@ -7,8 +9,11 @@ public class Configuracao : MonoBehaviour
     private Slider musicaSlider;
     private Slider narrativaSlider;
     private Toggle caixaMensagem;
+    private Toggle efeitosVisuais;
+    private int efeitosVisuaisAtivo;
     private GameObject caixaMensagemObj;
     private SoundPlayer soundPlayer;
+    private Camera Camera;
 
     private void Awake()
     {
@@ -16,7 +21,8 @@ public class Configuracao : MonoBehaviour
         musicaSlider = GameObject.Find("MusicaVolume").GetComponent<Slider>();
         narrativaSlider = GameObject.Find("NarrativaVolume").GetComponent<Slider>();
         soundPlayer = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
-       
+        Camera = Camera.main;
+
         if (somSlider != null)
         {
             somSlider.onValueChanged.AddListener(soundPlayer.SetSomVolume);
@@ -35,14 +41,25 @@ public class Configuracao : MonoBehaviour
             narrativaSlider.value = soundPlayer.GetNarrativaVolume();
         }
 
-        caixaMensagem = GameObject.Find("InformativoAtiva").GetComponent<Toggle>();
-        caixaMensagemObj = GameObject.Find("FundoInformativo");
+        if(SceneManager.GetActiveScene().name != "Configuracoes")
+        {
+            caixaMensagem = GameObject.Find("InformativoAtiva").GetComponent<Toggle>();
+            caixaMensagemObj = GameObject.Find("FundoInformativo");
 
-        caixaMensagemObj.SetActive(caixaMensagem.isOn);
+            caixaMensagemObj.SetActive(caixaMensagem.isOn);
+        }
+        
 
         if (caixaMensagem != null)
         {
             caixaMensagem.onValueChanged.AddListener(delegate { AlternarCaixaMensagem(); });
+        }
+
+        efeitosVisuais = GameObject.Find("EfeitosCheck").GetComponent<Toggle>();
+
+        if (efeitosVisuais != null)
+        {
+            efeitosVisuais.onValueChanged.AddListener(delegate { AtivarDesativarEfeitos(); });
         }
     }
 
@@ -59,4 +76,27 @@ public class Configuracao : MonoBehaviour
             caixaMensagemObj.SetActive(caixaMensagem.isOn);
         }
     }
+
+    public void AtivarDesativarEfeitos()
+    {
+        if (efeitosVisuais != null)
+        {
+            var cameraData = Camera.GetComponent<UniversalAdditionalCameraData>();
+
+            if (cameraData != null && cameraData.renderPostProcessing == true)
+            {
+                cameraData.renderPostProcessing = false;
+                PlayerPrefs.SetInt("EfeitosVisuais", 0);
+                PlayerPrefs.Save();
+            }
+            else if (cameraData != null && cameraData.renderPostProcessing == false)
+            {
+                cameraData.renderPostProcessing = true;
+                PlayerPrefs.SetInt("EfeitosVisuais", 1);
+                PlayerPrefs.Save();
+            }
+        }
+    }
+
+
 }
