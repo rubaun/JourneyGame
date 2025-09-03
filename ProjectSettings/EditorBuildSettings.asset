@@ -101,6 +101,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Torre/Paladino/TorreTestarSorte.unity
     guid: fbade8d15d2770f43b664f4f7d0bbedd
+  - enabled: 1
+    path: Assets/Scenes/Final/Paladino/PaladinoFinal1.unity
+    guid: ced94bf3d9f93ab45b81baed930829ec
+  - enabled: 1
+    path: Assets/Scenes/Final/Paladino/PaladinoFinal2.unity
+    guid: c2aeb048fdf57b741bd99fc3745e765c
+  - enabled: 1
+    path: Assets/Scenes/Agradecimentos.unity
+    guid: 9c201f88c951b054ca2ed21beb6566d3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

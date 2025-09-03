@@ -1482,7 +1482,7 @@ MonoBehaviour:
   nomeCenaAnterior: 
   nivelAnterior: 0
   cenaBatalha: 1
-  nomeCenaProxima: TorreCorredorPrisao
+  nomeCenaProxima: PaladinoFinal1
 --- !u!4 &729963416
 Transform:
   m_ObjectHideFlags: 0
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5079496ce6ee43478780e9bc4deab8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somBackgroundMenu: {fileID: 8300000, guid: b3973d691c88f31418b2d701a0e5f4ad, type: 3}
+  somBackgroundMenu: {fileID: 8300000, guid: c7286fc4a629d9c4fb4b1ae96467dd56, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
   nomeCenaSorte: 
   nomeCenaAzar: 
