@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      final_paladino1_0: 7466358667526613097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

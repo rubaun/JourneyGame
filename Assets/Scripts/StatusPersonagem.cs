@@ -36,14 +36,14 @@ public class StatusPersonagem : MonoBehaviour
             descritoP = "O mago é o mestre do arcano, moldando a realidade com o poder das palavras e da vontade, onde cada feitiço é um fio de conhecimento entre o mundo visível e o invisível.";
             EncontrarCamposTexto();
         }
-        else if(SceneManager.GetActiveScene().name == "Druida")
+        else if(SceneManager.GetActiveScene().name == "Ladino")
         {
-            nomeP = "Sylvaran";
+            nomeP = "Revik";
             vidaP = 80;
             ataqueP = 50;
             defesaP = 50;
-            especialP = "Raízes do Mundo Antigo";
-            classeP = "Druida";
+            especialP = "Lâminas de Sangue";
+            classeP = "Ladino";
             descritoP = "O Druida representa a harmonia entre a natureza e a magia, canalizando o poder da terra para curar aliados, controlar o ambiente e invocar a fúria selvagem contra seus inimigos.";
             EncontrarCamposTexto();
         }

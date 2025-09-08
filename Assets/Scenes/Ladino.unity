@@ -641,19 +641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1171682797}
-  mensagemCompleta: "Tu \xE9s Edgar, mago em ascens\xE3o, outrora apenas um aprendiz
-    entre pergaminhos e velhas bibliotecas. Agora, com teu cajado coroado por um
-    cristal roseado, dominas as chamas e o gelo, for\xE7as que duelam em tuas m\xE3os.
-    Tua mente \xE9 sede de curiosidade e investiga\xE7\xE3o, e teus olhos veem al\xE9m
-    das respostas f\xE1ceis, sempre em busca da verdade oculta.\nChamado por tua
-    Escola de Magia para desvendar rumores de uma maldi\xE7\xE3o, foste lan\xE7ado
-    no cora\xE7\xE3o do eclipse, onde a noite se imp\xF4s ao dia. Ali descobriste
-    os sinais de um feiti\xE7o ancestral, cuja origem ecoa nos contos mais obscuros
-    da magia: o Crep\xFAsculo Perdido, artefato capaz de moldar a luz e a sombra.
-    Agora, teu saber e tua ousadia ser\xE3o postos \xE0 prova, pois sobre tua jornada
-    recai a chave para impedir que a escurid\xE3o consuma o mundo."
-  velocidadeDigitacao: 0.07
-  narrativa: {fileID: 8300000, guid: 3b391a487cfe2254289bbb2b0ebfd709, type: 3}
+  mensagemCompleta: "Tu \xE9s Anduino, paladino da sagrada luz, escolhido pelos des\xEDgnios
+    celestiais. \nDiante de ti se ergue um fardo glorioso: encontrar o Crep\xFAsculo
+    Perdido, artefato ancestral capaz de comandar o nascer e o p\xF4r do sol. Oculto
+    nas ru\xEDnas de um reino esquecido, seu poder \xE9 cobi\xE7ado pela vil Ordem
+    das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nErgue tua l\xE2mina,
+    fortalece teu esp\xEDrito, pois sobre teus ombros recai o destino da luz."
+  velocidadeDigitacao: 0.08
+  narrativa: {fileID: 8300000, guid: 2d63531d07c2da640b4d304c2276c81f, type: 3}
 --- !u!1 &466993676
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,63 +835,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &504150335
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2098910416869480149, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 890.9655
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 555.0498
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.4145322
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7471852065329735555, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3b6c057db63d5044fbf8acf89b72c49c, type: 3}
 --- !u!1 &505393249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,10 +1314,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1108457853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.58235425, y: 0.275}
-  m_AnchorMax: {x: 0.8855209, y: 0.86200005}
-  m_AnchoredPosition: {x: 0.81329346, y: 2.5379028}
-  m_SizeDelta: {x: 1.4494019, y: -2.6753006}
+  m_AnchorMin: {x: 0.6057709, y: 0.275}
+  m_AnchorMax: {x: 0.8634376, y: 0.83962965}
+  m_AnchoredPosition: {x: 0.66986084, y: 2.5469055}
+  m_SizeDelta: {x: -1.3398, y: -2.657299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171682797
 MonoBehaviour:
@@ -1401,17 +1339,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tu \xE9s Edgar, mago em ascens\xE3o, outrora apenas um aprendiz entre
-    pergaminhos e velhas bibliotecas. Agora, com teu cajado coroado por um cristal
-    roseado, dominas as chamas e o gelo, for\xE7as que duelam em tuas m\xE3os. Tua
-    mente \xE9 sede de curiosidade e investiga\xE7\xE3o, e teus olhos veem al\xE9m
-    das respostas f\xE1ceis, sempre em busca da verdade oculta.\nChamado por tua
-    Escola de Magia para desvendar rumores de uma maldi\xE7\xE3o, foste lan\xE7ado
-    no cora\xE7\xE3o do eclipse, onde a noite se imp\xF4s ao dia. Ali descobriste
-    os sinais de um feiti\xE7o ancestral, cuja origem ecoa nos contos mais obscuros
-    da magia: o Crep\xFAsculo Perdido, artefato capaz de moldar a luz e a sombra.
-    Agora, teu saber e tua ousadia ser\xE3o postos \xE0 prova, pois sobre tua jornada
-    recai a chave para impedir que a escurid\xE3o consuma o mundo."
+  m_text: "Tu \xE9s Anduino, paladino da sagrada luz, escolhido pelos des\xEDgnios
+    celestiais. \nDiante de ti se ergue um fardo glorioso: encontrar o Crep\xFAsculo
+    Perdido, artefato ancestral capaz de comandar o nascer e o p\xF4r do sol. Oculto
+    nas ru\xEDnas de um reino esquecido, seu poder \xE9 cobi\xE7ado pela vil Ordem
+    das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nErgue tua l\xE2mina,
+    fortalece teu esp\xEDrito, pois sobre teus ombros recai o destino da luz."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1438,8 +1371,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1450,7 +1383,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 33.6
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 63.49
   m_charWidthMaxAdj: 0
@@ -2729,7 +2662,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -3668840541284343268, guid: a14eb4c1cf4ec3a4f840760d68d5f826, type: 3}
+  m_Sprite: {fileID: -6788167969615734115, guid: 910c44073ef3004458e29383e6f90a8c, type: 3}
   m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2750,8 +2683,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.07, y: -6.44, z: 0}
-  m_LocalScale: {x: 1.42, y: 1.42, z: 1.42}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.4745982, y: 0.4745982, z: 0.4745982}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3269,4 +3202,3 @@ SceneRoots:
   - {fileID: 147049345}
   - {fileID: 1888454473}
   - {fileID: 481164295}
-  - {fileID: 504150335}
