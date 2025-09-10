@@ -43,10 +43,10 @@ public class DiretorBatalhaMagia : MonoBehaviour
         nomePlayer.text = player.GetNomePersonagem();
         nomeInimigo = GameObject.Find("NomeInimigo").GetComponent<TextMeshProUGUI>();
         nomeInimigo.text = inimigo.GetNomePersonagem();
-        manaPlayer = GameObject.Find("ManaPlayer").GetComponent<Slider>();
+        //manaPlayer = GameObject.Find("BarraManaPlayer").GetComponent<Slider>();
         manaPlayer.maxValue = player.GetMana();
         manaPlayer.value = player.GetMana();
-        manaInimigo = GameObject.Find("ManaInimigo").GetComponent<Slider>();
+        //manaInimigo = GameObject.Find("BarraManaInimigo").GetComponent<Slider>();
         manaInimigo.maxValue = inimigo.GetMana();
         manaInimigo.value = inimigo.GetMana();
         indicadorEspecial = GameObject.Find("IndicadorEspecial").GetComponentInChildren<TextMeshProUGUI>();

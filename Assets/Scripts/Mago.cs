@@ -10,7 +10,7 @@ public class Mago : MonoBehaviour
     [SerializeField] private int especial;
     [SerializeField] private int mana;
     [SerializeField] private bool estahVivo = true;
-    [SerializeField] private DiretorBatalha dB;
+    [SerializeField] private DiretorBatalhaMagia dB;
     [SerializeField] private Sprite spriteDerrota;
     [SerializeField] private bool ehHeroi;
     [SerializeField] private GameObject pDesefa;
@@ -114,7 +114,7 @@ public class Mago : MonoBehaviour
     public int AtaqueNormal()
     {
         int valorAtaque = Random.Range(0, ataque);
-        UseMana(valorAtaque / 2);
+        UseMana(valorAtaque);
 
         especial++;
 
@@ -146,11 +146,14 @@ public class Mago : MonoBehaviour
         if (valorDefesa > 0)
         {
             FalaDoPersonagem("Defesa");
+            RegeneraMana(5);
             dB.RecebeTexto($"{nomePersonagem} defende com {valorDefesa}");
         }
         else
         {
             dB.RecebeTexto($"{nomePersonagem} nao consegue defender.");
+            RegeneraMana(5);
+            especial++;
         }
 
 
@@ -220,18 +223,18 @@ public class Mago : MonoBehaviour
          
         if (danoFinal <= 0)
         {
-            RegeneraMana(danoFinal / 4);
+            RegeneraMana(danoFinal / 10);
             StartCoroutine(TocarDefesa());
         }
         else if (danoFinal <= 25)
         {
             StartCoroutine(TocarDanoNormal(danoFinal));
-            RegeneraMana(danoFinal / 2);
+            RegeneraMana(danoFinal / 4);
         }
         else
         {
             StartCoroutine(TocarDanoMaximo(danoFinal));
-            RegeneraMana(danoFinal);
+            RegeneraMana(danoFinal / 2);
         }
 
         if (estahVivo)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8837477712460919351}
   - component: {fileID: 6349463247097902642}
   - component: {fileID: 9216045888867026601}
+  - component: {fileID: 1658626436533206205}
   m_Layer: 0
   m_Name: InimigoMago
   m_TagString: Untagged
@@ -159,6 +160,28 @@ MonoBehaviour:
   - "O fogo ancestral te devorar\xE1!"
   - Sangue para a tribo, dor para ti!
   - "Esp\xEDritos da guerra, ergam-se!"
+--- !u!95 &1658626436533206205
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40496458185631365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48e358c04b912ab42b06f1c3d42d7fdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &697045118041115510
 GameObject:
   m_ObjectHideFlags: 0
