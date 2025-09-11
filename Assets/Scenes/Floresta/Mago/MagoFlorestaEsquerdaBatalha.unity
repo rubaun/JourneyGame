@@ -2534,7 +2534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 2c32b656f90f23f4294e32e44169d747, type: 2}
   m_Color: {r: 0, g: 0.60784316, b: 0.83921576, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2882,7 +2882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.26008138, b: 0.3584906, a: 1}
+  m_Color: {r: 0.003921569, g: 0.1254902, b: 0.17254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4491,7 +4491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.26008138, b: 0.3584906, a: 1}
+  m_Color: {r: 0.002402986, g: 0.12382007, b: 0.16981131, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9526,6 +9526,10 @@ PrefabInstance:
       propertyPath: mana
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6349463247097902642, guid: 2826196d2a88fc143afe6a80a873cdd3, type: 3}
+      propertyPath: spriteDerrota
+      value: 
+      objectReference: {fileID: -6434201322305422230, guid: c8a1ea41eab983e45bf4ab4c48026a6c, type: 3}
     - target: {fileID: 8455390865323343282, guid: 2826196d2a88fc143afe6a80a873cdd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.47
