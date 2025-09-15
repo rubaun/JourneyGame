@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      OrcXama_Derrotado_0: -6434201322305422230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

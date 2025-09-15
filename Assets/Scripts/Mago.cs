@@ -8,7 +8,7 @@ public class Mago : MonoBehaviour
     [SerializeField] private int ataque;
     [SerializeField] private int defesa;
     [SerializeField] private int especial;
-    [SerializeField] private int mana;
+    [SerializeField] private float mana;
     [SerializeField] private bool estahVivo = true;
     [SerializeField] private DiretorBatalhaMagia dB;
     [SerializeField] private Sprite spriteDerrota;
@@ -81,7 +81,7 @@ public class Mago : MonoBehaviour
     {
         if (especial >= 3)
         {
-            dB.RecebeTexto($"{nomePersonagem} especial pronto!");
+            dB.RecebeTexto($"Especial carregado: {nomePersonagem}");
             audioSource.PlaySound(somEspecialPronto);
             return true;
         }
@@ -96,17 +96,20 @@ public class Mago : MonoBehaviour
         return especial;
     }
 
-    public int GetMana()
+    public float GetMana()
     {
         return mana;
     }
 
     private void UseMana(int manaGasto)
     {
-        mana -= manaGasto;
+        if(mana - manaGasto > 0)
+        {
+            mana -= manaGasto;
+        }            
     }
 
-    public void RegeneraMana(int manaGanho)
+    public void RegeneraMana(float manaGanho)
     {
         mana += manaGanho;
     }
@@ -114,45 +117,60 @@ public class Mago : MonoBehaviour
     public int AtaqueNormal()
     {
         int valorAtaque = Random.Range(0, ataque);
-        UseMana(valorAtaque);
 
         especial++;
 
         AnimaAtaque();
 
-        if (valorAtaque > 0)
+        if (valorAtaque > 0 && valorAtaque <= mana)
         {
+            UseMana(valorAtaque);
             FalaDoPersonagem("Ataque");
-            dB.RecebeTexto($"{nomePersonagem} ataca com {valorAtaque}");
+            dB.RecebeTexto($"{nomePersonagem} ataca: {valorAtaque}");
             PlaySomAtaque();
         }
-        else
+        else if(valorAtaque < 0)
         {
             dB.RecebeTexto($"{nomePersonagem} erra o ataque.");
             PlaySomErroAtaque();
         }
+        else
+        {
+            dB.RecebeTexto($"{nomePersonagem}: sem mana suficiente.");
+        }
 
 
-        return valorAtaque;
+            return valorAtaque;
     }
 
     public int DefesaEsquiva()
     {
         int valorDefesa = Random.Range(0, defesa + (defesa / 2));
-        UseMana(valorDefesa / 2);
         defesaTemp = valorDefesa;
         defesaAtiva = true;
 
-        if (valorDefesa > 0)
+        UseMana(valorDefesa);
+
+        if (valorDefesa > 0 && defesaAtiva && mana >= valorDefesa)
+        {
+            StartCoroutine(RecarregarMana());
+            dB.RecebeTexto($"{nomePersonagem} carrega defesa: {valorDefesa}");
+        }
+        else if(valorDefesa > 0 && defesaAtiva && mana <= valorDefesa)
+        {
+            StartCoroutine(RecarregarMana());
+            dB.RecebeTexto($"{nomePersonagem}: Mana insuficiente!");
+        }
+        else if (valorDefesa > 0 && !defesaAtiva)
         {
             FalaDoPersonagem("Defesa");
-            RegeneraMana(5);
-            dB.RecebeTexto($"{nomePersonagem} defende com {valorDefesa}");
+            StartCoroutine(RecarregarMana());
+            dB.RecebeTexto($"{nomePersonagem} defende: {valorDefesa}");
         }
         else
         {
-            dB.RecebeTexto($"{nomePersonagem} nao consegue defender.");
-            RegeneraMana(5);
+            dB.RecebeTexto($"{nomePersonagem}: não consegue defender.");
+            StartCoroutine(RecarregarMana());
             especial++;
         }
 
@@ -184,7 +202,7 @@ public class Mago : MonoBehaviour
         {
             int valorEspecialDobrado = (valorEspecial * 2) + fatorMultiplicador;
             FalaDoPersonagem("Ataque");
-            dB.RecebeTexto($"{nomePersonagem} ataca com {valorEspecialDobrado}");
+            dB.RecebeTexto($"{nomePersonagem} MEGA ESPECIAL: {valorEspecialDobrado}");
             PlaySomEspecial();
             especial = 0;
             UseMana(100);
@@ -193,15 +211,20 @@ public class Mago : MonoBehaviour
         else if (chanceDeDobrar < 90 && especial >= 3 && mana >= valorEspecial)
         {
             FalaDoPersonagem("Ataque");
-            dB.RecebeTexto($"{nomePersonagem} ataca com {valorEspecial}");
+            dB.RecebeTexto($"{nomePersonagem} usa especial: {valorEspecial}");
             PlaySomAtaque();
             especial = 0;
             UseMana(valorEspecial);
             return valorEspecial;
         }
+        else if(especial >= 3 && mana <= valorEspecial)
+        {
+            dB.RecebeTexto("Mana insuficiente!");
+            return 0;
+        }
         else
         {
-            dB.RecebeTexto("Seu especial não esta carregado!");
+            dB.RecebeTexto("Especial não esta carregado!");
             return 0;
         }
     }
@@ -223,18 +246,18 @@ public class Mago : MonoBehaviour
          
         if (danoFinal <= 0)
         {
-            RegeneraMana(danoFinal / 10);
+            //RegeneraMana(danoFinal / 10);
             StartCoroutine(TocarDefesa());
         }
         else if (danoFinal <= 25)
         {
             StartCoroutine(TocarDanoNormal(danoFinal));
-            RegeneraMana(danoFinal / 4);
+            //RegeneraMana(danoFinal / 4);
         }
         else
         {
             StartCoroutine(TocarDanoMaximo(danoFinal));
-            RegeneraMana(danoFinal / 2);
+           //RegeneraMana(danoFinal / 2);
         }
 
         if (estahVivo)
@@ -321,7 +344,7 @@ public class Mago : MonoBehaviour
 
     IEnumerator TocarDefesa()
     {
-        dB.RecebeTexto($"{nomePersonagem} consegue se defender!");
+        dB.RecebeTexto($"{nomePersonagem}: defende!");
         anim.SetTrigger("Defesa");
         yield return new WaitForSeconds(0.5f);
         PlaySomDefesa();
@@ -330,7 +353,7 @@ public class Mago : MonoBehaviour
 
     IEnumerator TocarDanoNormal(int danoFinal)
     {
-        dB.RecebeTexto($"{nomePersonagem} leva dano de {danoFinal}.");
+        dB.RecebeTexto($"{nomePersonagem}, dano: {danoFinal}.");
         anim.SetTrigger("Dano");
         yield return new WaitForSeconds(0.5f);
         PlaySomDano();
@@ -341,7 +364,7 @@ public class Mago : MonoBehaviour
 
     IEnumerator TocarDanoMaximo(int danoFinal)
     {
-        dB.RecebeTexto($"{nomePersonagem} toma uma porrada de {danoFinal}.");
+        dB.RecebeTexto($"{nomePersonagem}, dano crítico: {danoFinal}.");
         anim.SetTrigger("Dano");
         yield return new WaitForSeconds(0.5f);
         CameraTreme(0.5f);
@@ -355,5 +378,14 @@ public class Mago : MonoBehaviour
     {
         audioSource.PlaySound(somVitoria);
         cameraC.GetComponent<CameraShake>().ShakeCamera(0.5f, magnitude);
+    }
+
+    IEnumerator RecarregarMana()
+    {
+        while (mana < 100)
+        {
+            yield return new WaitForSeconds(1f);
+            RegeneraMana(1.5f);
+        }
     }
 }

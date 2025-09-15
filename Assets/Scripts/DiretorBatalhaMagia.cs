@@ -182,11 +182,29 @@ public class DiretorBatalhaMagia : MonoBehaviour
         StopContador();
         verificadorDeTurno = false;
 
+        int escolhaInimigo = Random.Range(1, 3);
+
+        yield return new WaitForSeconds(2f);
+
         if (turno == "Inimigo")
         {
             botaoAtaque.interactable = false;
             botaoEspecial.interactable = false;
-            player.LevarDano(inimigo.AtaqueNormal());
+            botaoDefesa.interactable = false;
+
+            if (escolhaInimigo == 1 && inimigo.VerificaEspecial())
+            {
+                player.LevarDano(inimigo.Especial());
+            }
+            else if(escolhaInimigo == 2 )
+            {
+                player.LevarDano(inimigo.AtaqueNormal());
+            }
+            else
+            {
+                inimigo.DefesaEsquiva();
+            }
+            
             yield return new WaitForSeconds(3f);
             verificadorDoContador = true;
             verificadorDeTurno = true;
