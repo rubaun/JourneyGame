@@ -18,11 +18,12 @@ public class LoginPlayer : MonoBehaviour
 
         if(playerAccountClientId != null)
         {
-            playerAccountClientId.text = "your-client-id-here";
+            playerAccountClientId.text = "Offiline";
+            playerAccountClientId.color = Color.red;
         }
     }
 
-    async void OnDestroy()
+    void OnDestroy()
     {
         // Remover o handler para evitar referências remanescentes
         if (PlayerAccountService.Instance != null)
@@ -57,6 +58,8 @@ public class LoginPlayer : MonoBehaviour
         try
         {
             await AuthenticationService.Instance.SignInWithUnityAsync(PlayerAccountService.Instance.AccessToken);
+            playerAccountClientId.text = "Logado na Unity";
+            playerAccountClientId.color = Color.green;
             Debug.Log("SignIn is successful.");
         }
         catch (AuthenticationException ex)

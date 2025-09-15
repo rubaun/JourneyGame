@@ -28,10 +28,10 @@ EditorBuildSettings:
     guid: 6f4b08067bc558f47a51b32b26e5f8c8
   - enabled: 1
     path: Assets/Scenes/Mago.unity
-    guid: 562ccce491beff1448a6618e9bf9b818
+    guid: ac193375fe6215f40966448bb1d5775b
   - enabled: 1
-    path: Assets/Scenes/Druida.unity
-    guid: 958f0ae0c0869fa42ab40c5a1fe4d185
+    path: Assets/Scenes/Placar.unity
+    guid: 77f2b4cb7f20d3344ac5c1c99a899e29
   - enabled: 1
     path: Assets/Scenes/Floresta/Paladino/EscolhaFloresta.unity
     guid: 06c4ab80b81f43840ae8daa468686044
@@ -58,16 +58,16 @@ EditorBuildSettings:
     guid: 74b74937c12959e448f046fa0a546341
   - enabled: 1
     path: Assets/Scenes/Floresta/Mago/MagoEscolhaFloresta.unity
-    guid: 1decabab5707f5a4e88ce2dfde0a84f4
+    guid: 0f99a38be9f739f428974e9a528dd8fa
   - enabled: 1
     path: Assets/Scenes/Floresta/Mago/MagoFlorestaEsquerda.unity
-    guid: f698de87abfde064289957efff62d663
+    guid: a9454406ae84b76459422c3f1c40e014
   - enabled: 1
     path: Assets/Scenes/Floresta/Mago/MagoFlorestaSaidaEsquerda.unity
-    guid: 106b3124fe6809c4aae45da08eafada8
+    guid: 61ff5f8ad38b70f4da489c2c86eb84b8
   - enabled: 1
     path: Assets/Scenes/Floresta/Mago/MagoFlorestaEsquerdaBatalha.unity
-    guid: f18420264f4e21140b737a0ec3c8d62b
+    guid: d60462436b508ad41865413baf279155
   - enabled: 1
     path: Assets/Scenes/Desfiladeiro/Paladino/DesfiladeiroBatalha.unity
     guid: f5a59a338617eb444b9dd248b88e1035
