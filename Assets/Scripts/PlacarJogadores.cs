@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Services.Core;
 using Unity.Services.Leaderboards;
+using Unity.Services.Authentication;
 using UnityEngine;
 
 public class PlacarJogadores : MonoBehaviour
 {
     [SerializeField] const string LeaderboardId = "Adventures";
     [SerializeField] TextMeshProUGUI topDez;
+    [SerializeField] TextMeshProUGUI playerId;
+    [SerializeField] TextMeshProUGUI playerScore;
+    [SerializeField] TextMeshProUGUI playerRank;
     string VersionId { get; set; }
     int Offset { get; set; }
     int Limit { get; set; }
@@ -21,11 +25,12 @@ public class PlacarJogadores : MonoBehaviour
     private async void Awake()
     {
         await UnityServices.InitializeAsync();
+        GetScores();
     }
 
     public async void AddScore()
     {
-        var scoreResponse = await LeaderboardsService.Instance.AddPlayerScoreAsync(LeaderboardId, 5000);
+        var scoreResponse = await LeaderboardsService.Instance.AddPlayerScoreAsync(LeaderboardId, 12345);
         Debug.Log(JsonConvert.SerializeObject(scoreResponse));
     }
 
@@ -36,8 +41,11 @@ public class PlacarJogadores : MonoBehaviour
             await LeaderboardsService.Instance.GetScoresAsync(LeaderboardId);
         foreach(var score in scoresResponse.Results)
         {
-            topDez.text += score.Rank + " - " + score.PlayerName + "\n";
+            topDez.text += score.Rank + " - \t" + score.PlayerName + " - \t\t\t" + score.Score + "\n";
         }
+        playerId.text = "Player ID: " + scoresResponse.Results.FindIndex(s => s.PlayerId == AuthenticationService.Instance.PlayerId).ToString();
+        playerScore.text = "Player Score: " + scoresResponse.Results.Find(s => s.PlayerId == AuthenticationService.Instance.PlayerId)?.Score.ToString();
+        playerRank.text = "Player Rank: " + scoresResponse.Results.Find(s => s.PlayerId == AuthenticationService.Instance.PlayerId)?.Rank.ToString();
         Debug.Log(JsonConvert.SerializeObject(scoresResponse));
     }
 

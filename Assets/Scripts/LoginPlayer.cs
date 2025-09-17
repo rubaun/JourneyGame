@@ -18,7 +18,7 @@ public class LoginPlayer : MonoBehaviour
 
         if(playerAccountClientId != null)
         {
-            playerAccountClientId.text = "Offiline";
+            playerAccountClientId.text = "Offline";
             playerAccountClientId.color = Color.red;
         }
     }

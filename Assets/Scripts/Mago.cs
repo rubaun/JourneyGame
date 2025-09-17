@@ -25,6 +25,7 @@ public class Mago : MonoBehaviour
     [SerializeField] private AudioClip somEspecialPronto;
     [SerializeField] private GameObject cameraC;
 
+    private Magias magias;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     private SoundPlayer audioSource;
@@ -37,6 +38,7 @@ public class Mago : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundPlayer>();
+        magias = GetComponent<Magias>();
 
         //Procura a camera
         if (cameraC == null)
@@ -154,6 +156,7 @@ public class Mago : MonoBehaviour
         if (valorDefesa > 0 && defesaAtiva && mana >= valorDefesa)
         {
             StartCoroutine(RecarregarMana());
+            magias.LigarEfeitoDefesa();
             dB.RecebeTexto($"{nomePersonagem} carrega defesa: {valorDefesa}");
         }
         else if(valorDefesa > 0 && defesaAtiva && mana <= valorDefesa)
@@ -165,12 +168,14 @@ public class Mago : MonoBehaviour
         {
             FalaDoPersonagem("Defesa");
             StartCoroutine(RecarregarMana());
+            magias.DesligarEfeitoDefesa();
             dB.RecebeTexto($"{nomePersonagem} defende: {valorDefesa}");
         }
         else
         {
             dB.RecebeTexto($"{nomePersonagem}: não consegue defender.");
             StartCoroutine(RecarregarMana());
+            magias.DesligarEfeitoDefesa();
             especial++;
         }
 
