@@ -220,10 +220,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"Muito bem. Pobre mortal! Voc\xEA pode passar pelo portal. Sua percep\xE7\xE3o
-    sobre a natureza \xE9 realmente not\xE1vel.\"\n\nO ser envolto em ra\xEDzes e
-    n\xE9voa permite que passe.\n\nAtrav\xE9s do portal voc\xEA pode ver um belo
-    vale que te levar\xE1 por um caminho mais seguro e direto para a Torre do Eclipse."
+  m_text: "O Guardi\xE3o silencia por um instante. As ra\xEDzes que formam seu corpo
+    se retorcem, e uma luz verde percorre seus olhos ocos.\r\n\r\n\u201CAcertaste,
+    tecel\xE3o dos ventos\u2026 Poucos entre os mortais ainda ouvem a voz da floresta.\u201D\r\n\r\nEle
+    ergue lentamente o bra\xE7o, e o ar ao redor se dobra, revelando um portal et\xE9reo,
+    pulsando em tons de esmeralda e ouro.\r\n\r\n\u201CSegue, mago. Que tua sabedoria
+    n\xE3o se perca no eco do poder que buscas.\u201D\r\n\r\nAo atravessar o portal,
+    Edgar sente o frio da magia antiga envolver seu corpo.\r\nDo outro lado, um vale
+    banhado por brumas douradas se revela \u2014 o caminho mais seguro e direto para
+    a Torre do Eclipse."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -250,8 +255,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -339,6 +344,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -360,6 +367,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -1108,6 +1116,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1129,6 +1139,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
@@ -1188,13 +1199,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1102000542}
-  mensagemCompleta: "\"Muito bem. Pobre mortal! Voc\xEA pode passar pelo portal.
-    Sua percep\xE7\xE3o sobre a natureza \xE9 realmente not\xE1vel.\"\n\nO ser envolto
-    em ra\xEDzes e n\xE9voa permite que passe.\n\nAtrav\xE9s do portal voc\xEA pode
-    ver um belo vale que te levar\xE1 por um caminho mais seguro e direto para a
-    Torre do Eclipse."
+  mensagemCompleta: "O Guardi\xE3o silencia por um instante. As ra\xEDzes que formam
+    seu corpo se retorcem, e uma luz verde percorre seus olhos ocos.\r\n\r\n\u201CAcertaste,
+    tecel\xE3o dos ventos\u2026 Poucos entre os mortais ainda ouvem a voz da floresta.\u201D\r\n\r\nEle
+    ergue lentamente o bra\xE7o, e o ar ao redor se dobra, revelando um portal et\xE9reo,
+    pulsando em tons de esmeralda e ouro.\r\n\r\n\u201CSegue, mago. Que tua sabedoria
+    n\xE3o se perca no eco do poder que buscas.\u201D\r\n\r\nAo atravessar o portal,
+    Edgar sente o frio da magia antiga envolver seu corpo.\r\nDo outro lado, um vale
+    banhado por brumas douradas se revela \u2014 o caminho mais seguro e direto para
+    a Torre do Eclipse."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 1390d93c61e8d7f479131f09ecfa3a02, type: 3}
+  narrativa: {fileID: 8300000, guid: 04eea9694a9651447ab9a2ce3f4eacbd, type: 3}
 --- !u!4 &2079247950
 Transform:
   m_ObjectHideFlags: 0

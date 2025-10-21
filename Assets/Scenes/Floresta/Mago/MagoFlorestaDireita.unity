@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A Relva
+  m_text: A Ar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: O Rio
+  m_text: O Vento
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -713,8 +713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: 150.06372}
-  m_SizeDelta: {x: 490.22, y: 360.4273}
+  m_AnchoredPosition: {x: 454.6013, y: 3.5037}
+  m_SizeDelta: {x: 574.6469, y: 779.8114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102000542
 MonoBehaviour:
@@ -736,9 +736,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ao investigar a Est\xE1tua com olhos de \xE2mbar, uma figura misteriosa
-    feita de ra\xEDzes e n\xE9voa, se aproxima e exige que voc\xEA resolva um enigma.\n\n\"O
-    que nasce da terra, mas n\xE3o a toca, e canta mesmo sem voz?\"\n"
+  m_text: "Ao se aproximar da est\xE1tua de olhos de \xE2mbar, a luz que a envolve
+    come\xE7a a pulsar, como se reagisse \xE0 tua presen\xE7a. Das ra\xEDzes do solo,
+    uma forma humanoide emerge \u2014 um ser antigo, feito de galhos, musgo e bruma
+    cintilante.\n\nSua voz ecoa em m\xFAltiplos tons, como o sussurro do vento entre
+    as folhas:\n\n\"Viajante do arcano... nenhum passo adiante sem provar tua sabedoria.
+    Responde-me, se \xE9s digno do caminho oculto.\"\n\nO ar ao redor se torna denso
+    de magia. Ent\xE3o, pronuncia o enigma:  \u201CSou o reflexo do que cresce, mas
+    n\xE3o tenho forma. Sopro sem pulm\xF5es, dan\xE7o sem p\xE9s. Sem mim, o bosque
+    dorme. Quem sou eu?\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -765,8 +771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -854,6 +860,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -875,6 +883,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -941,6 +950,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -962,6 +973,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
@@ -1188,7 +1200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A Chuva
+  m_text: "A \xC1gua"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1742,11 +1754,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1102000542}
-  mensagemCompleta: "Ao investigar a Est\xE1tua com olhos de \xE2mbar, uma figura
-    misteriosa feita de ra\xEDzes e n\xE9voa, se aproxima e exige que voc\xEA resolva
-    um enigma.\n\n\"O que nasce da terra, mas n\xE3o a toca, e canta mesmo sem voz?\""
+  mensagemCompleta: "Ao se aproximar da est\xE1tua de olhos de \xE2mbar, a luz que
+    a envolve come\xE7a a pulsar, como se reagisse \xE0 tua presen\xE7a. Das ra\xEDzes
+    do solo, uma forma humanoide emerge \u2014 um ser antigo, feito de galhos, musgo
+    e bruma cintilante.\n\nSua voz ecoa em m\xFAltiplos tons, como o sussurro do
+    vento entre as folhas:\n\n\"Viajante do arcano... nenhum passo adiante sem provar
+    tua sabedoria. Responde-me, se \xE9s digno do caminho oculto.\"\n\nO ar ao redor
+    se torna denso de magia. Ent\xE3o, pronuncia o enigma:  \u201CSou o reflexo do
+    que cresce, mas n\xE3o tenho forma. Sopro sem pulm\xF5es, dan\xE7o sem p\xE9s.
+    Sem mim, o bosque dorme. Quem sou eu?\u201D"
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: c4f9d7ce0acfeb94ab54cac3e8539638, type: 3}
+  narrativa: {fileID: 8300000, guid: f83fbc9c6cc3dd049ad47276287e640e, type: 3}
 --- !u!4 &2079247950
 Transform:
   m_ObjectHideFlags: 0

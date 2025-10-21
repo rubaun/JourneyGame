@@ -348,7 +348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507.52, y: -337}
+  m_AnchoredPosition: {x: 509.01, y: -380}
   m_SizeDelta: {x: 219.5099, y: 83.8422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
@@ -659,8 +659,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507.51904, y: 333.2442}
-  m_SizeDelta: {x: 641.691, y: 195.5431}
+  m_AnchoredPosition: {x: 503.92346, y: 360.2107}
+  m_SizeDelta: {x: 634.4998, y: 141.6102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214815203
 MonoBehaviour:
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -719,13 +719,13 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 1.6
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -49.6
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
@@ -797,8 +797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507.52, y: 8.1926}
-  m_SizeDelta: {x: 502.2581, y: 401.187}
+  m_AnchoredPosition: {x: 503.92, y: -24.337}
+  m_SizeDelta: {x: 634.5, y: 627.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295041824
 MonoBehaviour:
@@ -820,10 +820,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ap\xF3s vencer o desafio da criatura misteriosa, voc\xEA atravessa o portal
-    por acreditar que essa passagem lhe permitir\xE1 chegar mais r\xE1pido ao seu
-    destino. \nAt\xE9 agora tudo parece estar correndo bem. O que pode acontecer
-    de errado?"
+  m_text: "Ap\xF3s decifrar o enigma e ouvir o c\xE2ntico do Guardi\xE3o se dissipar
+    entre as \xE1rvores, Edgar respira fundo e atravessa o portal, certo de que est\xE1
+    prestes a alcan\xE7ar a Torre do Eclipse.\nPor um breve instante, tudo parece
+    tranquilo \u2014 o ar \xE9 leve, e uma n\xE9voa dourada o envolve. Mas ent\xE3o,
+    algo muda. O brilho do portal vacila, como se uma for\xE7a oculta interferisse
+    em sua magia.\nO ch\xE3o sob seus p\xE9s se desfaz em fragmentos de luz, e o
+    corpo do mago \xE9 lan\xE7ado em queda livre por um vazio silencioso. Vozes distantes
+    ecoam, fragmentadas, como ecos de pensamentos que n\xE3o s\xE3o seus.\nA sensa\xE7\xE3o
+    de vertigem o consome. O que deveria ser um atalho se torna uma armadilha.\nQuando
+    a luz finalmente cessa, Edgar desperta em um lugar esquecido \u2014 envolto por
+    sombras e murm\xFArios... o Abismo dos Ecos."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -850,8 +857,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -862,9 +869,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 39.99
+  m_lineSpacing: 22
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 113.5
+  m_paragraphSpacing: 70
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 1
   m_wordWrappingRatios: 0
@@ -932,12 +939,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Ap\xF3s vencer o desafio da criatura misteriosa, voc\xEA atravessa
-    o portal por acreditar que essa passagem lhe permitir\xE1 chegar mais r\xE1pido
-    ao seu destino. \nAt\xE9 agora tudo parece estar correndo bem. O que pode acontecer
-    de errado?"
+  mensagemCompleta: "Ap\xF3s decifrar o enigma e ouvir o c\xE2ntico do Guardi\xE3o
+    se dissipar entre as \xE1rvores, Edgar respira fundo e atravessa o portal, certo
+    de que est\xE1 prestes a alcan\xE7ar a Torre do Eclipse.\nPor um breve instante,
+    tudo parece tranquilo \u2014 o ar \xE9 leve, e uma n\xE9voa dourada o envolve.
+    Mas ent\xE3o, algo muda. O brilho do portal vacila, como se uma for\xE7a oculta
+    interferisse em sua magia.\nO ch\xE3o sob seus p\xE9s se desfaz em fragmentos
+    de luz, e o corpo do mago \xE9 lan\xE7ado em queda livre por um vazio silencioso.
+    Vozes distantes ecoam, fragmentadas, como ecos de pensamentos que n\xE3o s\xE3o
+    seus.\nA sensa\xE7\xE3o de vertigem o consome. O que deveria ser um atalho se
+    torna uma armadilha.\nQuando a luz finalmente cessa, Edgar desperta em um lugar
+    esquecido \u2014 envolto por sombras e murm\xFArios... o Abismo dos Ecos."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 8cb1b7400a63ee049a2037d533cbb8f7, type: 3}
+  narrativa: {fileID: 8300000, guid: e8b38de06ba06114e9c4a88103551164, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0
@@ -990,6 +1004,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1011,6 +1027,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
