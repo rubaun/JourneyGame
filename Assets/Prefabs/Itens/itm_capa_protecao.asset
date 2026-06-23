@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aea514a5223f054fa601925e949f960, type: 3}
+  m_Name: itm_capa_protecao
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBatalhaData
+  id: itm_capa_protecao
+  nomeExibicao: "Capa de Prote\xE7\xE3o"
+  descricao: "Manto encantado que melhora resist\xEAncia a golpes."
+  icone: {fileID: -3650610188664391067, guid: 1da4b83c4138b8e428fe536055067bf0, type: 3}
+  categoria: 2
+  efeitoBatalha: 4
+  utilizavelEmBatalha: 1
+  consomeTurno: 1
+  valor: 4
+  duracaoTurnos: 2

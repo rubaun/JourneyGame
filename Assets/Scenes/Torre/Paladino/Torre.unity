@@ -286,6 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 75ce9d7bd0f1bf94bb21ddafe1af0db3, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &80741052
@@ -381,10 +383,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.70100003, y: 0.11585186}
-  m_AnchorMax: {x: 0.81900007, y: 0.19544443}
-  m_AnchoredPosition: {x: -1.0400085, y: 1}
-  m_SizeDelta: {x: -6.4901123, y: -2.1578064}
+  m_AnchorMin: {x: 0.7585395, y: 0}
+  m_AnchorMax: {x: 0.7585395, y: 0}
+  m_AnchoredPosition: {x: 0.000061035156, y: 141}
+  m_SizeDelta: {x: 446.5626, y: 107.9678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -617,10 +619,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5676042, y: 0.02377778}
-  m_AnchorMax: {x: 0.95220834, y: 0.9741852}
-  m_AnchoredPosition: {x: -0.11999512, y: 0.99993896}
-  m_SizeDelta: {x: -3.9058228, y: 1.0201416}
+  m_AnchorMin: {x: 0.7585395, y: 0}
+  m_AnchorMax: {x: 0.7585395, y: 1}
+  m_AnchoredPosition: {x: -22.809021, y: 0.2199707}
+  m_SizeDelta: {x: 1248.8, y: 0.19995117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097347659
 MonoBehaviour:
@@ -692,10 +694,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5853332, y: 0.78355557}
-  m_AnchorMax: {x: 0.934, y: 0.90300006}
-  m_AnchoredPosition: {x: 0.3999939, y: 1.5}
-  m_SizeDelta: {x: 3.5040283, y: -1.8725891}
+  m_AnchorMin: {x: 0.62626326, y: 0.78355557}
+  m_AnchorMax: {x: 0.8965132, y: 0.90300006}
+  m_AnchoredPosition: {x: -0.7420044, y: 1.2181091}
+  m_SizeDelta: {x: 4.5, y: -2.4363}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214815203
 MonoBehaviour:
@@ -752,7 +754,7 @@ MonoBehaviour:
   m_fontSizeMax: 98.29
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -885,10 +887,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.60300004, y: 0.21300001}
-  m_AnchorMax: {x: 0.91700006, y: 0.75762963}
-  m_AnchoredPosition: {x: -0.040008545, y: -0.8931885}
-  m_SizeDelta: {x: -2.7858276, y: 1.5985718}
+  m_AnchorMin: {x: 0.62626326, y: 0.21855558}
+  m_AnchorMax: {x: 0.8965132, y: 0.78355557}
+  m_AnchoredPosition: {x: -30.723022, y: -1.1401062}
+  m_SizeDelta: {x: 5.9235992, y: 10.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295041824
 MonoBehaviour:
@@ -944,8 +946,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 30.85
+  m_fontSizeBase: 30.85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -956,7 +958,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 28
+  m_lineSpacing: 88.6
   m_lineSpacingMax: 0
   m_paragraphSpacing: 28
   m_charWidthMaxAdj: 0
@@ -1089,6 +1091,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1110,10 +1114,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 95827651691446003, guid: 75ec9947e36df2a40b4d1d35891d28d5, type: 3}
+  m_Sprite: {fileID: -246919369312876876, guid: 6b1a0543b3886034f978cea5c627e1e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1133,8 +1138,8 @@ Transform:
   m_GameObject: {fileID: 1356804897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.84, y: -1.61, z: 0}
-  m_LocalScale: {x: 1.49, y: 1.5144153, z: 1.284101}
+  m_LocalPosition: {x: 2.4, y: -2.3, z: 0}
+  m_LocalScale: {x: 1.0345128, y: 1.0514643, z: 0.8915563}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}

@@ -1,8 +1,65 @@
 using System.Collections;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IPersonagemBatalha
 {
+    [SerializeField] private int vidaMax = 100;
+    [SerializeField] private TextoFlutuante textoFlutuantePrefab;
+
+    private int buffAtaque;
+    private int buffDefesa;
+    private int turnosBuffAtaque;
+    private int turnosBuffDefesa;
+
+    public string NomePersonagem => nomePersonagem;
+    public bool EstaVivo => estahVivo;
+
+    public void CurarVida(int valor)
+    {
+        if (valor <= 0 || !estahVivo) return;
+        vida = Mathf.Min(vida + valor, vidaMax);
+    }
+
+    public void RecuperarMana(float valor)
+    {
+        // Player sem mana: manter sem efeito
+    }
+
+    public void AplicarBuffAtaque(int valor, int turnos)
+    {
+        buffAtaque += valor;
+        turnosBuffAtaque = Mathf.Max(turnosBuffAtaque, turnos);
+    }
+
+    public void AplicarBuffDefesa(int valor, int turnos)
+    {
+        buffDefesa += valor;
+        turnosBuffDefesa = Mathf.Max(turnosBuffDefesa, turnos);
+    }
+
+    public void AtivarEscudoItem(int valorEscudo, int turnos)
+    {
+        AplicarBuffDefesa(valorEscudo, turnos);
+    }
+
+    public void AtualizarEfeitosPorTurno()
+    {
+        if (turnosBuffAtaque > 0 && --turnosBuffAtaque == 0) buffAtaque = 0;
+        if (turnosBuffDefesa > 0 && --turnosBuffDefesa == 0) buffDefesa = 0;
+    }
+
+    private void ExibirTextoFlutuante(string texto, Color cor)
+    {
+        if (textoFlutuantePrefab == null) return;
+        TextoFlutuante t = Instantiate(textoFlutuantePrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+        t.Exibir(texto, cor);
+    }
+
+    public void MostrarTextoAcao(string texto)
+    {
+        ExibirTextoFlutuante(texto, Color.yellow);
+    }
+
     [SerializeField] private string nomePersonagem;
     [SerializeField] private int vida;
     [SerializeField] private int ataque;
@@ -95,7 +152,8 @@ public class Player : MonoBehaviour
 
     public int Ataque()
     {
-        int valorAtaque = Random.Range(0,ataque);
+        int ataqueTotal = Mathf.Max(1, ataque + buffAtaque);
+        int valorAtaque = Random.Range(0,ataqueTotal);
 
         especial++;
 
@@ -111,6 +169,7 @@ public class Player : MonoBehaviour
         {
             dB.RecebeTexto($"{nomePersonagem} erra o ataque.");
             PlaySomErroAtaque();
+            ExibirTextoFlutuante("errou", Color.gray);
         }
 
 
@@ -119,7 +178,8 @@ public class Player : MonoBehaviour
 
     public int Defesa()
     {
-        int valorDefesa = Random.Range(0, defesa);
+        int defesaTotal = Mathf.Max(1, defesa + buffDefesa);
+        int valorDefesa = Random.Range(0, defesaTotal);
 
         if(valorDefesa > 0)
         {
@@ -272,6 +332,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         PlaySomDefesa();
         ParticulaDefesa();
+        ExibirTextoFlutuante("defesa", Color.cyan);
     }
 
     IEnumerator TocarDanoNormal(int danoFinal)
@@ -283,6 +344,7 @@ public class Player : MonoBehaviour
         ParticulaSangrar();
         vida -= danoFinal; //vida = vida - danoFinal;
         DefineVida();
+        ExibirTextoFlutuante($"-{danoFinal}", Color.red);
     }
 
     IEnumerator TocarDanoMaximo(int danoFinal)
@@ -295,11 +357,15 @@ public class Player : MonoBehaviour
         ParticulaSangrar();
         vida -= danoFinal;
         DefineVida();
+
+        ExibirTextoFlutuante($"-{danoFinal}", Color.red);
+        yield return new WaitForSeconds(0.2f); // pequeno delay entre mensagens
+        ExibirTextoFlutuante("crítico", Color.yellow);
     }
 
     private void CameraTreme(float magnitude)
     {
         audioSource.PlaySound(somVitoria);
-        cameraC.GetComponent<CameraShake>().ShakeCamera(0.5f, magnitude);
+        cameraC.GetComponent<CameraShake>().ShakeCamera(0.25f, 0.15f);
     }
 }

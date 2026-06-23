@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class DiretorBatalha : MonoBehaviour
 {
+    [Header("Bootstrap")]
+    [SerializeField] private GameObject audioManagerPrefab;
+
     [SerializeField] Player player;
     [SerializeField] Player inimigo;
     [SerializeField] int tempoRoundPlayer = 20;
@@ -18,11 +21,20 @@ public class DiretorBatalha : MonoBehaviour
     [SerializeField] TextMeshProUGUI indicadorEspecial;
     [SerializeField] Button botaoEspecial;
     [SerializeField] Button botaoAtaque;
+    [SerializeField] private Button botaoItem;
+    [SerializeField] private InventarioBatalha inventarioPlayer;
+    [SerializeField] private InventarioBatalha inventarioInimigo;
+    [SerializeField, Range(0, 100)] private int chanceContraAtaque = 20;
     string turno = "Player";
     bool verificadorDeTurno = true;
     bool verificadorDoContador = true;
     Coroutine contadorCoroutine;
     int contador;
+
+    private void Awake()
+    {
+        AudioBootstrapper.GarantirAudioManager(audioManagerPrefab);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,14 +54,18 @@ public class DiretorBatalha : MonoBehaviour
         botaoEspecial.interactable = false;
         DefinirCorBotaoDesabilitado();
         contadorCoroutine = StartCoroutine(ContadorRoundPlayer());
+
+        if (SessaoJogoManager.Instance != null)
+            SessaoJogoManager.Instance.MarcarBatalhaEmAndamento(SceneManager.GetActiveScene().name);
     }
 
     void Update()
     {
         AtualizaDadosTela();
 
-        if(turno == "Player" && verificadorDeTurno && player.VerificaVida())
+        if (turno == "Player" && verificadorDeTurno && player.VerificaVida())
         {
+            ((IPersonagemBatalha)player).AtualizarEfeitosPorTurno();
             botaoAtaque.interactable = true;
 
             if (player.VerificaEspecial())
@@ -65,6 +81,7 @@ public class DiretorBatalha : MonoBehaviour
         }
         else if (turno == "Inimigo" && verificadorDeTurno && inimigo.VerificaVida())
         {
+            ((IPersonagemBatalha)inimigo).AtualizarEfeitosPorTurno();
             StartCoroutine(AtaqueInimigo());
         }
 
@@ -87,7 +104,9 @@ public class DiretorBatalha : MonoBehaviour
     }
     public void AtaquePlayer()
     {
-        inimigo.LevarDano(player.Ataque());
+        int dano = player.Ataque();
+        inimigo.LevarDano(dano);
+        TentarContraAtaqueCorpoACorpo(player, inimigo, dano);
         StartCoroutine(AtaqueP());
     }
 
@@ -155,17 +174,91 @@ public class DiretorBatalha : MonoBehaviour
         StopContador();
         verificadorDeTurno = false;
 
-        if (turno == "Inimigo")
+        if (turno != "Inimigo") yield break;
+
+        botaoAtaque.interactable = false;
+        botaoEspecial.interactable = false;
+
+        bool consumiuTurnoComItem = TentarUsarItemInimigo();
+
+        if (!consumiuTurnoComItem)
         {
-            botaoAtaque.interactable = false;
-            botaoEspecial.interactable = false;
-            player.LevarDano(inimigo.Ataque());
-            yield return new WaitForSeconds(3f);
-            verificadorDoContador = true;
-            verificadorDeTurno = true;
-            turno = "Player";
-            contadorCoroutine = StartCoroutine(ContadorRoundPlayer());
+            // IA simples sem magia: ataca ou usa especial se disponível
+            if (inimigo.VerificaEspecial() && Random.value < 0.35f)
+            {
+                player.LevarDano(inimigo.Especial());
+            }
+            else
+            {
+                int dano = inimigo.Ataque();
+                player.LevarDano(dano);
+                TentarContraAtaqueCorpoACorpo(inimigo, player, dano);
+            }
         }
+
+        yield return new WaitForSeconds(2f);
+        verificadorDoContador = true;
+        verificadorDeTurno = true;
+        turno = "Player";
+        contadorCoroutine = StartCoroutine(ContadorRoundPlayer());
+    }
+
+    private bool TentarUsarItemInimigo()
+    {
+        if (inventarioInimigo == null) return false;
+
+        ItemBatalhaData itemEscolhido = EscolherItemInimigo();
+        if (itemEscolhido == null) return false;
+
+        if (!inventarioInimigo.TentarConsumir(itemEscolhido)) return false;
+
+        AplicarItem(inimigo, itemEscolhido);
+        return itemEscolhido.consomeTurno;
+    }
+
+    private ItemBatalhaData EscolherItemInimigo()
+    {
+        if (Random.value > 0.50f) return null;
+
+        bool vidaCritica = inimigo.GetVida() <= 30;
+        bool oponenteForte = player.GetVida() > 35;
+
+        if (vidaCritica)
+        {
+            var cura = BuscarItemInimigoPorEfeito(EfeitoItemBatalha.CuraVida);
+            if (cura != null) return cura;
+
+            var escudo = BuscarItemInimigoPorEfeito(EfeitoItemBatalha.Escudo);
+            if (escudo != null) return escudo;
+        }
+
+        if (oponenteForte)
+        {
+            var buffDef = BuscarItemInimigoPorEfeito(EfeitoItemBatalha.BuffDefesa);
+            if (buffDef != null) return buffDef;
+        }
+
+        var buffAtk = BuscarItemInimigoPorEfeito(EfeitoItemBatalha.BuffAtaque);
+        if (buffAtk != null) return buffAtk;
+
+        return null;
+    }
+
+    private ItemBatalhaData BuscarItemInimigoPorEfeito(EfeitoItemBatalha efeito)
+    {
+        var slots = inventarioInimigo.ObterSlots();
+        for (int i = 0; i < slots.Count; i++)
+        {
+            var slot = slots[i];
+            if (slot.item == null) continue;
+            if (slot.quantidade <= 0) continue;
+            if (!slot.item.utilizavelEmBatalha) continue;
+            if (slot.item.efeitoBatalha != efeito) continue;
+
+            return slot.item;
+        }
+
+        return null;
     }
 
     private IEnumerator AtaqueP()
@@ -201,6 +294,10 @@ public class DiretorBatalha : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         player.PlaySomVitoria();
+
+        if (SessaoJogoManager.Instance != null)
+            SessaoJogoManager.Instance.ConcluirBatalhaAtual();
+
         SceneManager.LoadScene("Vitoria");
     }
 
@@ -211,5 +308,58 @@ public class DiretorBatalha : MonoBehaviour
         SceneManager.LoadScene("Derrota");
     }
 
-    
+    public void UsarItemPlayer(ItemBatalhaData item)
+    {
+        if (item == null || inventarioPlayer == null) return;
+        if (!inventarioPlayer.TentarConsumir(item)) return;
+
+        IPersonagemBatalha alvo = player;
+        AplicarItem(alvo, item);
+
+        if (item.consomeTurno)
+        {
+            StartCoroutine(AtaqueP());
+        }
+    }
+
+    private void AplicarItem(IPersonagemBatalha alvo, ItemBatalhaData item)
+    {
+        if (!item.utilizavelEmBatalha) return;
+
+        switch (item.efeitoBatalha)
+        {
+            case EfeitoItemBatalha.CuraVida:
+                alvo.CurarVida(item.valor);
+                break;
+            case EfeitoItemBatalha.RecuperaMana:
+                alvo.RecuperarMana(item.valor);
+                break;
+            case EfeitoItemBatalha.BuffAtaque:
+                alvo.AplicarBuffAtaque(item.valor, item.duracaoTurnos);
+                break;
+            case EfeitoItemBatalha.BuffDefesa:
+                alvo.AplicarBuffDefesa(item.valor, item.duracaoTurnos);
+                break;
+            case EfeitoItemBatalha.Escudo:
+                alvo.AtivarEscudoItem(item.valor, item.duracaoTurnos);
+                break;
+        }
+
+        alvo.MostrarTextoAcao(item.nomeExibicao);
+        RecebeTexto($"{alvo.NomePersonagem} usou {item.nomeExibicao}");
+    }
+
+    private void TentarContraAtaqueCorpoACorpo(Player atacante, Player defensor, int danoAtaque)
+    {
+        if (danoAtaque <= 0) return; // ataque errou
+        if (!atacante.VerificaVida() || !defensor.VerificaVida()) return;
+        if (Random.Range(0, 100) >= chanceContraAtaque) return;
+
+        RecebeTexto($"{defensor.GetNomePersonagem()} contra-ataca!");
+        int danoContra = defensor.Ataque();
+        if (danoContra > 0)
+        {
+            atacante.LevarDano(danoContra);
+        }
+    }
 }

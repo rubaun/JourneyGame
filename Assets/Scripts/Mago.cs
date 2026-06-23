@@ -1,7 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
-public class Mago : MonoBehaviour
+public class Mago : MonoBehaviour, IPersonagemBatalha
 {
     [SerializeField] private string nomePersonagem;
     [SerializeField] private int vida;
@@ -22,8 +22,11 @@ public class Mago : MonoBehaviour
     [SerializeField] private AudioClip[] somDano;
     [SerializeField] private AudioClip somVitoria;
     [SerializeField] private AudioClip somMorte;
-    [SerializeField] private AudioClip somEspecialPronto;
+    [SerializeField] private AudioClip somespecialPronto;
     [SerializeField] private GameObject cameraC;
+    [SerializeField] private int turnosDefesaMax = 2;
+    [SerializeField] private int vidaMax = 100;
+    [SerializeField] private TextoFlutuante textoFlutuantePrefab;
 
     private Magias magias;
     private Animator anim;
@@ -32,6 +35,12 @@ public class Mago : MonoBehaviour
     private FalasPersonagem falasPersonagem;
     private bool defesaAtiva;
     private int defesaTemp;
+    private int turnosDefesaRestantes;
+
+    private int buffAtaque;
+    private int buffDefesa;
+    private int turnosBuffAtaque;
+    private int turnosBuffDefesa;
 
     private void Start()
     {
@@ -49,6 +58,40 @@ public class Mago : MonoBehaviour
         if (!falasPersonagem && !ehHeroi)
         {
             falasPersonagem = GetComponent<FalasPersonagem>();
+        }
+    }
+
+    public bool EhMago()
+    {
+        return magias != null;
+    }
+
+    public Coroutine LancarMagiaAtaque()
+    {
+        if (magias != null)
+            return StartCoroutine(magias.LancarMagiaAtaque());
+        return null;
+    }
+
+    public Coroutine LancarMagiaEspecial()
+    {
+        if (magias != null)
+            return StartCoroutine(magias.LancarMagiaEspecial());
+        return null;
+    }
+
+    public void AtualizarDefesaPorTurno()
+    {
+        if (defesaAtiva && turnosDefesaRestantes > 0)
+        {
+            turnosDefesaRestantes--;
+            if (turnosDefesaRestantes <= 0)
+            {
+                defesaAtiva = false;
+                defesaTemp = 0;
+                if (magias != null) magias.DesligarEfeitoDefesa();
+                dB.RecebeTexto($"{nomePersonagem}: defesa expirou!");
+            }
         }
     }
 
@@ -74,17 +117,17 @@ public class Mago : MonoBehaviour
         return vida;
     }
 
-    public bool VerificaVida() //retorna true se o jogador esta vivo e false se esta morto
+    public bool VerificaVida()
     {
         return estahVivo;
     }
 
-    public bool VerificaEspecial() //retorna true se o jogador tem especial e false se nao tem
+    public bool VerificaEspecial()
     {
         if (especial >= 3)
         {
             dB.RecebeTexto($"Especial carregado: {nomePersonagem}");
-            audioSource.PlaySound(somEspecialPronto);
+            audioSource.PlaySound(somespecialPronto);
             return true;
         }
         else
@@ -105,77 +148,100 @@ public class Mago : MonoBehaviour
 
     private void UseMana(int manaGasto)
     {
-        if(mana - manaGasto > 0)
+        if (mana - manaGasto >= 0)
         {
             mana -= manaGasto;
-        }            
+        }
     }
 
     public void RegeneraMana(float manaGanho)
     {
-        mana += manaGanho;
+        mana = Mathf.Min(mana + manaGanho, 100f);
+    }
+
+    private void ExibirTextoFlutuante(string texto, Color cor)
+    {
+        if (textoFlutuantePrefab == null) return;
+        TextoFlutuante t = Instantiate(textoFlutuantePrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+        t.Exibir(texto, cor);
     }
 
     public int AtaqueNormal()
     {
-        int valorAtaque = Random.Range(0, ataque);
+        int ataqueBase = Mathf.Max(1, ataque + buffAtaque);
+        int valorAtaque = Random.Range(0, ataqueBase);
 
         especial++;
 
-        AnimaAtaque();
+        // Magos não executam animação de ataque físico
+        if (magias == null)
+        {
+            AnimaAtaque();
+        }
 
         if (valorAtaque > 0 && valorAtaque <= mana)
         {
             UseMana(valorAtaque);
-            FalaDoPersonagem("Ataque");
             dB.RecebeTexto($"{nomePersonagem} ataca: {valorAtaque}");
             PlaySomAtaque();
         }
-        else if(valorAtaque < 0)
+        else if (valorAtaque <= 0)
         {
             dB.RecebeTexto($"{nomePersonagem} erra o ataque.");
             PlaySomErroAtaque();
+            ExibirTextoFlutuante("errou", Color.gray);
         }
         else
         {
             dB.RecebeTexto($"{nomePersonagem}: sem mana suficiente.");
         }
 
+        return valorAtaque;
+    }
 
-            return valorAtaque;
+    private int CalcularEsquiva()
+    {
+        int defesaTotal = Mathf.Max(1, defesa + buffDefesa);
+        int valorEsquiva = Random.Range(0, defesaTotal + (defesaTotal / 2));
+
+        if (valorEsquiva > 0)
+        {
+            dB.RecebeTexto($"{nomePersonagem} esquiva: {valorEsquiva}");
+        }
+        else
+        {
+            dB.RecebeTexto($"{nomePersonagem}: não consegue esquivar.");
+        }
+
+        return valorEsquiva;
     }
 
     public int DefesaEsquiva()
     {
-        int valorDefesa = Random.Range(0, defesa + (defesa / 2));
+        int defesaTotal = Mathf.Max(1, defesa + buffDefesa);
+        int valorDefesa = Random.Range(0, defesaTotal + (defesaTotal / 2));
         defesaTemp = valorDefesa;
-        defesaAtiva = true;
-
-        UseMana(valorDefesa);
-
-        if (valorDefesa > 0 && defesaAtiva && mana >= valorDefesa)
+            
+        if (valorDefesa > 0 && mana >= valorDefesa)
         {
+            defesaAtiva = true;
+            turnosDefesaRestantes = turnosDefesaMax;
+            UseMana(valorDefesa);
             StartCoroutine(RecarregarMana());
-            magias.LigarEfeitoDefesa();
+            if (magias != null) magias.LigarEfeitoDefesa();
             dB.RecebeTexto($"{nomePersonagem} carrega defesa: {valorDefesa}");
         }
-        else if(valorDefesa > 0 && defesaAtiva && mana <= valorDefesa)
+        else if (valorDefesa > 0 && mana < valorDefesa)
         {
+            defesaAtiva = false;
             StartCoroutine(RecarregarMana());
             dB.RecebeTexto($"{nomePersonagem}: Mana insuficiente!");
         }
-        else if (valorDefesa > 0 && !defesaAtiva)
-        {
-            FalaDoPersonagem("Defesa");
-            StartCoroutine(RecarregarMana());
-            magias.DesligarEfeitoDefesa();
-            dB.RecebeTexto($"{nomePersonagem} defende: {valorDefesa}");
-        }
         else
         {
-            dB.RecebeTexto($"{nomePersonagem}: n�o consegue defender.");
+            defesaAtiva = false;
+            dB.RecebeTexto($"{nomePersonagem}: não consegue defender.");
             StartCoroutine(RecarregarMana());
-            magias.DesligarEfeitoDefesa();
             especial++;
         }
 
@@ -183,7 +249,7 @@ public class Mago : MonoBehaviour
         return valorDefesa;
     }
 
-    public bool DefesaAtiva()
+    public bool DefensaAtiva()
     {
         if(defesaAtiva)
         {
@@ -195,18 +261,23 @@ public class Mago : MonoBehaviour
             return false;
         }
     }
+
     public int Especial()
     {
-        int valorEspecial = Random.Range((int)Mathf.Floor(ataque * 0.2f), ataque + (int)Mathf.Floor(ataque * 0.3f));
+        int ataqueTotal = Mathf.Max(1, ataque + buffAtaque);
+        int valorEspecial = Random.Range((int)Mathf.Floor(ataqueTotal * 0.2f), ataqueTotal + (int)Mathf.Floor(ataqueTotal * 0.3f));
         int chanceDeDobrar = Random.Range(0, 100);
         int fatorMultiplicador = especial;
 
-        AnimaAtaque();
+        // Magos não executam animação de ataque físico
+        if (magias == null)
+        {
+            AnimaAtaque();
+        }
 
         if (chanceDeDobrar >= 90 && especial >= 3 && mana == 100)
         {
             int valorEspecialDobrado = (valorEspecial * 2) + fatorMultiplicador;
-            FalaDoPersonagem("Ataque");
             dB.RecebeTexto($"{nomePersonagem} MEGA ESPECIAL: {valorEspecialDobrado}");
             PlaySomEspecial();
             especial = 0;
@@ -215,7 +286,6 @@ public class Mago : MonoBehaviour
         }
         else if (chanceDeDobrar < 90 && especial >= 3 && mana >= valorEspecial)
         {
-            FalaDoPersonagem("Ataque");
             dB.RecebeTexto($"{nomePersonagem} usa especial: {valorEspecial}");
             PlaySomAtaque();
             especial = 0;
@@ -229,7 +299,7 @@ public class Mago : MonoBehaviour
         }
         else
         {
-            dB.RecebeTexto("Especial n�o esta carregado!");
+            dB.RecebeTexto("Especial não esta carregado!");
             return 0;
         }
     }
@@ -241,28 +311,33 @@ public class Mago : MonoBehaviour
         if (defesaAtiva)
         {
             danoFinal = dano - defesaTemp;
-            defesaAtiva = false;
+
+            // Escudo só quebra se o dano for maior que a defesa carregada
+            if (danoFinal > 0)
+            {
+                defesaAtiva = false;
+                turnosDefesaRestantes = 0;
+                if (magias != null) magias.DesligarEfeitoDefesa();
+            }
         }
         else
         {
-            danoFinal = dano - DefesaEsquiva();
+            // Esquiva passiva — SEM ativar escudo ou efeito de defesa
+            danoFinal = dano - CalcularEsquiva();
         }
            
          
         if (danoFinal <= 0)
         {
-            //RegeneraMana(danoFinal / 10);
             StartCoroutine(TocarDefesa());
         }
         else if (danoFinal <= 25)
         {
             StartCoroutine(TocarDanoNormal(danoFinal));
-            //RegeneraMana(danoFinal / 4);
         }
         else
         {
             StartCoroutine(TocarDanoMaximo(danoFinal));
-           //RegeneraMana(danoFinal / 2);
         }
 
         if (estahVivo)
@@ -276,13 +351,13 @@ public class Mago : MonoBehaviour
 
     }
     
-    private void DefineVida() //Verifica o valor da vida e define como morto
+    private void DefineVida()
     {
         if (vida <= 0)
         {
             spriteRenderer.sprite = spriteDerrota;
             vida = 0;
-            estahVivo = false; //Ta morto
+            estahVivo = false;
         }
     }
 
@@ -354,6 +429,7 @@ public class Mago : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         PlaySomDefesa();
         ParticulaDefesa();
+        ExibirTextoFlutuante("defesa", Color.cyan);
     }
 
     IEnumerator TocarDanoNormal(int danoFinal)
@@ -363,13 +439,14 @@ public class Mago : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         PlaySomDano();
         ParticulaSangrar();
-        vida -= danoFinal; //vida = vida - danoFinal;
+        vida -= danoFinal;
         DefineVida();
+        ExibirTextoFlutuante($"-{danoFinal}", Color.red);
     }
 
     IEnumerator TocarDanoMaximo(int danoFinal)
     {
-        dB.RecebeTexto($"{nomePersonagem}, dano cr�tico: {danoFinal}.");
+        dB.RecebeTexto($"{nomePersonagem}, dano crítico: {danoFinal}.");
         anim.SetTrigger("Dano");
         yield return new WaitForSeconds(0.5f);
         CameraTreme(0.5f);
@@ -377,12 +454,16 @@ public class Mago : MonoBehaviour
         ParticulaSangrar();
         vida -= danoFinal;
         DefineVida();
+
+        ExibirTextoFlutuante($"-{danoFinal}", Color.red);
+        yield return new WaitForSeconds(0.2f); // pequeno delay entre mensagens
+        ExibirTextoFlutuante("crítico", Color.yellow);
     }
 
     private void CameraTreme(float magnitude)
     {
         audioSource.PlaySound(somVitoria);
-        cameraC.GetComponent<CameraShake>().ShakeCamera(0.5f, magnitude);
+        cameraC.GetComponent<CameraShake>().ShakeCamera(0.25f, 0.15f);
     }
 
     IEnumerator RecarregarMana()
@@ -393,4 +474,52 @@ public class Mago : MonoBehaviour
             RegeneraMana(1.5f);
         }
     }
+
+    public string NomePersonagem => nomePersonagem;
+public bool EstaVivo => estahVivo;
+
+public void CurarVida(int valor)
+{
+    if (valor <= 0 || !estahVivo) return;
+    vida = Mathf.Min(vida + valor, vidaMax);
+}
+
+public void RecuperarMana(float valor)
+{
+    if (valor <= 0f) return;
+    mana = Mathf.Min(mana + valor, 100f);
+}
+
+public void AplicarBuffAtaque(int valor, int turnos)
+{
+    buffAtaque += valor;
+    turnosBuffAtaque = Mathf.Max(turnosBuffAtaque, turnos);
+}
+
+public void AplicarBuffDefesa(int valor, int turnos)
+{
+    buffDefesa += valor;
+    turnosBuffDefesa = Mathf.Max(turnosBuffDefesa, turnos);
+}
+
+public void AtivarEscudoItem(int valorEscudo, int turnos)
+{
+    defesaAtiva = true;
+    defesaTemp = valorEscudo;
+    turnosDefesaRestantes = Mathf.Max(1, turnos);
+    if (magias != null) magias.LigarEfeitoDefesa();
+}
+
+public void AtualizarEfeitosPorTurno()
+{
+    AtualizarDefesaPorTurno();
+
+    if (turnosBuffAtaque > 0 && --turnosBuffAtaque == 0) buffAtaque = 0;
+    if (turnosBuffDefesa > 0 && --turnosBuffDefesa == 0) buffDefesa = 0;
+}
+
+public void MostrarTextoAcao(string texto)
+{
+    ExibirTextoFlutuante(texto, Color.yellow);
+}
 }

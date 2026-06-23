@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aea514a5223f054fa601925e949f960, type: 3}
+  m_Name: itm_runas_impacto
+  m_EditorClassIdentifier: Assembly-CSharp::ItemBatalhaData
+  id: itm_runas_impacto
+  nomeExibicao: Runas de Impacto
+  descricao: "Runas tempor\xE1rias que aumentam o dano causado."
+  icone: {fileID: 4721180844040405081, guid: 1490bcee6d1568b498338795d49f7868, type: 3}
+  categoria: 1
+  efeitoBatalha: 3
+  utilizavelEmBatalha: 1
+  consomeTurno: 1
+  valor: 6
+  duracaoTurnos: 3

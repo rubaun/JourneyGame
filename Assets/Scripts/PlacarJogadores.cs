@@ -37,12 +37,17 @@ public class PlacarJogadores : MonoBehaviour
     public async void GetScores()
     {
         topDez.text = "";
-        var scoresResponse =
-            await LeaderboardsService.Instance.GetScoresAsync(LeaderboardId);
-        foreach(var score in scoresResponse.Results)
+        var scoresResponse = await LeaderboardsService.Instance.GetScoresAsync(LeaderboardId);
+
+        foreach (var score in scoresResponse.Results)
         {
-            topDez.text += score.Rank + " - \t" + score.PlayerName + " - \t\t\t" + score.Score + "\n";
+            string nome = string.IsNullOrWhiteSpace(score.PlayerName)
+                ? $"Jogador-{score.PlayerId.Substring(0, 6)}"
+                : score.PlayerName;
+
+            topDez.text += score.Rank + " - \t" + nome + " - \t\t\t" + score.Score + "\n";
         }
+
         playerId.text = "Player ID: " + scoresResponse.Results.FindIndex(s => s.PlayerId == AuthenticationService.Instance.PlayerId).ToString();
         playerScore.text = "Player Score: " + scoresResponse.Results.Find(s => s.PlayerId == AuthenticationService.Instance.PlayerId)?.Score.ToString();
         playerRank.text = "Player Rank: " + scoresResponse.Results.Find(s => s.PlayerId == AuthenticationService.Instance.PlayerId)?.Rank.ToString();

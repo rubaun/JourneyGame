@@ -195,10 +195,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451.37988, y: 136.3899}
-  m_SizeDelta: {x: 538.7318, y: 481.9001}
+  m_AnchorMin: {x: 0.60983336, y: 0.24400002}
+  m_AnchorMax: {x: 0.86, y: 0.8668821}
+  m_AnchoredPosition: {x: 1.0707397, y: -1.1928711}
+  m_SizeDelta: {x: -0.9930115, y: -5.3710938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102000542
 MonoBehaviour:
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -339,6 +339,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -360,10 +362,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3199425845850816216, guid: 7dbb2bba5e44a5f4c8945d44a1e43a3a, type: 3}
+  m_Sprite: {fileID: -8909587404161820643, guid: 4f8218df7a94db348a659260722f1899, type: 3}
   m_Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -383,8 +386,8 @@ Transform:
   m_GameObject: {fileID: 1131750267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.15, z: 0}
-  m_LocalScale: {x: 1.3268753, y: 1.3486177, z: 1.143518}
+  m_LocalPosition: {x: -4.34, y: 1.01, z: 0}
+  m_LocalScale: {x: 1.1612684, y: 1.180297, z: 1.0007957}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -420,6 +423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &1341276562
@@ -847,10 +852,10 @@ RectTransform:
   - {fileID: 1446697734}
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: -328.83}
-  m_SizeDelta: {x: 219.5099, y: 83.8422}
+  m_AnchorMin: {x: 0.7345626, y: 0.21549769}
+  m_AnchorMax: {x: 0.7345626, y: 0.21549769}
+  m_AnchoredPosition: {x: -2.1900024, y: -79}
+  m_SizeDelta: {x: 295.6783, y: 147.3158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972336152
 MonoBehaviour:
@@ -978,10 +983,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: 0}
-  m_SizeDelta: {x: 848.8199, y: 972.4905}
+  m_AnchorMin: {x: 0.7345626, y: 0}
+  m_AnchorMax: {x: 0.7345626, y: 0}
+  m_AnchoredPosition: {x: 1.5874023, y: 444.24}
+  m_SizeDelta: {x: 848.8199, y: 888.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975334501
 MonoBehaviour:
@@ -1108,6 +1113,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1129,11 +1136,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2483927609062372246, guid: e14879b8221d1a04cb2a10663e66227d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.56078434}
+  m_Sprite: {fileID: -3064147821933488508, guid: 83f7e99dbcfd63749b10c5d3ec7baa74, type: 3}
+  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -1152,9 +1160,9 @@ Transform:
   m_GameObject: {fileID: 2041867150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.93, y: -0.71, z: 0}
-  m_LocalScale: {x: 0.44181308, y: 0.44181308, z: 0.44181308}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -7.86, y: -1.19, z: 0}
+  m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

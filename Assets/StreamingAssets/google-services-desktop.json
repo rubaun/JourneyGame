@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "764181239187",
+    "project_id": "jornada-crepusculo",
+    "storage_bucket": "jornada-crepusculo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764181239187:android:4ac84e10c388f974134466",
+        "android_client_info": {
+          "package_name": "com.RejoiceGames.JornadaCrepusculo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB0sL5tzSikS6qObJybR-v3tDpNo04FHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

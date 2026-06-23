@@ -452,7 +452,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -460,6 +459,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &166937502
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.67612505, y: 0.14325929}
   m_AnchorMax: {x: 0.79064584, y: 0.22100002}
-  m_AnchoredPosition: {x: 0.6498108, y: -0.2000122}
+  m_AnchoredPosition: {x: 0.6497803, y: -0.2000122}
   m_SizeDelta: {x: -0.4901123, y: -0.15779877}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505393251
@@ -1963,6 +1963,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1984,6 +1986,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -2181,6 +2184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 0}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &1665557572
@@ -2648,6 +2653,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2669,10 +2676,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -3668840541284343268, guid: a14eb4c1cf4ec3a4f840760d68d5f826, type: 3}
+  m_Sprite: {fileID: 2252976455213247619, guid: 2b4501c9388cdc94a86c4f9116927f49, type: 3}
   m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2692,7 +2700,7 @@ Transform:
   m_GameObject: {fileID: 1898940134}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.07, y: -6.44, z: 0}
+  m_LocalPosition: {x: -3.21, y: -12.36, z: 0}
   m_LocalScale: {x: 1.42, y: 1.42, z: 1.42}
   m_ConstrainProportionsScale: 1
   m_Children: []

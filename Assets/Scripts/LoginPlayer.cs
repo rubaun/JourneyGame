@@ -7,27 +7,39 @@ using TMPro;
 
 public class LoginPlayer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI playerAccountClientId; // Substitua pelo seu Client ID
+    [SerializeField] TextMeshProUGUI playerAccountClientId;
 
     async void Start()
     {
-        await UnityServices.InitializeAsync();
+        if (UnityServices.State != ServicesInitializationState.Initialized)
+            await UnityServices.InitializeAsync();
 
-        // Registrar o handler após inicializar os serviços
         PlayerAccountService.Instance.SignedIn += SignInWithUnityAuth;
 
-        if(playerAccountClientId != null)
-        {
-            playerAccountClientId.text = "Offline";
-            playerAccountClientId.color = Color.red;
-        }
+        AtualizarStatusConexaoUI();
     }
 
     void OnDestroy()
     {
-        // Remover o handler para evitar referências remanescentes
         if (PlayerAccountService.Instance != null)
             PlayerAccountService.Instance.SignedIn -= SignInWithUnityAuth;
+    }
+
+    private void AtualizarStatusConexaoUI()
+    {
+        if (playerAccountClientId == null) return;
+
+        if (AuthenticationService.Instance.IsSignedIn)
+        {
+            playerAccountClientId.text = "Online";
+            playerAccountClientId.color = Color.green;
+            AtualizarTextoUsuario();
+        }
+        else
+        {
+            playerAccountClientId.text = "Offline";
+            playerAccountClientId.color = Color.red;
+        }
     }
 
     public async void StartPlayerAccountsSignInAsync()
@@ -52,15 +64,19 @@ public class LoginPlayer : MonoBehaviour
         }
     }
 
-    // <-- note que é async void (event handler)
     async void SignInWithUnityAuth()
     {
         try
         {
-            await AuthenticationService.Instance.SignInWithUnityAsync(PlayerAccountService.Instance.AccessToken);
-            playerAccountClientId.text = "Logado na Unity";
-            playerAccountClientId.color = Color.green;
-            Debug.Log("SignIn is successful.");
+            string accessToken = PlayerAccountService.Instance.AccessToken;
+
+            if (AuthenticationService.Instance.IsSignedIn)
+                await LinkWithUnityAsync(accessToken);
+            else
+                await AuthenticationService.Instance.SignInWithUnityAsync(accessToken);
+
+            Debug.Log("Login/Vínculo Unity concluído com sucesso.");
+            AtualizarStatusConexaoUI();
         }
         catch (AuthenticationException ex)
         {
@@ -81,24 +97,7 @@ public class LoginPlayer : MonoBehaviour
         }
         catch (AuthenticationException ex) when (ex.ErrorCode == AuthenticationErrorCodes.AccountAlreadyLinked)
         {
-            Debug.LogError("This user is already linked with another account. Log in instead.");
-        }
-        catch (AuthenticationException ex)
-        {
-            Debug.LogException(ex);
-        }
-        catch (RequestFailedException ex)
-        {
-            Debug.LogException(ex);
-        }
-    }
-
-    async Task UnlinkUnityAsync()
-    {
-        try
-        {
-            await AuthenticationService.Instance.UnlinkUnityAsync();
-            Debug.Log("Unlink is successful.");
+            Debug.Log("Conta Unity já vinculada.");
         }
         catch (AuthenticationException ex)
         {
@@ -114,5 +113,46 @@ public class LoginPlayer : MonoBehaviour
     {
         AuthenticationService.Instance.SignOut(clearSessionToken);
         PlayerAccountService.Instance.SignOut();
+        AtualizarStatusConexaoUI();
+    }
+
+    private string FormatarIdCurto(string playerId)
+    {
+        if (string.IsNullOrWhiteSpace(playerId) || playerId.Length < 10) return playerId;
+        return $"{playerId.Substring(0, 6)}...{playerId.Substring(playerId.Length - 4)}";
+    }
+
+    private void AtualizarTextoUsuario()
+    {
+        if (playerAccountClientId == null) return;
+
+        string nome = AuthenticationService.Instance.PlayerName;
+        if (!string.IsNullOrWhiteSpace(nome))
+            playerAccountClientId.text = $"Olá, {nome}";
+        else
+            playerAccountClientId.text = $"ID: {FormatarIdCurto(AuthenticationService.Instance.PlayerId)}";
+    }
+
+    public async void DefinirNomeExibicaoSeVazio(string nomeDesejado)
+    {
+        if (!AuthenticationService.Instance.IsSignedIn) return;
+        if (string.IsNullOrWhiteSpace(nomeDesejado)) return;
+
+        if (!string.IsNullOrWhiteSpace(AuthenticationService.Instance.PlayerName))
+            return; // já tem nome
+
+        try
+        {
+            await AuthenticationService.Instance.UpdatePlayerNameAsync(nomeDesejado.Trim());
+            AtualizarStatusConexaoUI();
+        }
+        catch (AuthenticationException ex)
+        {
+            Debug.LogException(ex);
+        }
+        catch (RequestFailedException ex)
+        {
+            Debug.LogException(ex);
+        }
     }
 }

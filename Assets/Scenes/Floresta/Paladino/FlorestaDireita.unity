@@ -662,6 +662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &898761886
@@ -711,10 +713,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: 150.06372}
-  m_SizeDelta: {x: 490.22, y: 360.4273}
+  m_AnchorMin: {x: 0.60635424, y: 0.4151991}
+  m_AnchorMax: {x: 0.8523125, y: 0.8611991}
+  m_AnchoredPosition: {x: 5.369995, y: 0.000030517578}
+  m_SizeDelta: {x: 0.00021362, y: -0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102000542
 MonoBehaviour:
@@ -765,8 +767,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -854,6 +856,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -875,10 +879,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4671755256167569839, guid: 89206c9aed741bb47b09118bf53b8dd7, type: 3}
+  m_Sprite: {fileID: 4305830885333703268, guid: c907cb392c9b3104f9d4d0bf097efddf, type: 3}
   m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -899,7 +904,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 0.15, z: 0}
-  m_LocalScale: {x: 1.3268753, y: 1.3486177, z: 1.143518}
+  m_LocalScale: {x: 0.9209842, y: 0.93607557, z: 0.79371583}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -941,6 +946,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -962,11 +969,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2483927609062372246, guid: e14879b8221d1a04cb2a10663e66227d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.09019608}
+  m_Sprite: {fileID: -3064147821933488508, guid: 83f7e99dbcfd63749b10c5d3ec7baa74, type: 3}
+  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -985,8 +993,8 @@ Transform:
   m_GameObject: {fileID: 1164564757}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.93, y: -0.71, z: 0}
-  m_LocalScale: {x: 0.44181308, y: 0.44181308, z: 0.44181308}
+  m_LocalPosition: {x: -6.53, y: -1.67, z: 0}
+  m_LocalScale: {x: 0.3188565, y: 0.3188565, z: 0.3188565}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1669,10 +1677,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: 0}
-  m_SizeDelta: {x: 848.8199, y: 972.4905}
+  m_AnchorMin: {x: 0.7311251, y: 0.040597226}
+  m_AnchorMax: {x: 0.7311251, y: 0.040597226}
+  m_AnchoredPosition: {x: 1.9298096, y: 412.2391}
+  m_SizeDelta: {x: 722.0798, y: 828.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975334501
 MonoBehaviour:

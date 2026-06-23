@@ -293,6 +293,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -314,10 +316,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 8039364189766598545, guid: f157e47ce98c0084592a1dcc2f8a93e5, type: 3}
+  m_Sprite: {fileID: -5595459935226171888, guid: b09c2dae5f1355549b67d7c6028de70f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -338,7 +341,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.17, y: -4.7, z: 0}
-  m_LocalScale: {x: 1.64, y: 1.745846, z: 2.455825}
+  m_LocalScale: {x: 0.94, y: 1.0006678, z: 1.4076071}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -449,10 +452,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: -298}
-  m_SizeDelta: {x: 219.5099, y: 83.8422}
+  m_AnchorMin: {x: 0.7344376, y: 0}
+  m_AnchorMax: {x: 0.7344376, y: 0}
+  m_AnchoredPosition: {x: 1.7099609, y: 121}
+  m_SizeDelta: {x: 308.373, y: 83.8422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -684,10 +687,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: 180.46}
-  m_SizeDelta: {x: 573.5569, y: 360.91}
+  m_AnchorMin: {x: 0.597, y: 0.21859258}
+  m_AnchorMax: {x: 0.8688125, y: 0.8758959}
+  m_AnchoredPosition: {x: 3.7930908, y: -1.6921997}
+  m_SizeDelta: {x: -5.58313, y: -3.2302246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297045123
 MonoBehaviour:
@@ -754,7 +757,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 8.3
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -780,7 +783,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -235.56845}
+  m_margin: {x: 0, y: 0, z: 0, w: -3.8898468}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -885,6 +888,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -906,6 +911,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -966,6 +972,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 0}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &1396105906
@@ -1094,10 +1102,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448.81006, y: 0}
-  m_SizeDelta: {x: 848.8199, y: 972.4905}
+  m_AnchorMin: {x: 0.7344376, y: 0}
+  m_AnchorMax: {x: 0.7344376, y: 0}
+  m_AnchoredPosition: {x: 1.5875854, y: 445.622}
+  m_SizeDelta: {x: 732.1625, y: 891.2539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792049021
 MonoBehaviour:

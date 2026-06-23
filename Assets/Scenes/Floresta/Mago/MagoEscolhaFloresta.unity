@@ -1058,6 +1058,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1079,6 +1081,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -1103,7 +1106,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0555, y: 8.33, z: 0}
-  m_LocalScale: {x: 1.8245262, y: 1.8544233, z: 1.5724}
+  m_LocalScale: {x: 2.247269, y: 2.2840931, z: 1.9367249}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1356,7 +1359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17912498, y: 0.36}
   m_AnchorMax: {x: 0.397, y: 0.43159258}
-  m_AnchoredPosition: {x: 0.4500122, y: -0.5}
+  m_AnchoredPosition: {x: 0.44995117, y: -0.5}
   m_SizeDelta: {x: -0.6685791, y: 1.046875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823085963
@@ -1406,7 +1409,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.65
+  m_fontSize: 51.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1489,6 +1492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: 33eca77972ec3df4488fee9978f1f246, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &2019174451

@@ -2,73 +2,94 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FalasPersonagem : MonoBehaviour
 {
-    [SerializeField] private GameObject falaTexto;
-    [SerializeField] private GameObject balaoFala;
-    [SerializeField] private float tempoFalaInicial = 5.0f;
-    [SerializeField] private float tempoFalaAtaque = 3f;
-    [SerializeField] private float tempoFalaDefesa = 2f;
+    [Header("Referências UI")]
+    [SerializeField] private TextMeshProUGUI falaTexto;
+    [SerializeField] private Animator balaoAnimator;
+    [SerializeField] private Animator textoAnimator;
+
+    [Header("Tempos (segundos)")]
+    [SerializeField] private float atrasoFalaInicial = 0.8f;
+    [SerializeField] private float duracaoFalaInicial = 2.8f;
+    [SerializeField] private float atrasoFalaAtaque = 0.15f;
+    [SerializeField] private float duracaoFalaAtaque = 1.8f;
+    [SerializeField] private float atrasoFalaDefesa = 0.05f;
+    [SerializeField] private float duracaoFalaDefesa = 1.6f;
+
     [Header("Falas do Personagem")]
-    [Header("0 - Fala inicial | 1-3 - Defesa | 4-6 - Ataque")]
+    [Header("0 = Inicial | 1-3 = Defesa | 4-6 = Ataque")]
     [SerializeField] private List<string> falas = new List<string>();
-    private Player personagem;
 
+    private Coroutine falaAtual;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        personagem = GetComponent<Player>();
-        StartCoroutine(FalaInicial());
-    }
-
-    private IEnumerator FalaInicial()
-    {
-        yield return new WaitForSeconds(tempoFalaInicial);
-        falaTexto.GetComponent<TextMeshProUGUI>().text = falas[0];
-        balaoFala.GetComponent<Animator>().SetTrigger("FalaAgora");
-        falaTexto.GetComponent<Animator>().SetTrigger("FalaAgora");
-        yield return new WaitForSeconds(tempoFalaInicial);
-        balaoFala.GetComponent<Animator>().SetTrigger("CalaBoca");
-        falaTexto.GetComponent<Animator>().SetTrigger("CalaBoca");
-        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
+        if (falas.Count > 0)
+            IniciarFala(falas[0], atrasoFalaInicial, duracaoFalaInicial);
     }
 
     public void FalaDeAtaque()
     {
-        StartCoroutine(FalaAtaque());
-    }
-    private IEnumerator FalaAtaque()
-    {
-        yield return new WaitForSeconds(tempoFalaAtaque);
-        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
-        falaTexto.GetComponent<TextMeshProUGUI>().text = falas[Random.Range(4,6)];
-        balaoFala.GetComponent<Animator>().SetTrigger("FalaAgora");
-        falaTexto.GetComponent<Animator>().SetTrigger("FalaAgora");
-        yield return new WaitForSeconds(tempoFalaAtaque);
-        balaoFala.GetComponent<Animator>().SetTrigger("CalaBoca");
-        falaTexto.GetComponent<Animator>().SetTrigger("CalaBoca");
-        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
+        string texto = ObterFalaAleatoria(4, 7); // 4..6
+        if (!string.IsNullOrWhiteSpace(texto))
+            IniciarFala(texto, atrasoFalaAtaque, duracaoFalaAtaque);
     }
 
     public void FalaDeDefesa()
     {
-        StartCoroutine(FalaDefesa());
+        string texto = ObterFalaAleatoria(1, 4); // 1..3
+        if (!string.IsNullOrWhiteSpace(texto))
+            IniciarFala(texto, atrasoFalaDefesa, duracaoFalaDefesa);
     }
 
-    private IEnumerator FalaDefesa()
+    private void IniciarFala(string texto, float atraso, float duracao)
     {
-        
-        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
-        falaTexto.GetComponent<TextMeshProUGUI>().text = falas[Random.Range(1, 3)];
-        balaoFala.GetComponent<Animator>().SetTrigger("FalaAgora");
-        falaTexto.GetComponent<Animator>().SetTrigger("FalaAgora");
-        yield return new WaitForSeconds(tempoFalaDefesa);
-        balaoFala.GetComponent<Animator>().SetTrigger("CalaBoca");
-        falaTexto.GetComponent<Animator>().SetTrigger("CalaBoca");
-        falaTexto.GetComponent<TextMeshProUGUI>().text = "";
+        if (falaAtual != null)
+            StopCoroutine(falaAtual);
+
+        falaAtual = StartCoroutine(RotinaFala(texto, atraso, duracao));
+    }
+
+    private IEnumerator RotinaFala(string texto, float atraso, float duracao)
+    {
+        if (falaTexto == null || balaoAnimator == null || textoAnimator == null)
+            yield break;
+
+        if (atraso > 0f)
+            yield return new WaitForSeconds(atraso);
+
+        falaTexto.text = texto;
+
+        // Garante texto antes da animação de abrir
+        yield return null;
+
+        balaoAnimator.ResetTrigger("CalaBoca");
+        textoAnimator.ResetTrigger("CalaBoca");
+        balaoAnimator.SetTrigger("FalaAgora");
+        textoAnimator.SetTrigger("FalaAgora");
+
+        yield return new WaitForSeconds(duracao);
+
+        balaoAnimator.ResetTrigger("FalaAgora");
+        textoAnimator.ResetTrigger("FalaAgora");
+        balaoAnimator.SetTrigger("CalaBoca");
+        textoAnimator.SetTrigger("CalaBoca");
+
+        falaTexto.text = "";
+        falaAtual = null;
+    }
+
+    private string ObterFalaAleatoria(int inicioInclusivo, int fimExclusivo)
+    {
+        if (falas == null || falas.Count == 0) return null;
+
+        int inicio = Mathf.Clamp(inicioInclusivo, 0, falas.Count);
+        int fim = Mathf.Clamp(fimExclusivo, 0, falas.Count);
+
+        if (fim <= inicio) return null;
+
+        return falas[Random.Range(inicio, fim)];
     }
 }

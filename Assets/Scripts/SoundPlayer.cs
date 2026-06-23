@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
+    public static SoundPlayer Instance { get; private set; }
+    public static bool Existe => Instance != null;
+
     [SerializeField] private float somVolume = 0.5f;
     [SerializeField] private float narrativaVolume = 1.0f;
     [SerializeField] private float musicaVolume = 0.3f;
 
-    private static SoundPlayer Instance;
     private AudioSource bgMusic;
     private AudioSource soundFX;
     private AudioSource voice;
 
-    void Awake()
+    private void Awake()
     {
         if (Instance != null && Instance != this)
         {

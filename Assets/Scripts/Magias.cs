@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Magias : MonoBehaviour
@@ -17,23 +18,14 @@ public class Magias : MonoBehaviour
     [SerializeField] private GameObject efeitoMagiaEspecial;
     [SerializeField] private GameObject efeitoMagiaEspecialArea;
     [SerializeField] private GameObject mira;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float velocidadeProjetil = 10f;
+    [SerializeField] private float tempoEfeitoArea = 2f;
 
     public void LigarEfeitoDefesa()
     {
         if (efeitoMagiaDefesaArea != null)
         {
+            efeitoMagiaDefesaArea.SetActive(true);
             efeitoMagiaDefesaArea.GetComponent<ParticleSystem>().Play();
         }
     }
@@ -43,45 +35,76 @@ public class Magias : MonoBehaviour
         if (efeitoMagiaDefesaArea != null)
         {
             efeitoMagiaDefesaArea.GetComponent<ParticleSystem>().Stop();
+            efeitoMagiaDefesaArea.SetActive(false);
         }
     }
 
-    private void LigarEfeitoArcano()
+    public IEnumerator LancarMagiaAtaque()
     {
-        if (efeitoMagiaEspecialArea != null)
+        if (efeitoMagiaAtaque == null || mira == null) yield break;
+
+        // Instancia o projétil apontando para a mira
+        GameObject projetil = Instantiate(efeitoMagiaAtaque, transform.position, Quaternion.identity);
+        ApontarParaAlvo(projetil, transform.position);
+
+        ParticleSystem ps = projetil.GetComponent<ParticleSystem>();
+        if (ps != null) ps.Play();
+
+        // Move até o alvo
+        while (Vector3.Distance(projetil.transform.position, mira.transform.position) > 0.1f)
         {
-            efeitoMagiaEspecialArea.GetComponent<ParticleSystem>().Play();
+            projetil.transform.position = Vector3.MoveTowards(
+                projetil.transform.position,
+                mira.transform.position,
+                velocidadeProjetil * Time.deltaTime);
+            yield return null;
         }
+
+        // Projétil chegou: instancia efeito de área no oponente atingido
+        InstanciarEfeitoArea(efeitoMagiaAtaqueArea);
+        Destroy(projetil, 0.5f);
     }
 
-    public void LancarPoderArcado()
+    public IEnumerator LancarMagiaEspecial()
     {
-        //Procurar o inimigo na cena
-        GameObject inimigo = GameObject.FindGameObjectWithTag("Inimigo");
+        if (efeitoMagiaEspecial == null || mira == null) yield break;
 
-        if (efeitoMagiaAtaque != null && mira != null)
+        // Instancia o projétil apontando para a mira
+        GameObject projetil = Instantiate(efeitoMagiaEspecial, transform.position, Quaternion.identity);
+        ApontarParaAlvo(projetil, transform.position);
+
+        ParticleSystem ps = projetil.GetComponent<ParticleSystem>();
+        if (ps != null) ps.Play();
+
+        // Move até o alvo
+        while (Vector3.Distance(projetil.transform.position, mira.transform.position) > 0.1f)
         {
-            LigarEfeitoArcano();
-            //Instanciar o efeito da magia no inimigo
-            GameObject efeito = Instantiate(efeitoMagiaAtaque, mira.transform.position, Quaternion.identity);
-            efeito.GetComponent<ParticleSystem>().Play();
-            Destroy(efeito, 2f);
+            projetil.transform.position = Vector3.MoveTowards(
+                projetil.transform.position,
+                mira.transform.position,
+                velocidadeProjetil * Time.deltaTime);
+            yield return null;
         }
+
+        // Projétil chegou: instancia efeito de área especial no oponente atingido
+        InstanciarEfeitoArea(efeitoMagiaEspecialArea);
+        Destroy(projetil, 0.5f);
     }
 
-    public void LigarEfeitoEspecial()
+    private void ApontarParaAlvo(GameObject projetil, Vector3 origem)
     {
-        if (efeitoMagiaEspecialArea != null)
-        {
-            efeitoMagiaEspecialArea.GetComponent<ParticleSystem>().Play();
-        }
+        if (mira == null || projetil == null) return;
+        Vector3 direcao = (mira.transform.position - origem).normalized;
+        float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+        projetil.transform.rotation = Quaternion.Euler(0, 0, angulo);
     }
 
-    public void DesligarEfeitoEspecial()
+    private void InstanciarEfeitoArea(GameObject efeitoPrefab)
     {
-        if (efeitoMagiaEspecialArea != null)
-        {
-            efeitoMagiaEspecialArea.GetComponent<ParticleSystem>().Stop();
-        }
+        if (efeitoPrefab == null || mira == null) return;
+        GameObject efeitoArea = Instantiate(efeitoPrefab, mira.transform.position, Quaternion.identity);
+        ParticleSystem psArea = efeitoArea.GetComponent<ParticleSystem>();
+        if (psArea != null) psArea.Play();
+        Destroy(efeitoArea, tempoEfeitoArea);
     }
 }
