@@ -641,14 +641,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1171682797}
-  mensagemCompleta: "Tu \xE9s Anduino, paladino da sagrada luz, escolhido pelos des\xEDgnios
-    celestiais. \nDiante de ti se ergue um fardo glorioso: encontrar o Crep\xFAsculo
+  mensagemCompleta: "Anduino \xE9 um paladino da sagrada luz, escolhido pelos des\xEDgnios
+    celestiais. \nDiante dele se ergue um fardo glorioso: encontrar o Crep\xFAsculo
     Perdido, artefato ancestral capaz de comandar o nascer e o p\xF4r do sol. Oculto
     nas ru\xEDnas de um reino esquecido, seu poder \xE9 cobi\xE7ado pela vil Ordem
-    das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nErgue tua l\xE2mina,
-    fortalece teu esp\xEDrito, pois sobre teus ombros recai o destino da luz."
+    das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nCom sua l\xE2mina
+    e seu esp\xEDrito fortalecido luta para que a luz prevale\xE7a em meio \xE0s
+    trevas."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 2d63531d07c2da640b4d304c2276c81f, type: 3}
+  narrativa: {fileID: 8300000, guid: 14ac71581bca4ea4f9a3536013db43d1, type: 3}
 --- !u!1 &466993676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,12 +1340,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tu \xE9s Anduino, paladino da sagrada luz, escolhido pelos des\xEDgnios
-    celestiais. \nDiante de ti se ergue um fardo glorioso: encontrar o Crep\xFAsculo
+  m_text: "Anduino \xE9 um paladino da sagrada luz, escolhido pelos des\xEDgnios
+    celestiais. \nDiante dele se ergue um fardo glorioso: encontrar o Crep\xFAsculo
     Perdido, artefato ancestral capaz de comandar o nascer e o p\xF4r do sol. Oculto
     nas ru\xEDnas de um reino esquecido, seu poder \xE9 cobi\xE7ado pela vil Ordem
-    das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nErgue tua l\xE2mina,
-    fortalece teu esp\xEDrito, pois sobre teus ombros recai o destino da luz."
+    das Sombras, que deseja lan\xE7ar o mundo em trevas eternas. \nCom sua l\xE2mina
+    e seu esp\xEDrito fortalecido luta para que a luz prevale\xE7a em meio \xE0s
+    trevas."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1814,8 +1816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45, y: 73}
-  m_SizeDelta: {x: 275.594, y: 33.9649}
+  m_AnchoredPosition: {x: 163.42, y: 73}
+  m_SizeDelta: {x: 512.44, y: 33.965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522606886
 MonoBehaviour:
@@ -2041,8 +2043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45.000008, y: 22.982452}
-  m_SizeDelta: {x: 275.594, y: 33.9649}
+  m_AnchoredPosition: {x: 163.42, y: 22.982452}
+  m_SizeDelta: {x: 512.44, y: 33.965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665372208
 MonoBehaviour:
@@ -2439,7 +2441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158, y: -0.6000061}
+  m_AnchoredPosition: {x: -276.8, y: -0.00000017881}
   m_SizeDelta: {x: 31.4723, y: 31.4723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691041266
@@ -2867,7 +2869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.62901, y: -44.500023}
+  m_AnchoredPosition: {x: 165.22, y: -54.035}
   m_SizeDelta: {x: 508.8519, y: 89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991863543
@@ -3005,7 +3007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158, y: 0.9175415}
+  m_AnchoredPosition: {x: -276.8, y: 1.2463}
   m_SizeDelta: {x: 31.4723, y: 31.4723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000121661

@@ -383,10 +383,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7492895, y: 0}
-  m_AnchorMax: {x: 0.7492895, y: 0}
-  m_AnchoredPosition: {x: 3.668518, y: 160.68}
-  m_SizeDelta: {x: 443.8537, y: 138.7221}
+  m_AnchorMin: {x: 0.66973597, y: 0.086}
+  m_AnchorMax: {x: 0.82488346, y: 0.164}
+  m_AnchoredPosition: {x: 9.168518, y: 0.6799927}
+  m_SizeDelta: {x: 12.853699, y: 38.722107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -676,10 +676,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7492895, y: 0}
-  m_AnchorMax: {x: 0.7492895, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 5.75}
-  m_SizeDelta: {x: 1289.5, y: 0}
+  m_AnchorMin: {x: 0.59000003, y: 0.044548284}
+  m_AnchorMax: {x: 0.9085983, y: 0.9642119}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0.25}
+  m_SizeDelta: {x: 405.5, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097347659
 MonoBehaviour:
@@ -912,16 +912,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ao derrubar Dremilin, o mago morto-vivo, um sil\xEAncio pesado toma conta
-    do ambiente. Voc\xEA respira fundo e empurra a pesada porta que leva ao cora\xE7\xE3o
-    da Torre do Eclipse.\nO Hall de Entrada se revela \xE0 sua frente. Espalhados
-    ao longo do sal\xE3o, montes de tesouros esquecidos brilham com um brilho opaco:
-    armas antigas, armaduras forjadas com maestria, artefatos reluzentes e po\xE7\xF5es
-    que emanam um leve calor.\nAqui, no limiar da batalha final, voc\xEA sente que
-    este \xE9 o momento de fortalecer-se, de preparar sua mente e seu corpo para
-    o que est\xE1 por vir. Cada espada, cada elmo, cada frasco pode ser a diferen\xE7a
-    entre a vit\xF3ria e o esquecimento.\n\xC0 sua frente, o caminho para o Crep\xFAsculo
-    Perdido aguarda."
+  m_text: "Ao derrubar o mago morto-vivo. Voc\xEA respira fundo e empurra a pesada
+    porta que leva ao cora\xE7\xE3o da Torre do Eclipse.\nO Hall de Entrada se revela
+    \xE0 sua frente. Espalhados ao longo do sal\xE3o, montes de tesouros esquecidos
+    brilham: armas, armaduras, artefatos reluzentes e po\xE7\xF5es.\nAqui, no limiar
+    da batalha final, voc\xEA sente que este \xE9 o momento de fortalecer-se, de
+    preparar sua mente e seu corpo para o que est\xE1 por vir.  Cada espada, cada
+    elmo, cada frasco pode ser a diferen\xE7a entre a vit\xF3ria e a derrota. Voc\xEA
+    tem apenas uma chance."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -948,8 +946,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.2
-  m_fontSizeBase: 24.2
+  m_fontSize: 32.1
+  m_fontSizeBase: 32.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1030,18 +1028,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Ao derrubar Dremilin, o mago morto-vivo, um sil\xEAncio pesado
-    toma conta do ambiente. Voc\xEA respira fundo e empurra a pesada porta que leva
-    ao cora\xE7\xE3o da Torre do Eclipse.\nO Hall de Entrada se revela \xE0 sua frente.
-    Espalhados ao longo do sal\xE3o, montes de tesouros esquecidos brilham com um
-    brilho opaco: armas antigas, armaduras forjadas com maestria, artefatos reluzentes
-    e po\xE7\xF5es que emanam um leve calor.\nAqui, no limiar da batalha final, voc\xEA
-    sente que este \xE9 o momento de fortalecer-se, de preparar sua mente e seu corpo
-    para o que est\xE1 por vir. Cada espada, cada elmo, cada frasco pode ser a diferen\xE7a
-    entre a vit\xF3ria e o esquecimento.\n\xC0 sua frente, o caminho para o Crep\xFAsculo
-    Perdido aguarda."
+  mensagemCompleta: "Ao derrubar o mago morto-vivo. Voc\xEA respira fundo e empurra
+    a pesada porta que leva ao cora\xE7\xE3o da Torre do Eclipse.\nO Hall de Entrada
+    se revela \xE0 sua frente. Espalhados ao longo do sal\xE3o, montes de tesouros
+    esquecidos brilham: armas, armaduras, artefatos reluzentes e po\xE7\xF5es.\nAqui,
+    no limiar da batalha final, voc\xEA sente que este \xE9 o momento de fortalecer-se,
+    de preparar sua mente e seu corpo para o que est\xE1 por vir.  Cada espada, cada
+    elmo, cada frasco pode ser a diferen\xE7a entre a vit\xF3ria e a derrota. Voc\xEA
+    tem apenas uma chance."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: e9d2688115098ab4da5ff2be6553d92a, type: 3}
+  narrativa: {fileID: 8300000, guid: 2eed3f36a5f0fe249888f7df6fcd3ca8, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

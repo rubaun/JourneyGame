@@ -289,10 +289,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.76468426, y: 0}
-  m_AnchorMax: {x: 0.76468426, y: 0}
-  m_AnchoredPosition: {x: 259, y: 183.58}
-  m_SizeDelta: {x: 352.5099, y: 112.84219}
+  m_AnchorMin: {x: 0.79472, y: 0.11844237}
+  m_AnchorMax: {x: 0.9218798, y: 0.17055765}
+  m_AnchoredPosition: {x: -1, y: -1.9199829}
+  m_SizeDelta: {x: 0.5098877, y: 45.842194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -558,10 +558,10 @@ RectTransform:
   - {fileID: 412331642}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.76468426, y: 0}
-  m_AnchorMax: {x: 0.76468426, y: 0}
-  m_AnchoredPosition: {x: -262.05402, y: 183.57886}
-  m_SizeDelta: {x: 347.5099, y: 112.84219}
+  m_AnchorMin: {x: 0.6074399, y: 0.11844237}
+  m_AnchorMax: {x: 0.73300004, y: 0.17055765}
+  m_AnchoredPosition: {x: 0.4459839, y: -1.9211426}
+  m_SizeDelta: {x: -1.4901123, y: 45.842194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661983198
 MonoBehaviour:
@@ -795,10 +795,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.76468426, y: 0}
-  m_AnchorMax: {x: 0.76468426, y: 0}
-  m_AnchoredPosition: {x: -0.07952881, y: 642}
-  m_SizeDelta: {x: 1290.4, y: 1284}
+  m_AnchorMin: {x: 0.606, y: 0.04520249}
+  m_AnchorMax: {x: 0.919, y: 0.96031785}
+  m_AnchoredPosition: {x: 5.420471, y: -4}
+  m_SizeDelta: {x: 421.40002, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144417728
 MonoBehaviour:
@@ -870,10 +870,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.62265795, y: 0.7961482}
-  m_AnchorMax: {x: 0.9063553, y: 0.89500004}
-  m_AnchoredPosition: {x: 0.940979, y: -0.99731445}
-  m_SizeDelta: {x: 8.110001, y: -1.9946003}
+  m_AnchorMin: {x: 0.62085813, y: 0.8086728}
+  m_AnchorMax: {x: 0.9074352, y: 0.9035577}
+  m_AnchoredPosition: {x: 1.5737915, y: -0.5}
+  m_SizeDelta: {x: 0.11000061, y: 3.0053997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214815203
 MonoBehaviour:
@@ -1058,7 +1058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62265795, y: 0.19511114}
   m_AnchorMax: {x: 0.9063553, y: 0.77900004}
-  m_AnchoredPosition: {x: 0.41400146, y: 0.627594}
+  m_AnchoredPosition: {x: 0.73383, y: 0.000030518}
   m_SizeDelta: {x: 7.7899933, y: 4.1008987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295041824
@@ -1081,16 +1081,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Diante da entrada, envolto por correntes de energia arcana corro\xEDda,
-    est\xE1 o Guardi\xE3o da Sombra \u2014 um mago morto-vivo, de olhos ocos que
-    brilham em tons viol\xE1ceos. Sua t\xFAnica em farrapos parece flutuar sem vento,
-    e sua presen\xE7a distorce o ch\xE3o ao redor. H\xE1 s\xE9culos, ele foi selado
-    ali para impedir que qualquer alma profanasse os port\xF5es da torre.\nEste \xE9
-    o momento da escolha:\nVoc\xEA enfrentar\xE1 o mago terr\xEDvel em combate direto,
-    desafiando seu dom\xEDnio necrom\xE2ntico?\nOu tentar\xE1 evitar o confronto,
-    sondando os arredores em busca de uma entrada alternativa pela masmorra subterr\xE2nea,
-    torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?\nLembre-se: sua
-    classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o o desfecho."
+  m_text: "Diante da entrada, envolto por correntes de energia arcana, um mago morto-vivo,
+    de olhos brilhantes. Sua t\xFAnica em farrapos flutua, e sua presen\xE7a distorce
+    o ch\xE3o ao redor. Parece estar selado ali para impedir que qualquer um passe
+    os port\xF5es da torre.  Mas, voc\xEA tem uma escolha:\nEnfrentar o mago terr\xEDvel
+    em combate direto, desafiando seu dom\xEDnio necrom\xE2ntico?\nOu tentar evitar
+    o confronto, sondando os arredores em busca de uma entrada alternativa pela masmorra
+    subterr\xE2nea, torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?
+    Lembre-se: sua classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o
+    o desfecho."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1199,18 +1198,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "Diante da entrada, envolto por correntes de energia arcana corro\xEDda,
-    est\xE1 o Guardi\xE3o da Sombra \u2014 um mago morto-vivo, de olhos ocos que
-    brilham em tons viol\xE1ceos. Sua t\xFAnica em farrapos parece flutuar sem vento,
-    e sua presen\xE7a distorce o ch\xE3o ao redor. H\xE1 s\xE9culos, ele foi selado
-    ali para impedir que qualquer alma profanasse os port\xF5es da torre.\nEste \xE9
-    o momento da escolha:\nVoc\xEA enfrentar\xE1 o mago terr\xEDvel em combate direto,
-    desafiando seu dom\xEDnio necrom\xE2ntico?\nOu tentar\xE1 evitar o confronto,
-    sondando os arredores em busca de uma entrada alternativa pela masmorra subterr\xE2nea,
-    torcendo para que o Guardi\xE3o n\xE3o perceba sua presen\xE7a?\nLembre-se: sua
-    classe, suas habilidades furtivas e a vontade dos deuses influenciar\xE3o o desfecho."
+  mensagemCompleta: "Diante da entrada, envolto por correntes de energia arcana,
+    um mago morto-vivo, de olhos brilhantes. Sua t\xFAnica em farrapos flutua, e
+    sua presen\xE7a distorce o ch\xE3o ao redor. Parece estar selado ali para impedir
+    que qualquer um passe os port\xF5es da torre.  Mas, voc\xEA tem uma escolha:\nEnfrentar
+    o mago terr\xEDvel em combate direto, desafiando seu dom\xEDnio necrom\xE2ntico?\nOu
+    tentar evitar o confronto, sondando os arredores em busca de uma entrada alternativa
+    pela masmorra subterr\xE2nea, torcendo para que o Guardi\xE3o n\xE3o perceba
+    sua presen\xE7a? Lembre-se: sua classe, suas habilidades furtivas e a vontade
+    dos deuses influenciar\xE3o o desfecho."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 3d999a6607a60b94885f22be6434e9a4, type: 3}
+  narrativa: {fileID: 8300000, guid: 70043387e35847240aec438d9491bc15, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

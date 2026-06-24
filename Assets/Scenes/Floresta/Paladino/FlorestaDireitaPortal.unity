@@ -852,10 +852,10 @@ RectTransform:
   - {fileID: 1446697734}
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7345626, y: 0.21549769}
-  m_AnchorMax: {x: 0.7345626, y: 0.21549769}
-  m_AnchoredPosition: {x: -2.1900024, y: -79}
-  m_SizeDelta: {x: 295.6783, y: 147.3158}
+  m_AnchorMin: {x: 0.6576459, y: 0.094649054}
+  m_AnchorMax: {x: 0.81020844, y: 0.15911207}
+  m_AnchoredPosition: {x: -0.69000244, y: -0.5}
+  m_SizeDelta: {x: 2.6783142, y: 90.315796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972336152
 MonoBehaviour:
@@ -983,10 +983,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1571627383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7345626, y: 0}
-  m_AnchorMax: {x: 0.7345626, y: 0}
-  m_AnchoredPosition: {x: 1.5874023, y: 444.24}
-  m_SizeDelta: {x: 848.8199, y: 888.47}
+  m_AnchorMin: {x: 0.57685417, y: 0.041731507}
+  m_AnchorMax: {x: 0.89500004, y: 0.95576113}
+  m_AnchoredPosition: {x: -0.91259766, y: 1.7399902}
+  m_SizeDelta: {x: 237.81989, y: 77.46997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975334501
 MonoBehaviour:
@@ -1202,7 +1202,7 @@ MonoBehaviour:
     ver um belo vale que te levar\xE1 por um caminho mais seguro e direto para a
     Torre do Eclipse."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 1390d93c61e8d7f479131f09ecfa3a02, type: 3}
+  narrativa: {fileID: 8300000, guid: 60d8a843bede0ba43b6eeed2b9d3ec62, type: 3}
 --- !u!4 &2079247950
 Transform:
   m_ObjectHideFlags: 0

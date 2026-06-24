@@ -491,10 +491,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7548958, y: 0}
-  m_AnchorMax: {x: 0.7548958, y: 0}
-  m_AnchoredPosition: {x: -2.130005, y: 146}
-  m_SizeDelta: {x: 266.3017, y: 72.00002}
+  m_AnchorMin: {x: 0.68739593, y: 0.141}
+  m_AnchorMax: {x: 0.82260424, y: 0.18836576}
+  m_AnchoredPosition: {x: -2.130005, y: 0}
+  m_SizeDelta: {x: 6.301697, y: 30.000023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -622,10 +622,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7548958, y: 0}
-  m_AnchorMax: {x: 0.7548958, y: 0}
-  m_AnchoredPosition: {x: -2.2098389, y: 454.218}
-  m_SizeDelta: {x: 718.7404, y: 908.43604}
+  m_AnchorMin: {x: 0.596, y: 0.048395347}
+  m_AnchorMax: {x: 0.91477084, y: 0.9613658}
+  m_AnchoredPosition: {x: -3.2098389, y: -4.3573914}
+  m_SizeDelta: {x: 106.74069, y: 77.285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519042328
 MonoBehaviour:
@@ -1103,13 +1103,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "O corpo ainda pulsa com a adrenalina do combate contra Vorazin. A luz
-    que penetra timidamente pelas copas retorcidas da Floresta das Sombras parece
-    mais viva agora \u2014 como se at\xE9 a natureza temesse o orc tombado.\nAo abrir
-    caminho por entre ra\xEDzes e n\xE9voa, seus olhos finalmente alcan\xE7am o Desfiladeiro
-    das Almas. Rochas imensas se erguem como sentinelas antigas, e l\xE1 embaixo,
-    entre as fendas e a poeira, silhuetas se movem.\nVoc\xEA respira fundo. O descanso
-    ainda n\xE3o veio. A pr\xF3xima batalha j\xE1 come\xE7ou no olhar."
+  m_text: "A adrenalina ainda pulsa ap\xF3s o combate. Ao abrir caminho por entre
+    ra\xEDzes e n\xE9voa, seus olhos finalmente alcan\xE7am o Desfiladeiro das Almas.
+    Rochas imensas se erguem como sentinelas antigas, mas voc\xEA percebe, entre
+    as fendas e a poeira, silhuetas que se movem. Como que fugindo da luz do dia.\nVoc\xEA
+    respira fundo.Mesmo cansado, mais uma batalha se aproxima."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1218,16 +1216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "O corpo ainda pulsa com a adrenalina do combate contra Vorazin.
-    A luz que penetra timidamente pelas copas retorcidas da Floresta das Sombras
-    parece mais viva agora \u2014 como se at\xE9 a natureza temesse o orc tombado.\nAo
-    abrir caminho por entre ra\xEDzes e n\xE9voa, seus olhos finalmente alcan\xE7am
-    o Desfiladeiro das Almas. Rochas imensas se erguem como sentinelas antigas, e
-    l\xE1 embaixo, entre as fendas e a poeira, silhuetas se movem.\nVoc\xEA respira
-    fundo. O descanso ainda n\xE3o veio. A pr\xF3xima batalha j\xE1 come\xE7ou no
-    olhar."
+  mensagemCompleta: "A adrenalina ainda pulsa ap\xF3s o combate. Ao abrir caminho
+    por entre ra\xEDzes e n\xE9voa, seus olhos finalmente alcan\xE7am o Desfiladeiro
+    das Almas. Rochas imensas se erguem como sentinelas antigas, mas voc\xEA percebe,
+    entre as fendas e a poeira, silhuetas que se movem. Como que fugindo da luz do
+    dia.\nVoc\xEA respira fundo.Mesmo cansado, mais uma batalha se aproxima."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 1a5de94fcf097534191be699964cd9d3, type: 3}
+  narrativa: {fileID: 8300000, guid: c86dceba88d487f46bbbf7c1bbde3e1e, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

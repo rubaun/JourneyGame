@@ -286,6 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: b945a3491f238ff4f9a5bc7f5a27bace, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &80741052
@@ -383,7 +385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.70100003, y: 0.11585186}
   m_AnchorMax: {x: 0.81900007, y: 0.19544443}
-  m_AnchoredPosition: {x: 3.7004, y: -8.3593}
+  m_AnchoredPosition: {x: 3.7003784, y: -8.359314}
   m_SizeDelta: {x: 66.9592, y: -16.7186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
@@ -884,7 +886,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.5
+  m_fontSize: 41.15
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -973,7 +975,7 @@ MonoBehaviour:
     decide entreg\xE1-lo \xE0 Ordem Sagrada da Luz, onde ficar\xE1 guardado sob prote\xE7\xE3o
     eterna."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: c92846f2fb61bf64a863a7aa31991787, type: 3}
+  narrativa: {fileID: 8300000, guid: 000d7ab97d88f9646a2977620afbf337, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

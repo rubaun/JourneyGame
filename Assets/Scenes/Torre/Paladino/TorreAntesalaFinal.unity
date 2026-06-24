@@ -676,10 +676,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7493158, y: 0}
-  m_AnchorMax: {x: 0.7493158, y: 1}
-  m_AnchoredPosition: {x: 0.00012207, y: 0.34998}
-  m_SizeDelta: {x: 1319.1, y: 0.6999512}
+  m_AnchorMin: {x: 0.5902084, y: 0.039}
+  m_AnchorMax: {x: 0.90979385, y: 0.9524517}
+  m_AnchoredPosition: {x: -1.9998779, y: 5.8499756}
+  m_SizeDelta: {x: 431.09998, y: 111.69995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097347659
 MonoBehaviour:
@@ -912,14 +912,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "O ar est\xE1 pesado, como se o mundo inteiro prendesse a respira\xE7\xE3o.\nNo
-    centro do sal\xE3o, uma \xFAltima reuni\xE3o \u2014 os tr\xEAs her\xF3is, vindos
-    de caminhos diferentes, finalmente lado a lado. Paladino, Mago e Ladr\xE3o se
-    encaram, sabendo que n\xE3o h\xE1 mais volta.\nO Paladino ajusta a armadura,
+  m_text: "Os tr\xEAs her\xF3is, finalmente lado a lado. Paladino, Mago e Ladr\xE3o
+    se encaram, sabendo que n\xE3o h\xE1 mais volta.\nO Paladino ajusta a armadura,
     o olhar firme, mas com um leve tremor de incerteza.\nO Mago observa as runas
     que brilham na porta, murmurando palavras de poder, como se buscando for\xE7as
-    ocultas.\nO Ladr\xE3o afia as l\xE2minas, sorriso c\xEDnico, mas os olhos revelam
-    respeito pelo que est\xE1 por vir."
+    ocultas.\nO Ladr\xE3o afia as l\xE2minas, com um sorriso nervoso, pela incerteza
+    e emo\xE7\xE3o do que est\xE1 por vir."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1028,16 +1026,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "O ar est\xE1 pesado, como se o mundo inteiro prendesse a respira\xE7\xE3o.\nNo
-    centro do sal\xE3o, uma \xFAltima reuni\xE3o \u2014 os tr\xEAs her\xF3is, vindos
-    de caminhos diferentes, finalmente lado a lado. Paladino, Mago e Ladr\xE3o se
-    encaram, sabendo que n\xE3o h\xE1 mais volta.\nO Paladino ajusta a armadura,
-    o olhar firme, mas com um leve tremor de incerteza.\nO Mago observa as runas
-    que brilham na porta, murmurando palavras de poder, como se buscando for\xE7as
-    ocultas.\nO Ladr\xE3o afia as l\xE2minas, sorriso c\xEDnico, mas os olhos revelam
-    respeito pelo que est\xE1 por vir."
+  mensagemCompleta: "Os tr\xEAs her\xF3is, finalmente lado a lado. Paladino, Mago
+    e Ladr\xE3o se encaram, sabendo que n\xE3o h\xE1 mais volta.\nO Paladino ajusta
+    a armadura, o olhar firme, mas com um leve tremor de incerteza.\nO Mago observa
+    as runas que brilham na porta, murmurando palavras de poder, como se buscando
+    for\xE7as ocultas.\nO Ladr\xE3o afia as l\xE2minas, com um sorriso nervoso, pela
+    incerteza e emo\xE7\xE3o do que est\xE1 por vir."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 53c5186a074daa140a47a1713cc4dfb0, type: 3}
+  narrativa: {fileID: 8300000, guid: 2554b73ebdbedee429df95d37b19138f, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

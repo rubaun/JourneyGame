@@ -286,6 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   somBackgroundMenu: {fileID: 8300000, guid: b945a3491f238ff4f9a5bc7f5a27bace, type: 3}
   somBotao: {fileID: 8300000, guid: c0fe2155bc4d58a4184425828780f689, type: 3}
+  cenaSelecaoPersonagem: SelecionaPersonagens
+  botaoContinuar: {fileID: 0}
   nomeCenaSorte: CenaSorte
   nomeCenaAzar: CenaAzar
 --- !u!4 &80741052
@@ -889,7 +891,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.35
+  m_fontSize: 33.55
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -982,7 +984,7 @@ MonoBehaviour:
     mas apenas abre caminho para desafios ainda maiores que se escondem al\xE9m do
     horizonte."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: e0f5bb9ea2fa39143869357b0b768666, type: 3}
+  narrativa: {fileID: 8300000, guid: e192b4c8e53374d42ab8dac5ada89805, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

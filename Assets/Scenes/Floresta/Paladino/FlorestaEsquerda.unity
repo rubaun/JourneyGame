@@ -452,10 +452,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7344376, y: 0}
-  m_AnchorMax: {x: 0.7344376, y: 0}
-  m_AnchoredPosition: {x: 1.7099609, y: 121}
-  m_SizeDelta: {x: 308.373, y: 83.8422}
+  m_AnchorMin: {x: 0.66156244, y: 0.10714798}
+  m_AnchorMax: {x: 0.814, y: 0.16600001}
+  m_AnchoredPosition: {x: -4.790039, y: 0}
+  m_SizeDelta: {x: 15.372986, y: 31.842201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -712,13 +712,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Voc\xEA escolhe o caminho \xE0 esquerda \n\xC0 sua frente, uma clareira
-    se abre repentinamente. No centro dela, como uma muralha viva, ergue-se um orc
-    colossal. Vorazin, dizem os rumores. Um guerreiro amaldi\xE7oado por sua pr\xF3pria
-    f\xFAria, expulso dos cl\xE3s por sua sede insaci\xE1vel de sangue. \nVorazin
-    veste uma armadura pesada, marcada por rachaduras e espinhos, forjada para ferir
-    tanto quanto proteger. Ele guarda este trecho da floresta como um c\xE3o raivoso
-    guarda sua \xFAltima refei\xE7\xE3o."
+  m_text: "Voc\xEA escolhe o caminho da esquerda, uma clareira, quando repentinamente,
+    no centro dela, como uma muralha viva, ergue-se um orc colossal. Seu nome \xE9
+    Vorazin. Um guerreiro amaldi\xE7oado por sua pr\xF3pria f\xFAria, expulso dos
+    cl\xE3s por sua sede insaci\xE1vel de sangue. Ele guarda este trecho da floresta
+    como um c\xE3o raivoso guarda sua \xFAltima refei\xE7\xE3o."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -827,15 +825,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1297045123}
-  mensagemCompleta: "Voc\xEA escolhe o caminho \xE0 esquerda \n\xC0 sua frente, uma
-    clareira se abre repentinamente. No centro dela, como uma muralha viva, ergue-se
-    um orc colossal. Vorazin, dizem os rumores. Um guerreiro amaldi\xE7oado por sua
-    pr\xF3pria f\xFAria, expulso dos cl\xE3s por sua sede insaci\xE1vel de sangue.
-    \nVorazin veste uma armadura pesada, marcada por rachaduras e espinhos, forjada
-    para ferir tanto quanto proteger. Ele guarda este trecho da floresta como um
-    c\xE3o raivoso guarda sua \xFAltima refei\xE7\xE3o."
+  mensagemCompleta: "Voc\xEA escolhe o caminho da esquerda, uma clareira, quando
+    repentinamente, no centro dela, como uma muralha viva, ergue-se um orc colossal.
+    Seu nome \xE9 Vorazin. Um guerreiro amaldi\xE7oado por sua pr\xF3pria f\xFAria,
+    expulso dos cl\xE3s por sua sede insaci\xE1vel de sangue. Ele guarda este trecho
+    da floresta como um c\xE3o raivoso guarda sua \xFAltima refei\xE7\xE3o."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 49e652b5ae18d8b4d9d374d5cc4caed0, type: 3}
+  narrativa: {fileID: 8300000, guid: 0a022e483be74a547af4e40e059a0a2a, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0
@@ -1102,10 +1098,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7344376, y: 0}
-  m_AnchorMax: {x: 0.7344376, y: 0}
-  m_AnchoredPosition: {x: 1.5875854, y: 445.622}
-  m_SizeDelta: {x: 732.1625, y: 891.2539}
+  m_AnchorMin: {x: 0.573, y: 0.042000003}
+  m_AnchorMax: {x: 0.89474994, y: 0.960425}
+  m_AnchoredPosition: {x: 2.5875854, y: 1.1220093}
+  m_SizeDelta: {x: 114.162476, y: 76.25391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792049021
 MonoBehaviour:

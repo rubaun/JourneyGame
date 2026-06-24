@@ -383,10 +383,10 @@ RectTransform:
   - {fileID: 50716756}
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.748, y: 0}
-  m_AnchorMax: {x: 0.748, y: 0}
-  m_AnchoredPosition: {x: 0, y: 173.08}
-  m_SizeDelta: {x: 429.6273, y: 114.9211}
+  m_AnchorMin: {x: 0.6721202, y: 0.10866356}
+  m_AnchorMax: {x: 0.82100004, y: 0.164}
+  m_AnchoredPosition: {x: 4, y: -1.4199219}
+  m_SizeDelta: {x: 15.627289, y: 43.921097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325857260
 MonoBehaviour:
@@ -619,10 +619,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 693381498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.748, y: 0}
-  m_AnchorMax: {x: 0.748, y: 1}
-  m_AnchoredPosition: {x: 4.3114014, y: -0.15002441}
-  m_SizeDelta: {x: 1198.0293, y: -0.30004883}
+  m_AnchorMin: {x: 0.5925198, y: 0.035884734}
+  m_AnchorMax: {x: 0.91, y: 0.9642119}
+  m_AnchoredPosition: {x: -4.6885986, y: -0.18799}
+  m_SizeDelta: {x: 316.0293, y: 91.776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097347659
 MonoBehaviour:
@@ -912,12 +912,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xC0 sua frente, uma pris\xE3o esquecida pelo tempo, onde o sil\xEAncio
-    \xE9 quebrado apenas pelo eco de correntes e o rangido de portas met\xE1licas
-    corro\xEDdas.\nCelas antigas se alinham em fileiras, algumas abertas, outras
-    trancadas. Esqueletos permanecem como sentinelas eternas, testemunhas silenciosas
-    de horrores passados. Espalhados pelo ch\xE3o, entre ossos e sujeira, jazem armas
-    enferrujadas e armaduras quebradas, rel\xEDquias abandonadas de batalhas antigas.\nEsses
+  m_text: "Voc\xEA entra por uma pris\xE3o esquecida pelo tempo. O tilintar das correntes
+    e o rangido de portas met\xE1licas corro\xEDdas se ouve por todo lado.\nEsqueletos
+    permanecem como prisioneiros eternos, testemunhas silenciosas de horrores passados.
+    Espalhados pelo ch\xE3o, rel\xEDquias abandonadas de batalhas antigas.\nEsses
     restos, embora desgastados, podem conter a \xFAltima esperan\xE7a de sobreviv\xEAncia.\nVoc\xEA
     sente o peso do tempo e da morte ao seu redor. O destino do Crep\xFAsculo Perdido
     est\xE1 mais pr\xF3ximo do que nunca."
@@ -1029,17 +1027,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texto: {fileID: 1295041824}
-  mensagemCompleta: "\xC0 sua frente, uma pris\xE3o esquecida pelo tempo, onde o
-    sil\xEAncio \xE9 quebrado apenas pelo eco de correntes e o rangido de portas
-    met\xE1licas corro\xEDdas.\nCelas antigas se alinham em fileiras, algumas abertas,
-    outras trancadas. Esqueletos permanecem como sentinelas eternas, testemunhas
-    silenciosas de horrores passados. Espalhados pelo ch\xE3o, entre ossos e sujeira,
-    jazem armas enferrujadas e armaduras quebradas, rel\xEDquias abandonadas de batalhas
+  mensagemCompleta: "Voc\xEA entra por uma pris\xE3o esquecida pelo tempo. O tilintar
+    das correntes e o rangido de portas met\xE1licas corro\xEDdas se ouve por todo
+    lado.\nEsqueletos permanecem como prisioneiros eternos, testemunhas silenciosas
+    de horrores passados. Espalhados pelo ch\xE3o, rel\xEDquias abandonadas de batalhas
     antigas.\nEsses restos, embora desgastados, podem conter a \xFAltima esperan\xE7a
     de sobreviv\xEAncia.\nVoc\xEA sente o peso do tempo e da morte ao seu redor.
     O destino do Crep\xFAsculo Perdido est\xE1 mais pr\xF3ximo do que nunca."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 70fe5c937720d2544b03caab6ad8a70a, type: 3}
+  narrativa: {fileID: 8300000, guid: e152db5ee2dff5f42a14100dc8712c96, type: 3}
 --- !u!4 &1300629035
 Transform:
   m_ObjectHideFlags: 0

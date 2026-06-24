@@ -248,7 +248,7 @@ MonoBehaviour:
     esquerda, uma trilha estreita coberta por cogumelos brilhantes.\n\n\xC0 direita,
     uma clareira iluminada por uma est\xE1tua de pedra com olhos de \xE2mbar."
   velocidadeDigitacao: 0.08
-  narrativa: {fileID: 8300000, guid: 91235b45f6024fa4a9f7e192fd220939, type: 3}
+  narrativa: {fileID: 8300000, guid: 5023741fb04ae684c8ff5e56baef3849, type: 3}
 --- !u!1 &330038195
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,10 +844,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1108457853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.1108889}
-  m_AnchorMax: {x: 0.5, y: 0.1108889}
-  m_AnchoredPosition: {x: 9.112488, y: 207.41699}
-  m_SizeDelta: {x: 1631.7064, y: 420.5146}
+  m_AnchorMin: {x: 0.157, y: 0.1065074}
+  m_AnchorMax: {x: 0.8527708, y: 0.52141017}
+  m_AnchoredPosition: {x: -0.3875122, y: 26.916992}
+  m_SizeDelta: {x: 296.70642, y: 51.514587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317389783
 MonoBehaviour:
@@ -1357,10 +1357,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1108457853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.21387501, y: 0.47228935}
-  m_AnchorMax: {x: 0.21387501, y: 0.47228935}
-  m_AnchoredPosition: {x: 249.37, y: -47}
-  m_SizeDelta: {x: 498.7463, y: 91.2172}
+  m_AnchorMin: {x: 0.21387501, y: 0.36725372}
+  m_AnchorMax: {x: 0.47400004, y: 0.47228935}
+  m_AnchoredPosition: {x: -0.13000488, y: -0.5}
+  m_SizeDelta: {x: -0.25369263, y: -1.7827988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823085963
 MonoBehaviour:
